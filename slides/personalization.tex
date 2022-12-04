@@ -575,10 +575,10 @@ RCT  $\rightarrow$ $\underset{I \in {0,1}}{\mathrm{argmax}}~E[P|do(I), M]$
 \scriptsize{
 \begin{equation*}
 \begin{align*}
-E[P | do(I=1), M=1] = 0.350 =(0.25+0.45)/2 \\
-E[P | do(I=0), M=1] = 0.275 =(0.50 + 0.05)/2 \\
-E[P | do(I=1), M=0] = 0.275 =(0.50 + 0.05)/2 \\
-E[P | do(I=0), M=0] = 0.200 = (0.10 +0.30)/2 \\
+E[P | do(I=1), M=1] &= 0.350 =(0.25+0.45)/2 \\
+E[P | do(I=0), M=1] &= 0.275 =(0.50 + 0.05)/2 \\
+E[P | do(I=1), M=0] &= 0.275 =(0.50 + 0.05)/2 \\
+E[P | do(I=0), M=0] &= 0.200 = (0.10 +0.30)/2 \\
 \end{align*}
 \end{equation*}
 }
@@ -636,12 +636,105 @@ Expected profit = $\boxed{\mathbf{0.315}}$ = (0.35+0.275)/2.
 %%%%Slide
 
 \begin{frame}
-[fragile]\frametitle{Data Scientist 4: Counterfactual Decision Criterion}
+[fragile]\frametitle{Data Scientist 4: Regret Decision Criterion (RDC)}
 
-Profit =0.4375
+RDC  $\rightarrow$ $\underset{a' \in~{0,1}}{\mathrm{argmax}}~E[P_{a'}| I=a, M]$
+
+\vskip10pt
+
+\pause
+
+\scriptsize{
+\begin{equation*}
+\begin{align*}
+P(\pi_{a'}, M) &= P(\pi_{a'}, M, a') +  P(\pi_{a'}, M, a) \\
+                      &=  P(\pi_{a'} | M, a') P(M, a') + P(\pi_{a'} | M, a) P(M, a) \\ \\
+ P(\pi_{a'} | M)  &= P(\pi_{a'} | M, a') P( a' | M)  + P(\pi_{a'} | M, a) P(a | M) \\
+                        &= P(\pi | M, a') P( a' | M)  + P(\pi_{a'} | M, a) P(a | M) ~\text{(from Consistency)} \\ \\
+P(\pi_{a'} | M, a) &= \frac{1}{P(a|M)} \Bigl[P(\pi_{a'} | M) -  P(\pi | M, a') P( a' | M) \Bigr] \\
+&= \boxed{\frac{1}{P(a|M)} \Bigl[P\Big(\pi | M, do(a')\Big) -  P(\pi | M, a') P( a' | M) \Bigr]}\\
+\end{align*}
+\end{equation*}
+}
 
 \end{frame}
 
+%%%%Slide
+
+\begin{frame}
+[fragile]\frametitle{Data Scientist 4: Regret Decision Criterion (RDC) - cont'd}
+
+\begin{columns}[T] % align columns
+\begin{column}{.48\textwidth}
+
+
+\begin{scriptsize}
+$\boxed{P(\pi_{I=1} | M=1, I=0)} = $
+\begin{equation*}
+\begin{flalign*}
+ \frac{1}{P(I=0|M=1)} \Bigl[P\Big(\pi | M=1, do(I=1)\Big) -  \\
+ P(\pi | M=1, I=1) P( I=1 | M=1) \Bigr].  & \\
+  \frac{1}{1/2} (0.350-0.25  \times \frac{1}{1/2})  & = \textbf{0.45}
+\end{flalign*}
+\end{equation*}
+
+$\boxed{P(\pi_{I=1} | M=0, I=0)} = \textbf{0.50} \\ $ 
+
+$\boxed{P(\pi_{I=0} | M=1, I=1)} = \textbf{0.50} \\ $ 
+
+$\boxed{P(\pi_{I=0} | M=0, I=1)} = \textbf{0.30} \\ $ 
+
+\end{scriptsize}
+
+
+\end{column}%
+\hfill%
+
+
+\begin{column}{.48\textwidth}
+
+\footnotesize{
+\begin{table}
+ \begin{tabular}{ccccc}
+\toprule
+ &\multicolumn{2}{c}{$R=0$}
+&
+\multicolumn{2}{c}{$R=1$} \\\cmidrule(r){2-3}\cmidrule(l){4-5}
+ & $M=1$ & $M=0$     & $M=1$ & $M=0$     \\  
+ \midrule
+$I=1$ &  \cellcolor{blue!25}{0.25} & 0.50 & 0.45 & \cellcolor{blue!25}{0.05} \\
+$I=0$ &  0.50 & \cellcolor{blue!25}{0.10} & \cellcolor{blue!25}{0.05} & 0.30 \\
+\bottomrule
+\end{tabular}
+\vskip5pt
+\caption{$E[P|M, R, I]$.}
+\end{table}
+}
+
+\end{column}%
+\end{columns}
+
+\vskip5pt
+
+\scriptsize{
+\textbf{Decision Rule}:
+
+\small{
+\begin{itemize}
+\item If Visit Site $\land$ Married $\rightarrow$ No Purchase Incentive $\rightarrow~E[P] = \textbf{0.50} $
+\item If Visit Site $\land$ Not Married $\rightarrow$ No Purchase Incentive  $\rightarrow~E[P] = \textbf{0.30} $
+\item If Not Visit Site $\land$ Married $\rightarrow$ Purchase Incentive $\rightarrow~E[P] = \textbf{0.45} $
+\item If Not Visit Site $\land$ Not Married $\rightarrow$ Purchase Incentive  $\rightarrow~E[P] = \textbf{0.50} $
+\end{itemize}
+}
+
+
+\vskip5pt
+
+Expected profit = $\boxed{\mathbf{0.4375}}$ = (0.50 + 0.30+ .45+0.50)/4.
+}
+
+\end{frame}
 
 %%%%Slide
 
@@ -652,6 +745,10 @@ Profit =0.4375
 \item Summarize results so far from the various criteria and emphasize no result is right or wrong, they answer different questions, but some questions are more preferable than others in specific context. 
 
 \item Compare to oracle
+
+
+\item Profit =0.4375
+
 \end{itemize}
 
 

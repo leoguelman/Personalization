@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  3 DEC 2022 11:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  4 DEC 2022 10:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1685,18 +1685,124 @@ l.19 \end{align*}
 ]
 \openout4 = `personalization.vrb'.
 
- (./personalization.vrb) [11
+ (./personalization.vrb
+
+./personalization.vrb:18: Package amsmath Error: Erroneous nesting of equation 
+structures;
+(amsmath)                trying to recover with `aligned'.
+
+See the amsmath package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.18 \end{align*}
+                 
+? 
+) [11
+
+] (./personalization.vrb
+
+./personalization.vrb:18: Package amsmath Error: Erroneous nesting of equation 
+structures;
+(amsmath)                trying to recover with `aligned'.
+
+See the amsmath package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.18 \end{align*}
+                 
+? 
+) [12
 
 ]
 \openout4 = `personalization.vrb'.
 
- (./personalization.vrb) [12
+ (./personalization.vrb
 
-]
-\openout4 = `personalization.vrb'.
+./personalization.vrb:14: Package amsmath Error: Erroneous nesting of equation 
+structures;
+(amsmath)                trying to recover with `aligned'.
+
+See the amsmath package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 \end{flalign*}
+                   
+? 
+
+Overfull \hbox (11.96925pt too wide) detected at line 15
+[][]
+ []
 
 
-(./personalization.vrb) [13
+./personalization.vrb:17: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.17 ...\pi_{I=1} | M=0, I=0)} = \textbf{0.50} \\ 
+                                                  $
+? 
+./personalization.vrb:17: Missing $ inserted.
+<inserted text> 
+                $
+l.17 ...\pi_{I=1} | M=0, I=0)} = \textbf{0.50} \\ 
+                                                  $
+? 
+./personalization.vrb:18: Missing $ inserted.
+<inserted text> 
+                $
+l.18 
+     
+? 
+
+./personalization.vrb:19: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.19 ...\pi_{I=0} | M=1, I=1)} = \textbf{0.50} \\ 
+                                                  $
+? 
+./personalization.vrb:19: Missing $ inserted.
+<inserted text> 
+                $
+l.19 ...\pi_{I=0} | M=1, I=1)} = \textbf{0.50} \\ 
+                                                  $
+? 
+./personalization.vrb:20: Missing $ inserted.
+<inserted text> 
+                $
+l.20 
+     
+? 
+
+./personalization.vrb:21: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 ...\pi_{I=0} | M=0, I=1)} = \textbf{0.30} \\ 
+                                                  $
+? 
+./personalization.vrb:21: Missing $ inserted.
+<inserted text> 
+                $
+l.21 ...\pi_{I=0} | M=0, I=1)} = \textbf{0.30} \\ 
+                                                  $
+? 
+./personalization.vrb:22: Missing $ inserted.
+<inserted text> 
+                $
+l.22 
+     
+? 
+) [13
 
 ]
 \openout4 = `personalization.vrb'.
@@ -1706,8 +1812,18 @@ l.19 \end{align*}
 ]
 \openout4 = `personalization.vrb'.
 
+ (./personalization.vrb) [15
 
-(./personalization.vrb) [15
+]
+\openout4 = `personalization.vrb'.
+
+
+(./personalization.vrb) [16
+
+]
+\openout4 = `personalization.vrb'.
+
+ (./personalization.vrb) [17
 
 ]
 \tf@nav=\write6
@@ -1719,11 +1835,12 @@ l.19 \end{align*}
 \tf@snm=\write8
 \openout8 = `personalization.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 704.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 704.
- (./personalization.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 704.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 704.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 801.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 801.
+
+(./personalization.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 801.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 801.
 Package rerunfilecheck Info: File `personalization.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
@@ -1732,40 +1849,43 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 32436 strings out of 480608
- 690348 string characters out of 5903631
- 929535 words of memory out of 5000000
- 47562 multiletter control sequences out of 15000+600000
- 554569 words of font info for 75 fonts, out of 8000000 for 9000
+ 32449 strings out of 480608
+ 690517 string characters out of 5903631
+ 931535 words of memory out of 5000000
+ 47566 multiletter control sequences out of 15000+600000
+ 555343 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  58i,15n,69p,853b,1097s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
-</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
-/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></u
-sr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr
-/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/
-local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/lo
-cal/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/loca
-l/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/loca
-l/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/local
-/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi9.pfb></usr/local/
-texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/t
-exlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/tex
-live/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texli
-ve/2020/texmf-dist/fonts/type1/public/amsfonts/symbols/msam5.pfb></usr/local/te
-xlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texl
-ive/2020/texmf-dist/fonts/type1/public/cm-super/sfss0500.pfb></usr/local/texliv
-e/2020/texmf-dist/fonts/type1/public/cm-super/sfss0600.pfb></usr/local/texlive/
-2020/texmf-dist/fonts/type1/public/cm-super/sfss0700.pfb></usr/local/texlive/20
-20/texmf-dist/fonts/type1/public/cm-super/sfss0900.pfb></usr/local/texlive/2020
-/texmf-dist/fonts/type1/public/cm-super/sfss1000.pfb></usr/local/texlive/2020/t
-exmf-dist/fonts/type1/public/cm-super/sfss1440.pfb></usr/local/texlive/2020/tex
-mf-dist/fonts/type1/public/cm-super/sfsx0900.pfb></usr/local/texlive/2020/texmf
--dist/fonts/type1/public/cm-super/sfsx1000.pfb>
-Output written on personalization.pdf (15 pages, 401643 bytes).
+</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.p
+fb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pf
+b></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb>
+</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></
+usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></u
+sr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr
+/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/l
+ocal/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/l
+ocal/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/lo
+cal/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi9.pfb></usr/loc
+al/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loca
+l/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/
+texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/te
+xlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texl
+ive/2020/texmf-dist/fonts/type1/public/amsfonts/symbols/msam5.pfb></usr/local/t
+exlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/tex
+live/2020/texmf-dist/fonts/type1/public/cm-super/sfss0500.pfb></usr/local/texli
+ve/2020/texmf-dist/fonts/type1/public/cm-super/sfss0600.pfb></usr/local/texlive
+/2020/texmf-dist/fonts/type1/public/cm-super/sfss0700.pfb></usr/local/texlive/2
+020/texmf-dist/fonts/type1/public/cm-super/sfss0900.pfb></usr/local/texlive/202
+0/texmf-dist/fonts/type1/public/cm-super/sfss1000.pfb></usr/local/texlive/2020/
+texmf-dist/fonts/type1/public/cm-super/sfss1440.pfb></usr/local/texlive/2020/te
+xmf-dist/fonts/type1/public/cm-super/sfsx0700.pfb></usr/local/texlive/2020/texm
+f-dist/fonts/type1/public/cm-super/sfsx0900.pfb></usr/local/texlive/2020/texmf-
+dist/fonts/type1/public/cm-super/sfsx1000.pfb>
+Output written on personalization.pdf (17 pages, 443602 bytes).
 PDF statistics:
- 516 PDF objects out of 1000 (max. 8388607)
- 462 compressed objects within 5 object streams
- 31 named destinations out of 1000 (max. 500000)
+ 581 PDF objects out of 1000 (max. 8388607)
+ 521 compressed objects within 6 object streams
+ 35 named destinations out of 1000 (max. 500000)
  54 words of extra memory for PDF output out of 10000 (max. 10000000)
 
