@@ -171,25 +171,45 @@
 %%%%Slide
 
 \begin{frame}
-[fragile]\frametitle{Talk Overview}
+[fragile]\frametitle{Overview}
 
 
 
 \begin{itemize}
 
-\item The practice of Data Science often places significant focus on adopting sound technical methods.
+\item The idea of Personalization is founded on the premise that individuals have heterogenous response to actions.
+% The action that maximizes reward for one client, might not be the best action for another client. 
 
-\item However, much less effort is often placed on business problem identification.
+\pause
 
-\item Using Personalized Marketing problem as a motivating example:
+\item Personalization algorithms aim to improve decision-making by identifying and exploiting this heterogeneity.
 
-\begin{itemize}
+\pause
 
-\item Show (fiction) story on how 4 different Data Scientists might approach this problem and get different conclusions from data.
+\item However, latent confounders (i.e., unobserved variables affecting both the actions and the outcome variables) pose a unique challenge to personalization. 
+% These latent confounders are pretty much the norm, not the exception.
 
-\item Show that the different conclusions emerge as a result of slightly different interpretation of the business question being asked.
+\pause
 
-\end{itemize}
+\item In contrast to the general notion that Randomized Controlled Experiments (a.k.a. A/B Tests) are `gold standard', in this setting they might actually result in loss of information. 
+
+\pause
+
+\item Counterfactual-based decision-making can address these problems and lead to a coherent fusion of observational and experimental data.
+
+%\item The practice of Data Science often places significant focus on adopting sound technical methods.
+
+%\item However, much less effort is often placed on business problem identification.
+
+%\item Using Personalized Marketing problem as a motivating example:
+
+%\begin{itemize}
+
+%\item Show (fiction) story on how 4 different Data Scientists might approach this problem and get different conclusions from data.
+
+%\item Show that the different conclusions emerge as a result of slightly different interpretation of the business question being asked.
+
+%\end{itemize}
 
 \end{itemize}
 
@@ -204,10 +224,10 @@
 
 \begin{itemize}
 
-\item \textbf{Business Objective:} Cross-sell a credit card to new-to-RBC clients. 
+\item \textbf{Business objective:} Cross-sell a credit card to new-to-RBC clients. 
 
 
-\item \textbf{Offer/Incentive:}
+\item \textbf{Past campaign:} All new-to-RBC clients who visited the RBC public site, get a credit card offer $+$ iPad incentive.
 
 
 \begin{figure}
@@ -216,9 +236,7 @@
 
 \vskip20pt
 
-\item \textbf{Goal:} Maximize the expected profitability of the campaign on the new-to-RBC client segment. 
-
-%Identify which new-to-RBC clients should receive an iPad incentive in the future to maximize the expected profitability of the campaign. 
+\item \textbf{The goal is to personalize the incentive:} Identify which new-to-RBC clients should receive an iPad incentive in the future to maximize the expected profitability of the campaign. 
 
 \end{itemize}
 
@@ -235,11 +253,11 @@
 
 \begin{figure}
 \begin{tikzpicture}
-    \node (m) at (-0.5,0) {Married (M)};
-    \node[red]  (r) at (2,0) {Retired (R)};
-    \node (v) at (-1,-1.5) {Visit Public site (V)};
-    \node (o) at (-1,-3) {Purchase Incentive (I)};
-    \node (p) at (2,-3) {Profit (P)};
+    \node (m) at (-0.5,0) {Married ($M$)};
+    \node[red]  (r) at (2,0) {Retired ($R$)};
+    \node (v) at (-1,-1.5) {Visit Public site ($V$)};
+    \node (o) at (-1,-3) {Purchase Incentive ($I$)};
+    \node (p) at (2,-3) {Profit ($P$)};
 
     \path (m) edge (v);
     \path[dashed, red] (r) edge (v);
@@ -252,7 +270,7 @@
 
 \vskip 5pt
 
-\caption{Causal DAG}
+\caption{Past campaign `true' causal DAG.}
 
 \end{figure}
 
@@ -327,6 +345,8 @@ E[P | I=0, M=0] =& 0.10 \\
 
 \begin{column}{.48\textwidth}
 
+\vskip 30pt
+
 \footnotesize{
 \begin{table}
  \begin{tabular}{ccccc}
@@ -352,6 +372,7 @@ $I=0$ &  0.50 & \cellcolor{blue!25}{0.10} & \cellcolor{blue!25}{0.05} & 0.30 \\
 
 \vskip15pt
 
+\pause
 
 \textbf{Decision Rule}:
 
@@ -381,12 +402,12 @@ Expected profit = $\boxed{\mathbf{0.15}}$ = (0.25+0.05)/2.
 
 \begin{figure}
 \begin{tikzpicture}[thick,scale=0.8, every node/.style={scale=0.8}]
-    \node (m) at (-0.5,0) {Married (M)};
-    \node[red]  (r) at (2,0) {Retired (R)};
-    \node (v) at (-1,-1.5) {Visit Public site (V)};
-    \node (o) at (-1,-3) {Purchase Incentive (I)};
-    \node (p) at (2,-3) {Profit (P)};
-    \node[blue] (c)  at (-4,-1.5) {Coin Flip (C)};
+    \node (m) at (-0.5,0) {Married ($M$)};
+    \node[red]  (r) at (2,0) {Retired ($R$)};
+    \node (v) at (-1,-1.5) {Visit Public site ($V$)};
+    \node (o) at (-1,-3) {Purchase Incentive ($I$)};
+    \node (p) at (2,-3) {Profit ($P$)};
+    \node[blue] (c)  at (-4,-1.5) {Coin Flip ($C$)};
 
     \path (m) edge (v);
     \path[dashed, red] (r) edge (v);
@@ -457,6 +478,8 @@ E[P | do(I=0), M=0, V=1] =& 0.30
 
 \begin{column}{.48\textwidth}
 
+\vskip 30pt
+
 \footnotesize{
 \begin{table}
  \begin{tabular}{ccccc}
@@ -482,6 +505,8 @@ $I=0$ &  0.50 & \cellcolor{blue!25}{0.10} & \cellcolor{blue!25}{0.05} & 0.30 \\
 
 \vskip15pt
 
+\pause
+
 
 \textbf{Decision Rule}:
 
@@ -504,19 +529,19 @@ Expected profit = $\boxed{\mathbf{0.40}}$ = (0.50+0.30)/2.
 
 
 \begin{frame}
-[fragile]\frametitle{Approach 3: RCT on New-to-RBC Clients}
+[fragile]\frametitle{Approach 3: RCT on All New-to-RBC Clients}
 
 \begin{columns}[T] % align columns
 \begin{column}{.48\textwidth}
 
 \begin{figure}
 \begin{tikzpicture}[thick,scale=0.8, every node/.style={scale=0.8}]
-    \node (m) at (-0.5,0) {Married (M)};
-    \node[red]  (r) at (2,0) {Retired (R)};
-    \node (v) at (-1,-1.5) {Visit Public site (V)};
-    \node (o) at (-1,-3) {Purchase Incentive (I)};
-    \node (p) at (2,-3) {Profit (P)};
-    \node[blue] (c)  at (-4,-1.5) {Coin Flip (C)};
+    \node (m) at (-0.5,0) {Married ($M$)};
+    \node[red]  (r) at (2,0) {Retired ($R$)};
+    \node (v) at (-1,-1.5) {Visit Public site ($V$)};
+    \node (o) at (-1,-3) {Purchase Incentive ($I$)};
+    \node (p) at (2,-3) {Profit ($P$)};
+    \node[blue] (c)  at (-4,-1.5) {Coin Flip ($C$)};
 
     \path (m) edge (v);
     \path[dashed, red] (r) edge (v);
@@ -529,7 +554,8 @@ Expected profit = $\boxed{\mathbf{0.40}}$ = (0.50+0.30)/2.
 
 \vskip 5pt
 
-\caption{Causal DAG with RCT.}
+
+\caption{Causal DAG with RCT on All New-to-Bank Clients.}
 
 \end{figure}
 
@@ -560,7 +586,7 @@ I :=&  \textcolor{blue}{C}
 
 
 \begin{frame}
-[fragile]\frametitle{Approach 3: RCT on New-to-RBC Clients - cont'd}
+[fragile]\frametitle{Approach 3: RCT on All New-to-RBC Clients - cont'd}
 
 \begin{columns}[T] % align columns
 \begin{column}{.48\textwidth}
@@ -616,6 +642,7 @@ $I=0$ &  0.50 & \cellcolor{blue!25}{0.10} & \cellcolor{blue!25}{0.05} & 0.30 \\
 
 \vskip15pt
 
+\pause
 
 \textbf{Decision Rule}:
 
@@ -692,6 +719,8 @@ $\boxed{P(\pi_{I=0} | M=0, I=1)} = \textbf{0.30} \\ $
 
 
 \begin{column}{.48\textwidth}
+
+\vskip30pt
 
 \footnotesize{
 \begin{table}
