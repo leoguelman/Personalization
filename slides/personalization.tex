@@ -156,8 +156,7 @@
 \begin{document}
 
 
-\title[Deconstructing Data Science Questions]{Deconstructing Data Science Questions}
-\subtitle{A Case Study on Personalization}
+\title[Personalization with Latent Confounders]{Personalization with Latent Confounders}
 \author[Leo Guelman]{Leo Guelman}
 \institute[RBC Royal Bank]{RBC Royal Bank}
 \date[December 2022]
@@ -269,7 +268,7 @@
 \begin{equation*}
 \begin{align*}
 V :=& M~$\oplus{}$ R  \\
-I :=&  V \\
+I :=&  V 
 \end{align*}
 \end{equation*}
 %}
@@ -300,7 +299,7 @@ $I=0$ &  0.50 & \cellcolor{blue!25}{0.10} & \cellcolor{blue!25}{0.05} & 0.30 \\
 %%%%Slide
 
 \begin{frame}
-[fragile]\frametitle{Data Scientist 1: Empirical Decision Criterion (EDC)}
+[fragile]\frametitle{Approach 1: Empirical Decision Criterion (EDC)}
 
 \begin{columns}[T] % align columns
 \begin{column}{.48\textwidth}
@@ -314,10 +313,10 @@ EDC  $\rightarrow$ $\underset{I \in {0,1}}{\mathrm{argmax}}~E[P|I, M]$
 
 \begin{equation*}
 \begin{align*}
-E[P | I=1, M=1] = 0.25\\
-E[P | I=0, M=1] = 0.05\\
-E[P | I=1, M=0] = 0.05\\
-E[P | I=0, M=0] = 0.10\\
+E[P | I=1, M=1] =& 0.25\\
+E[P | I=0, M=1] =& 0.05\\
+E[P | I=1, M=0] =& 0.05\\
+E[P | I=0, M=0] =& 0.10 \\
 \end{align*}
 \end{equation*}
 
@@ -375,7 +374,7 @@ Expected profit = $\boxed{\mathbf{0.15}}$ = (0.25+0.05)/2.
 %%%%Slide
 
 \begin{frame}
-[fragile]\frametitle{Data Scientist 2: Post-Visit Randomization (PVR)}
+[fragile]\frametitle{Approach 2: Post-Visit Randomization (PVR)}
 
 \begin{columns}[T] % align columns
 \begin{column}{.48\textwidth}
@@ -415,10 +414,10 @@ Expected profit = $\boxed{\mathbf{0.15}}$ = (0.25+0.05)/2.
 \begin{equation*}
 \begin{align*}
 V :=& M~$\oplus{}$ R  \\
-I :=&  V \textcolor{blue}{\land C} \\
+I :=&  V \textcolor{blue}{\land C} 
 \end{align*}
 \end{equation*}
-%}
+
 
 \end{column}%
 \end{columns}
@@ -429,7 +428,7 @@ I :=&  V \textcolor{blue}{\land C} \\
 %%%%Slide
 
 \begin{frame}
-[fragile]\frametitle{Data Scientist 2: Post-Visit Randomization (PVR) - cont'd}
+[fragile]\frametitle{Approach 2: Post-Visit Randomization (PVR) - cont'd}
 
 
 \begin{columns}[T] % align columns
@@ -444,10 +443,10 @@ PVR $\rightarrow$ $\underset{I \in {0,1}}{\mathrm{argmax}}~E[P| do(I), M, V=1]$
 
 \begin{equation*}
 \begin{align*}
-E[P | do(I=1), M=1, V=1] = 0.25\\
-E[P | do(I=0), M=1, V=1] = 0.50\\
-E[P | do(I=1), M=0, V=1] = 0.05\\
-E[P | do(I=0), M=0, V=1] = 0.30\\
+E[P | do(I=1), M=1, V=1] =& 0.25\\
+E[P | do(I=0), M=1, V=1] =& 0.50\\
+E[P | do(I=1), M=0, V=1] =& 0.05\\
+E[P | do(I=0), M=0, V=1] =& 0.30
 \end{align*}
 \end{equation*}
 
@@ -505,7 +504,7 @@ Expected profit = $\boxed{\mathbf{0.40}}$ = (0.50+0.30)/2.
 
 
 \begin{frame}
-[fragile]\frametitle{Data Scientist 3: RCT on New-to-RBC Clients}
+[fragile]\frametitle{Approach 3: RCT on New-to-RBC Clients}
 
 \begin{columns}[T] % align columns
 \begin{column}{.48\textwidth}
@@ -544,7 +543,7 @@ Expected profit = $\boxed{\mathbf{0.40}}$ = (0.50+0.30)/2.
 \begin{equation*}
 \begin{align*}
 V :=& M~$\oplus{}$ R  \\
-I :=&  \textcolor{blue}{C} \\
+I :=&  \textcolor{blue}{C} 
 \end{align*}
 \end{equation*}
 %}
@@ -561,7 +560,7 @@ I :=&  \textcolor{blue}{C} \\
 
 
 \begin{frame}
-[fragile]\frametitle{Data Scientist 3: RCT on New-to-RBC Clients - cont'd}
+[fragile]\frametitle{Approach 3: RCT on New-to-RBC Clients - cont'd}
 
 \begin{columns}[T] % align columns
 \begin{column}{.48\textwidth}
@@ -578,7 +577,7 @@ RCT  $\rightarrow$ $\underset{I \in {0,1}}{\mathrm{argmax}}~E[P|do(I), M]$
 E[P | do(I=1), M=1] &= 0.350 =(0.25+0.45)/2 \\
 E[P | do(I=0), M=1] &= 0.275 =(0.50 + 0.05)/2 \\
 E[P | do(I=1), M=0] &= 0.275 =(0.50 + 0.05)/2 \\
-E[P | do(I=0), M=0] &= 0.200 = (0.10 +0.30)/2 \\
+E[P | do(I=0), M=0] &= 0.200 = (0.10 +0.30)/2 
 \end{align*}
 \end{equation*}
 }
@@ -636,7 +635,7 @@ Expected profit = $\boxed{\mathbf{0.315}}$ = (0.35+0.275)/2.
 %%%%Slide
 
 \begin{frame}
-[fragile]\frametitle{Data Scientist 4: Regret Decision Criterion (RDC)}
+[fragile]\frametitle{Approach 4: Regret Decision Criterion (RDC)}
 
 RDC  $\rightarrow$ $\underset{a' \in~{0,1}}{\mathrm{argmax}}~E[P_{a'}| I=a, M]$
 
@@ -650,9 +649,9 @@ RDC  $\rightarrow$ $\underset{a' \in~{0,1}}{\mathrm{argmax}}~E[P_{a'}| I=a, M]$
 P(\pi_{a'}, M) &= P(\pi_{a'}, M, a') +  P(\pi_{a'}, M, a) \\
                       &=  P(\pi_{a'} | M, a') P(M, a') + P(\pi_{a'} | M, a) P(M, a) \\ \\
  P(\pi_{a'} | M)  &= P(\pi_{a'} | M, a') P( a' | M)  + P(\pi_{a'} | M, a) P(a | M) \\
-                        &= P(\pi | M, a') P( a' | M)  + P(\pi_{a'} | M, a) P(a | M) ~\text{(from Consistency)} \\ \\
+                        &= P(\pi | M, a') P( a' | M)  + P(\pi_{a'} | M, a) P(a | M) ~\text{(Consistency)} \\ \\
 P(\pi_{a'} | M, a) &= \frac{1}{P(a|M)} \Bigl[P(\pi_{a'} | M) -  P(\pi | M, a') P( a' | M) \Bigr] \\
-&= \boxed{\frac{1}{P(a|M)} \Bigl[P\Big(\pi | M, do(a')\Big) -  P(\pi | M, a') P( a' | M) \Bigr]}\\
+&= \boxed{\frac{1}{P(a|M)} \Bigl[P\Big(\pi | M, do(a')\Big) -  P(\pi | M, a') P( a' | M) \Bigr]}
 \end{align*}
 \end{equation*}
 }
@@ -662,20 +661,21 @@ P(\pi_{a'} | M, a) &= \frac{1}{P(a|M)} \Bigl[P(\pi_{a'} | M) -  P(\pi | M, a') P
 %%%%Slide
 
 \begin{frame}
-[fragile]\frametitle{Data Scientist 4: Regret Decision Criterion (RDC) - cont'd}
+[fragile]\frametitle{Approach 4: Regret Decision Criterion (RDC) - cont'd}
 
 \begin{columns}[T] % align columns
 \begin{column}{.48\textwidth}
 
 
 \begin{scriptsize}
+
 $\boxed{P(\pi_{I=1} | M=1, I=0)} = $
 \begin{equation*}
-\begin{flalign*}
+\begin{align*}
  \frac{1}{P(I=0|M=1)} \Bigl[P\Big(\pi | M=1, do(I=1)\Big) -  \\
  P(\pi | M=1, I=1) P( I=1 | M=1) \Bigr].  & \\
-  \frac{1}{1/2} (0.350-0.25  \times \frac{1}{1/2})  & = \textbf{0.45}
-\end{flalign*}
+ = \frac{1}{1/2} (0.350-0.25  \times \frac{1}{1/2})  & = \textbf{0.45}
+\end{align*}
 \end{equation*}
 
 $\boxed{P(\pi_{I=1} | M=0, I=0)} = \textbf{0.50} \\ $ 

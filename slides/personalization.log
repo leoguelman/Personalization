@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  4 DEC 2022 10:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  4 DEC 2022 19:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1394,7 +1394,7 @@ File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 
 Package hyperref Warning: Option `pdfauthor' has already been used,
-(hyperref)                setting the option has no effect on input line 161.
+(hyperref)                setting the option has no effect on input line 160.
 
 [1
 
@@ -1720,7 +1720,7 @@ l.18 \end{align*}
 
  (./personalization.vrb
 
-./personalization.vrb:14: Package amsmath Error: Erroneous nesting of equation 
+./personalization.vrb:15: Package amsmath Error: Erroneous nesting of equation 
 structures;
 (amsmath)                trying to recover with `aligned'.
 
@@ -1728,78 +1728,78 @@ See the amsmath package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.14 \end{flalign*}
-                   
+l.15 \end{align*}
+                 
 ? 
 
-Overfull \hbox (11.96925pt too wide) detected at line 15
+Overfull \hbox (11.96925pt too wide) detected at line 16
 [][]
  []
 
 
-./personalization.vrb:17: LaTeX Error: There's no line here to end.
+./personalization.vrb:18: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.17 ...\pi_{I=1} | M=0, I=0)} = \textbf{0.50} \\ 
-                                                  $
-? 
-./personalization.vrb:17: Missing $ inserted.
-<inserted text> 
-                $
-l.17 ...\pi_{I=1} | M=0, I=0)} = \textbf{0.50} \\ 
+l.18 ...\pi_{I=1} | M=0, I=0)} = \textbf{0.50} \\ 
                                                   $
 ? 
 ./personalization.vrb:18: Missing $ inserted.
 <inserted text> 
                 $
-l.18 
-     
-? 
-
-./personalization.vrb:19: LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.19 ...\pi_{I=0} | M=1, I=1)} = \textbf{0.50} \\ 
+l.18 ...\pi_{I=1} | M=0, I=0)} = \textbf{0.50} \\ 
                                                   $
 ? 
 ./personalization.vrb:19: Missing $ inserted.
 <inserted text> 
                 $
-l.19 ...\pi_{I=0} | M=1, I=1)} = \textbf{0.50} \\ 
-                                                  $
-? 
-./personalization.vrb:20: Missing $ inserted.
-<inserted text> 
-                $
-l.20 
+l.19 
      
 ? 
 
-./personalization.vrb:21: LaTeX Error: There's no line here to end.
+./personalization.vrb:20: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.21 ...\pi_{I=0} | M=0, I=1)} = \textbf{0.30} \\ 
+l.20 ...\pi_{I=0} | M=1, I=1)} = \textbf{0.50} \\ 
+                                                  $
+? 
+./personalization.vrb:20: Missing $ inserted.
+<inserted text> 
+                $
+l.20 ...\pi_{I=0} | M=1, I=1)} = \textbf{0.50} \\ 
                                                   $
 ? 
 ./personalization.vrb:21: Missing $ inserted.
 <inserted text> 
                 $
-l.21 ...\pi_{I=0} | M=0, I=1)} = \textbf{0.30} \\ 
+l.21 
+     
+? 
+
+./personalization.vrb:22: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22 ...\pi_{I=0} | M=0, I=1)} = \textbf{0.30} \\ 
                                                   $
 ? 
 ./personalization.vrb:22: Missing $ inserted.
 <inserted text> 
                 $
-l.22 
+l.22 ...\pi_{I=0} | M=0, I=1)} = \textbf{0.30} \\ 
+                                                  $
+? 
+./personalization.vrb:23: Missing $ inserted.
+<inserted text> 
+                $
+l.23 
      
 ? 
 ) [13
@@ -1849,10 +1849,10 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 32449 strings out of 480608
- 690517 string characters out of 5903631
+ 32441 strings out of 480608
+ 690340 string characters out of 5903631
  931535 words of memory out of 5000000
- 47566 multiletter control sequences out of 15000+600000
+ 47558 multiletter control sequences out of 15000+600000
  555343 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  58i,15n,69p,853b,1097s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1882,7 +1882,7 @@ texmf-dist/fonts/type1/public/cm-super/sfss1440.pfb></usr/local/texlive/2020/te
 xmf-dist/fonts/type1/public/cm-super/sfsx0700.pfb></usr/local/texlive/2020/texm
 f-dist/fonts/type1/public/cm-super/sfsx0900.pfb></usr/local/texlive/2020/texmf-
 dist/fonts/type1/public/cm-super/sfsx1000.pfb>
-Output written on personalization.pdf (17 pages, 443602 bytes).
+Output written on personalization.pdf (17 pages, 443501 bytes).
 PDF statistics:
  581 PDF objects out of 1000 (max. 8388607)
  521 compressed objects within 6 object streams
