@@ -1,7 +1,36 @@
-\frametitle{Notes}
+\frametitle{Summary of Methods}
+\setlength{\leftmargini}{0pt}
+\begin{table}[H]
+   \label{tab:example}
+   \scriptsize
+   \centering
+   \begin{tabular}{p{2cm} p{4cm} p{2cm} }
+   \toprule\toprule
+   \textbf{Criterion} & \textbf{Decision Rule} & $E[\pi] $ \\
+   \midrule
+EDC &
 
-For each Data Science articulate what is the question being asked!!!!!
+\begin{itemize}
+\item If Visit Site $\land$ Married $\rightarrow$ \textbf{Purchase Incentive}
+\item If Visit Site $\land$ Not Married $\rightarrow$ \textbf{No Purchase Incentive}
+\end{itemize}
 
-The conclusion should be that although DS 4 achieves highest reward, wether that is the right solution, depends on the question being asked.
 
 
+&  .1500 &\\ \hline
+PVR & \textbf{Never Purchase Incentive} & .4000 \\ \\ \hline
+RCT & \textbf{Always Purchase Incentive} &  .3150  \\ \\ \hline
+RDC &
+
+\begin{itemize}
+\item If Visit Site $\land$ Married $\rightarrow$ \textbf{No Purchase Incentive}
+\item If Visit Site $\land$ Not Married $\rightarrow$ \textbf{No Purchase Incentive}
+\item If Not Visit Site $\land$ Married $\rightarrow$ \textbf{Purchase Incentive}
+\item If Not Visit Site $\land$ Not Married $\rightarrow$ \textbf{Purchase Incentive}
+\end{itemize}
+
+& \textbf{.4375}  \\ \hline
+Oracle & & \textbf{.4375} \\ \\  \hline
+   \bottomrule
+   \end{tabular}
+\end{table}

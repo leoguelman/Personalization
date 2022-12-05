@@ -257,7 +257,7 @@
     \node[red]  (r) at (2,0) {Retired ($R$)};
     \node (v) at (-1,-1.5) {Visit Public site ($V$)};
     \node (o) at (-1,-3) {Purchase Incentive ($I$)};
-    \node (p) at (2,-3) {Profit ($P$)};
+    \node (p) at (2,-3) {Profit ($\pi$)};
 
     \path (m) edge (v);
     \path[dashed, red] (r) edge (v);
@@ -305,7 +305,7 @@ $I=0$ &  0.50 & \cellcolor{blue!25}{0.10} & \cellcolor{blue!25}{0.05} & 0.30 \\
 \bottomrule
 \end{tabular}
 \vskip5pt
-\caption{$E[P|M, R, I]$. Highlighted cells reflect (new-to-RBC) client's 'natural' choice to visit the Public site or not.}
+\caption{$E[\pi|M, R, I]$. Highlighted cells reflect (new-to-RBC) client's 'natural' choice to visit the Public site or not.}
 \end{table}
 }
 
@@ -323,7 +323,7 @@ $I=0$ &  0.50 & \cellcolor{blue!25}{0.10} & \cellcolor{blue!25}{0.05} & 0.30 \\
 \begin{column}{.48\textwidth}
 
 \begin{center}
-EDC  $\rightarrow$ $\underset{I \in {0,1}}{\mathrm{argmax}}~E[P|I, M]$
+EDC  $\rightarrow$ $\underset{I \in {0,1}}{\mathrm{argmax}}~E[\pi|I, M]$
 \end{center}
 
 \vskip10pt
@@ -331,10 +331,10 @@ EDC  $\rightarrow$ $\underset{I \in {0,1}}{\mathrm{argmax}}~E[P|I, M]$
 
 \begin{equation*}
 \begin{align*}
-E[P | I=1, M=1] =& 0.25\\
-E[P | I=0, M=1] =& 0.05\\
-E[P | I=1, M=0] =& 0.05\\
-E[P | I=0, M=0] =& 0.10 \\
+E[\pi | I=1, M=1] =& 0.25\\
+E[\pi | I=0, M=1] =& 0.05\\
+E[\pi | I=1, M=0] =& 0.05\\
+E[\pi | I=0, M=0] =& 0.10 \\
 \end{align*}
 \end{equation*}
 
@@ -361,7 +361,7 @@ $I=0$ &  0.50 & \cellcolor{blue!25}{0.10} & \cellcolor{blue!25}{0.05} & 0.30 \\
 \bottomrule
 \end{tabular}
 \vskip5pt
-\caption{$E[P|M, R, I]$.}
+\caption{$E[\pi|M, R, I]$.}
 \end{table}
 }
 
@@ -378,8 +378,8 @@ $I=0$ &  0.50 & \cellcolor{blue!25}{0.10} & \cellcolor{blue!25}{0.05} & 0.30 \\
 
 \small{
 \begin{itemize}
-\item If Visit Site $\land$ Married $\rightarrow$ Purchase Incentive $\rightarrow~E[P] = \textbf{0.25}  $
-\item If Visit Site $\land$ Not Married $\rightarrow$ No Purchase Incentive  $\rightarrow~E[P] = \textbf{0.05} $
+\item If Visit Site $\land$ Married $\rightarrow$ Purchase Incentive $\rightarrow~E[\pi] = \textbf{0.25}  $
+\item If Visit Site $\land$ Not Married $\rightarrow$ No Purchase Incentive  $\rightarrow~E[\pi] = \textbf{0.05} $
 \end{itemize}
 }
 
@@ -406,7 +406,7 @@ Expected profit = $\boxed{\mathbf{0.15}}$ = (0.25+0.05)/2.
     \node[red]  (r) at (2,0) {Retired ($R$)};
     \node (v) at (-1,-1.5) {Visit Public site ($V$)};
     \node (o) at (-1,-3) {Purchase Incentive ($I$)};
-    \node (p) at (2,-3) {Profit ($P$)};
+    \node (p) at (2,-3) {Profit ($\pi$)};
     \node[blue] (c)  at (-4,-1.5) {Coin Flip ($C$)};
 
     \path (m) edge (v);
@@ -456,7 +456,7 @@ I :=&  V \textcolor{blue}{\land C}
 \begin{column}{.48\textwidth}
 
 \begin{center}
-PVR $\rightarrow$ $\underset{I \in {0,1}}{\mathrm{argmax}}~E[P| do(I), M, V=1]$
+PVR $\rightarrow$ $\underset{I \in {0,1}}{\mathrm{argmax}}~E[\pi| do(I), M, V=1]$
 \end{center}
 
 \vskip10pt
@@ -464,10 +464,10 @@ PVR $\rightarrow$ $\underset{I \in {0,1}}{\mathrm{argmax}}~E[P| do(I), M, V=1]$
 
 \begin{equation*}
 \begin{align*}
-E[P | do(I=1), M=1, V=1] =& 0.25\\
-E[P | do(I=0), M=1, V=1] =& 0.50\\
-E[P | do(I=1), M=0, V=1] =& 0.05\\
-E[P | do(I=0), M=0, V=1] =& 0.30
+E[\pi | do(I=1), M=1, V=1] =& 0.25\\
+E[\pi | do(I=0), M=1, V=1] =& 0.50\\
+E[\pi | do(I=1), M=0, V=1] =& 0.05\\
+E[\pi | do(I=0), M=0, V=1] =& 0.30
 \end{align*}
 \end{equation*}
 
@@ -494,7 +494,7 @@ $I=0$ &  0.50 & \cellcolor{blue!25}{0.10} & \cellcolor{blue!25}{0.05} & 0.30 \\
 \bottomrule
 \end{tabular}
 \vskip5pt
-\caption{$E[P|M, R, I]$.}
+\caption{$E[\pi|M, R, I]$.}
 \end{table}
 }
 
@@ -512,8 +512,8 @@ $I=0$ &  0.50 & \cellcolor{blue!25}{0.10} & \cellcolor{blue!25}{0.05} & 0.30 \\
 
 \small{
 \begin{itemize}
-\item If Visit Site $\land$ Married $\rightarrow$ No Purchase Incentive $\rightarrow~E[P] = \textbf{0.50} $
-\item If Visit Site $\land$ Not Married $\rightarrow$ No Purchase Incentive  $\rightarrow~E[P] = \textbf{0.30} $
+\item If Visit Site $\land$ Married $\rightarrow$ No Purchase Incentive $\rightarrow~E[\pi] = \textbf{0.50} $
+\item If Visit Site $\land$ Not Married $\rightarrow$ No Purchase Incentive  $\rightarrow~E[\pi] = \textbf{0.30} $
 \end{itemize}
 }
 
@@ -540,7 +540,7 @@ Expected profit = $\boxed{\mathbf{0.40}}$ = (0.50+0.30)/2.
     \node[red]  (r) at (2,0) {Retired ($R$)};
     \node (v) at (-1,-1.5) {Visit Public site ($V$)};
     \node (o) at (-1,-3) {Purchase Incentive ($I$)};
-    \node (p) at (2,-3) {Profit ($P$)};
+    \node (p) at (2,-3) {Profit ($\pi$)};
     \node[blue] (c)  at (-4,-1.5) {Coin Flip ($C$)};
 
     \path (m) edge (v);
@@ -592,7 +592,7 @@ I :=&  \textcolor{blue}{C}
 \begin{column}{.48\textwidth}
 
 \begin{center}
-RCT  $\rightarrow$ $\underset{I \in {0,1}}{\mathrm{argmax}}~E[P|do(I), M]$
+RCT  $\rightarrow$ $\underset{I \in {0,1}}{\mathrm{argmax}}~E[\pi|do(I), M]$
 \end{center}
 
 \vskip10pt
@@ -600,10 +600,10 @@ RCT  $\rightarrow$ $\underset{I \in {0,1}}{\mathrm{argmax}}~E[P|do(I), M]$
 \scriptsize{
 \begin{equation*}
 \begin{align*}
-E[P | do(I=1), M=1] &= 0.350 =(0.25+0.45)/2 \\
-E[P | do(I=0), M=1] &= 0.275 =(0.50 + 0.05)/2 \\
-E[P | do(I=1), M=0] &= 0.275 =(0.50 + 0.05)/2 \\
-E[P | do(I=0), M=0] &= 0.200 = (0.10 +0.30)/2 
+E[\pi | do(I=1), M=1] &= 0.350 =(0.25+0.45)/2 \\
+E[\pi | do(I=0), M=1] &= 0.275 =(0.50 + 0.05)/2 \\
+E[\pi | do(I=1), M=0] &= 0.275 =(0.50 + 0.05)/2 \\
+E[\pi | do(I=0), M=0] &= 0.200 = (0.10 +0.30)/2 
 \end{align*}
 \end{equation*}
 }
@@ -631,7 +631,7 @@ $I=0$ &  0.50 & \cellcolor{blue!25}{0.10} & \cellcolor{blue!25}{0.05} & 0.30 \\
 \bottomrule
 \end{tabular}
 \vskip5pt
-\caption{$E[P|M, R, I]$.}
+\caption{$E[\pi|M, R, I]$.}
 \end{table}
 }
 
@@ -648,8 +648,8 @@ $I=0$ &  0.50 & \cellcolor{blue!25}{0.10} & \cellcolor{blue!25}{0.05} & 0.30 \\
 
 \small{
 \begin{itemize}
-\item If  Married $\rightarrow$ Purchase Incentive $\rightarrow~E[P] = \textbf{0.35}  $
-\item If  Not Married $\rightarrow$ Purchase Incentive  $\rightarrow~E[P] = \textbf{0.275} $
+\item If  Married $\rightarrow$ Purchase Incentive $\rightarrow~E[\pi] = \textbf{0.35}  $
+\item If  Not Married $\rightarrow$ Purchase Incentive  $\rightarrow~E[\pi] = \textbf{0.275} $
 \end{itemize}
 }
 
@@ -664,7 +664,7 @@ Expected profit = $\boxed{\mathbf{0.315}}$ = (0.35+0.275)/2.
 \begin{frame}
 [fragile]\frametitle{Approach 4: Regret Decision Criterion (RDC)}
 
-RDC  $\rightarrow$ $\underset{a' \in~{0,1}}{\mathrm{argmax}}~E[P_{a'}| I=a, M]$
+RDC  $\rightarrow$ $\underset{a' \in~{0,1}}{\mathrm{argmax}}~E[\pi_{a'}| I=a, M]$
 
 \vskip10pt
 
@@ -736,7 +736,7 @@ $I=0$ &  0.50 & \cellcolor{blue!25}{0.10} & \cellcolor{blue!25}{0.05} & 0.30 \\
 \bottomrule
 \end{tabular}
 \vskip5pt
-\caption{$E[P|M, R, I]$.}
+\caption{$E[\pi|M, R, I]$.}
 \end{table}
 }
 
@@ -750,17 +750,17 @@ $I=0$ &  0.50 & \cellcolor{blue!25}{0.10} & \cellcolor{blue!25}{0.05} & 0.30 \\
 
 \small{
 \begin{itemize}
-\item If Visit Site $\land$ Married $\rightarrow$ No Purchase Incentive $\rightarrow~E[P] = \textbf{0.50} $
-\item If Visit Site $\land$ Not Married $\rightarrow$ No Purchase Incentive  $\rightarrow~E[P] = \textbf{0.30} $
-\item If Not Visit Site $\land$ Married $\rightarrow$ Purchase Incentive $\rightarrow~E[P] = \textbf{0.45} $
-\item If Not Visit Site $\land$ Not Married $\rightarrow$ Purchase Incentive  $\rightarrow~E[P] = \textbf{0.50} $
+\item If Visit Site $\land$ Married $\rightarrow$ No Purchase Incentive $\rightarrow~E[\pi] = \textbf{0.50} $
+\item If Visit Site $\land$ Not Married $\rightarrow$ No Purchase Incentive  $\rightarrow~E[\pi] = \textbf{0.30} $
+\item If Not Visit Site $\land$ Married $\rightarrow$ Purchase Incentive $\rightarrow~E[\pi] = \textbf{0.45} $
+\item If Not Visit Site $\land$ Not Married $\rightarrow$ Purchase Incentive  $\rightarrow~E[\pi] = \textbf{0.50} $
 \end{itemize}
 }
 
 
 \vskip5pt
 
-Expected profit = $\boxed{\mathbf{0.4375}}$ = (0.50 + 0.30+ .45+0.50)/4.
+Expected profit = $\boxed{\mathbf{0.4375}}$ = (0.50 + 0.30+ 0.45+0.50)/4.
 }
 
 \end{frame}
@@ -768,63 +768,42 @@ Expected profit = $\boxed{\mathbf{0.4375}}$ = (0.50 + 0.30+ .45+0.50)/4.
 %%%%Slide
 
 \begin{frame}
-[fragile]\frametitle{Summary}
+[fragile]\frametitle{Summary of Methods}
+\setlength{\leftmargini}{0pt}
+\begin{table}[H]
+   \label{tab:example}
+   \scriptsize
+   \centering
+   \begin{tabular}{p{2cm} p{4cm} p{2cm} }
+   \toprule\toprule
+   \textbf{Criterion} & \textbf{Decision Rule} & $E[\pi] $ \\  
+   \midrule
+EDC & 
 
 \begin{itemize}
-\item Summarize results so far from the various criteria and emphasize no result is right or wrong, they answer different questions, but some questions are more preferable than others in specific context. 
-
-\item Compare to oracle
-
-
-\item Profit =0.4375
-
+\item If Visit Site $\land$ Married $\rightarrow$ \textbf{Purchase Incentive} 
+\item If Visit Site $\land$ Not Married $\rightarrow$ \textbf{No Purchase Incentive}
 \end{itemize}
 
-
-\end{frame}
-
-%%%%Slide
-
-\begin{frame}
-[fragile]\frametitle{Extensions}
-
-\begin{itemize}
-
-\item Multiple Actions
-
-\item Online policy optimization (e.g., MABUC)
-
-\end{itemize}
-
-\end{frame}
-
-%%%%Slide
-
-\begin{frame}
-[fragile]\frametitle{The Personalization Paradigm}
-
-\begin{itemize}
-
-\item Illustration that shows that what is good for person 1 might be neutral or even harmful for person 2. 
-
-\item Motivating illustration in healthcare, marketing, client-level decision making. 
-
-\end{itemize}
   
-\end{frame}
+    
+&  .1500 &\\ \hline
+PVR & \textbf{Never Purchase Incentive} & .4000 \\ \\ \hline
+RCT & \textbf{Always Purchase Incentive} &  .3150  \\ \\ \hline
+RDC & 
 
+\begin{itemize}
+\item If Visit Site $\land$ Married $\rightarrow$ \textbf{No Purchase Incentive} 
+\item If Visit Site $\land$ Not Married $\rightarrow$ \textbf{No Purchase Incentive} 
+\item If Not Visit Site $\land$ Married $\rightarrow$ \textbf{Purchase Incentive} 
+\item If Not Visit Site $\land$ Not Married $\rightarrow$ \textbf{Purchase Incentive} 
+\end{itemize}
 
-
-%%%%Slide
-
-\begin{frame}
-[fragile]\frametitle{Notes}
-
-For each Data Science articulate what is the question being asked!!!!!
-
-The conclusion should be that although DS 4 achieves highest reward, wether that is the right solution, depends on the question being asked. 
-
-
+& \textbf{.4375}  \\ \hline
+Oracle & & \textbf{.4375} \\ \\  \hline
+   \bottomrule
+   \end{tabular}
+\end{table}
 \end{frame}
 
 \end{document}
