@@ -1,36 +1,19 @@
-\frametitle{Summary of Methods}
-\setlength{\leftmargini}{0pt}
-\begin{table}[H]
-   \label{tab:example}
-   \scriptsize
-   \centering
-   \begin{tabular}{p{2cm} p{4cm} p{2cm} }
-   \toprule\toprule
-   \textbf{Criterion} & \textbf{Decision Rule} & $E[\pi] $ \\
-   \midrule
-EDC &
+\frametitle{References}
 
 \begin{itemize}
-\item If Visit Site $\land$ Married $\rightarrow$ \textbf{Purchase Incentive}
-\item If Visit Site $\land$ Not Married $\rightarrow$ \textbf{No Purchase Incentive}
-\end{itemize}
 
-
-
-&  .1500 &\\ \hline
-PVR & \textbf{Never Purchase Incentive} & .4000 \\ \\ \hline
-RCT & \textbf{Always Purchase Incentive} &  .3150  \\ \\ \hline
-RDC &
+\item  Elias Bareinboim, Andrew Forney, and Judea Pearl. 2015. Bandits with unobserved confounders: a causal approach. In Proceedings of the 28th International Conference on Neural Information Processing Systems - Volume 1 (NIPS'15).
 
 \begin{itemize}
-\item If Visit Site $\land$ Married $\rightarrow$ \textbf{No Purchase Incentive}
-\item If Visit Site $\land$ Not Married $\rightarrow$ \textbf{No Purchase Incentive}
-\item If Not Visit Site $\land$ Married $\rightarrow$ \textbf{Purchase Incentive}
-\item If Not Visit Site $\land$ Not Married $\rightarrow$ \textbf{Purchase Incentive}
+
+\item Implementation: \url{https://github.com/leoguelman/mabuc}
+
 \end{itemize}
 
-& \textbf{.4375}  \\ \hline
-Oracle & & \textbf{.4375} \\ \\  \hline
-   \bottomrule
-   \end{tabular}
-\end{table}
+\item Forney, A., Pearl, J. ; Bareinboim, E.. (2017). Counterfactual Data-Fusion for Online Reinforcement Learners. Proceedings of the 34th International Conference on Machine Learning, in Proceedings of Machine Learning Research 70:1156-1164
+
+
+
+
+\end{itemize}
+

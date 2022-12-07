@@ -168,17 +168,54 @@
 
 %%%%Slide
 
+\begin{frame}
+[fragile]\frametitle{}
+
+% This is Ronald Fisher, he was a statistician and probably one of the most relevant figures in 20th century statistics 
+% He's been probably most famous for his contribution to experimental design (a.k.a. A/B testing).
+% He was the first to propose randomization in experiments as mechanism to eliminate confounding bias, and be able to disentangle causal relationships
+% To this day A/B testing (or RCTs in clinical trials) is considered the Gold Standard to learn causal relationships in Clinical Trials and Marketing.
+
+\begin{figure}[t]
+\includegraphics[width=3cm]{figures/fisher.jpg}
+\caption{Ronald Fisher (1890-1962)}
+\centering
+\end{figure}
+
+\end{frame}
+
+
 %%%%Slide
 
 \begin{frame}
-[fragile]\frametitle{Overview}
+[fragile]\frametitle{}
+
+% If there is a singe takeaway message from what I want to talk about is that, in contrast to the idea that A/B testing should be used as the gold standard to learn causal effects, when the goal is not just to learn average treatment effects (i.e., whether a action is effective on average) but to learn personalized optimal actions, then A/B test may or may not be the best we can do.
+
+% when the goal is to 
+
+\begin{center}
+\Large
+A/B Testing is likely NOT 'gold standard' for Personalized Decision-Making.
+\end{center}
+
+\end{frame}
 
 
+
+
+
+%%%%Slide
+
+\begin{frame}
+[fragile]\frametitle{Personalization with Unobserved Confounders}
+
+\small{
 
 \begin{itemize}
 
-\item The idea of Personalization is founded on the premise that individuals have heterogenous response to actions.
-% The action that maximizes reward for one client, might not be the best action for another client. 
+\item The value of Personalization is founded on the premise that individuals have heterogenous response to actions.
+% the optimal action for person A and person B might be different. 
 
 \pause
 
@@ -188,6 +225,7 @@
 
 \item However, latent confounders (i.e., unobserved variables affecting both the actions and the outcome variables) pose a unique challenge to personalization. 
 % These latent confounders are pretty much the norm, not the exception.
+% For latent confounders to be a problem, there must be an interaction effect between them and the treatment (so there is some heterogeneity that is due to the unobserved confounders) 
 
 \pause
 
@@ -212,7 +250,7 @@
 %\end{itemize}
 
 \end{itemize}
-
+}
 
 \end{frame}
 
@@ -529,7 +567,7 @@ Expected profit = $\boxed{\mathbf{0.40}}$ = (0.50+0.30)/2.
 
 
 \begin{frame}
-[fragile]\frametitle{Approach 3: RCT on All New-to-RBC Clients}
+[fragile]\frametitle{Approach 3: A/B Test on All New-to-RBC Clients}
 
 \begin{columns}[T] % align columns
 \begin{column}{.48\textwidth}
@@ -555,7 +593,7 @@ Expected profit = $\boxed{\mathbf{0.40}}$ = (0.50+0.30)/2.
 \vskip 5pt
 
 
-\caption{Causal DAG with RCT on All New-to-Bank Clients.}
+\caption{Causal DAG with A/B Test on All New-to-Bank Clients.}
 
 \end{figure}
 
@@ -586,13 +624,13 @@ I :=&  \textcolor{blue}{C}
 
 
 \begin{frame}
-[fragile]\frametitle{Approach 3: RCT on All New-to-RBC Clients - cont'd}
+[fragile]\frametitle{Approach 3: A/B Test on All New-to-RBC Clients - cont'd}
 
 \begin{columns}[T] % align columns
 \begin{column}{.48\textwidth}
 
 \begin{center}
-RCT  $\rightarrow$ $\underset{I \in {0,1}}{\mathrm{argmax}}~E[\pi|do(I), M]$
+ABT  $\rightarrow$ $\underset{I \in {0,1}}{\mathrm{argmax}}~E[\pi|do(I), M]$
 \end{center}
 
 \vskip10pt
@@ -789,7 +827,7 @@ EDC &
     
 &  .1500 &\\ \hline
 PVR & \textbf{Never Purchase Incentive} & .4000 \\ \\ \hline
-RCT & \textbf{Always Purchase Incentive} &  .3150  \\ \\ \hline
+ABT & \textbf{Always Purchase Incentive} &  .3150  \\ \\ \hline
 RDC & 
 
 \begin{itemize}
@@ -804,6 +842,49 @@ Oracle & & \textbf{.4375} \\ \\  \hline
    \bottomrule
    \end{tabular}
 \end{table}
+\end{frame}
+
+
+%%%%Slide
+
+\begin{frame}
+[fragile]\frametitle{Key Takeaways}
+
+\begin{itemize}
+
+\item A/B testing is not always the `Gold Standard' for learning causal effects 
+
+\item If (i) the goal is to learn optimal personalized actions, and (ii) we have unobserved confounders (very likely!), and (iii) these confounders interact with the action: then Counterfactual-based decision-making may outperform Causal-decision making. 
+
+\item The expression derived from RDC works only in the binary treatment case. RDC-type randomization \href{https://proceedings.mlr.press/v70/forney17a.html}{(Forney et al., 2017) }
+was proposed to estimate the counterfactual expressions empirically from an arbitrary number of treatments. 
+
+\end{itemize}
+
+\end{frame}
+
+%%%%Slide
+
+\begin{frame}
+[fragile]\frametitle{References}
+
+\begin{itemize}
+
+\item  Elias Bareinboim, Andrew Forney, and Judea Pearl. 2015. Bandits with unobserved confounders: a causal approach. In Proceedings of the 28th International Conference on Neural Information Processing Systems - Volume 1 (NIPS'15). 
+
+\begin{itemize}
+
+\item Implementation: \url{https://github.com/leoguelman/mabuc}
+
+\end{itemize}
+
+\item Forney, A., Pearl, J. ; Bareinboim, E.. (2017). Counterfactual Data-Fusion for Online Reinforcement Learners. Proceedings of the 34th International Conference on Machine Learning, in Proceedings of Machine Learning Research 70:1156-1164 
+
+
+
+
+\end{itemize}
+
 \end{frame}
 
 \end{document}
