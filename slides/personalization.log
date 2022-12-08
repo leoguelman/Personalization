@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  7 DEC 2022 08:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  8 DEC 2022 09:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1434,11 +1434,11 @@ Package pdftex.def Info: figures/fisher.jpg  used on input line 9.
 \openout4 = `personalization.vrb'.
 
  (./personalization.vrb
-<figures/campaign.png, id=236, 832.10875pt x 163.61125pt>
+<figures/campaign.png, id=236, 869.2475pt x 206.7725pt>
 File: figures/campaign.png Graphic file (type png)
 <use figures/campaign.png>
 Package pdftex.def Info: figures/campaign.png  used on input line 12.
-(pdftex.def)             Requested size: 259.36115pt x 50.99606pt.
+(pdftex.def)             Requested size: 259.36115pt x 61.69463pt.
 ) [9
 
  <./figures/campaign.png>]
@@ -1792,7 +1792,7 @@ l.18 \end{align*}
 
  (./personalization.vrb
 
-./personalization.vrb:15: Package amsmath Error: Erroneous nesting of equation 
+./personalization.vrb:16: Package amsmath Error: Erroneous nesting of equation 
 structures;
 (amsmath)                trying to recover with `aligned'.
 
@@ -1800,81 +1800,85 @@ See the amsmath package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.15 \end{align*}
+l.16 \end{align*}
                  
 ? 
 
-Overfull \hbox (11.96925pt too wide) detected at line 16
+Overfull \hbox (11.96925pt too wide) detected at line 17
 [][]
  []
 
 
-./personalization.vrb:18: LaTeX Error: There's no line here to end.
+./personalization.vrb:19: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.18 ...\pi_{I=1} | M=0, I=0)} = \textbf{0.50} \\ 
-                                                  $
-? 
-./personalization.vrb:18: Missing $ inserted.
-<inserted text> 
-                $
-l.18 ...\pi_{I=1} | M=0, I=0)} = \textbf{0.50} \\ 
+l.19 ...\pi_{I=1} | M=0, I=0)} = \textbf{0.50} \\ 
                                                   $
 ? 
 ./personalization.vrb:19: Missing $ inserted.
 <inserted text> 
                 $
-l.19 
-     
-? 
-
-./personalization.vrb:20: LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.20 ...\pi_{I=0} | M=1, I=1)} = \textbf{0.50} \\ 
+l.19 ...\pi_{I=1} | M=0, I=0)} = \textbf{0.50} \\ 
                                                   $
 ? 
 ./personalization.vrb:20: Missing $ inserted.
 <inserted text> 
                 $
-l.20 ...\pi_{I=0} | M=1, I=1)} = \textbf{0.50} \\ 
-                                                  $
-? 
-./personalization.vrb:21: Missing $ inserted.
-<inserted text> 
-                $
-l.21 
+l.20 
      
 ? 
 
-./personalization.vrb:22: LaTeX Error: There's no line here to end.
+./personalization.vrb:21: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.22 ...\pi_{I=0} | M=0, I=1)} = \textbf{0.30} \\ 
+l.21 ...\pi_{I=0} | M=1, I=1)} = \textbf{0.50} \\ 
+                                                  $
+? 
+./personalization.vrb:21: Missing $ inserted.
+<inserted text> 
+                $
+l.21 ...\pi_{I=0} | M=1, I=1)} = \textbf{0.50} \\ 
                                                   $
 ? 
 ./personalization.vrb:22: Missing $ inserted.
 <inserted text> 
                 $
-l.22 ...\pi_{I=0} | M=0, I=1)} = \textbf{0.30} \\ 
+l.22 
+     
+? 
+
+./personalization.vrb:23: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.23 ...\pi_{I=0} | M=0, I=1)} = \textbf{0.30} \\ 
                                                   $
 ? 
 ./personalization.vrb:23: Missing $ inserted.
 <inserted text> 
                 $
-l.23 
+l.23 ...\pi_{I=0} | M=0, I=1)} = \textbf{0.30} \\ 
+                                                  $
+? 
+./personalization.vrb:24: Missing $ inserted.
+<inserted text> 
+                $
+l.24 
      
 ? 
-) [22
+)
+Overfull \vbox (18.60013pt too high) detected at line 807
+ []
+
+[22
 
 ]
 \openout4 = `personalization.vrb'.
@@ -1891,12 +1895,22 @@ l.20 &  .1500 &
 ]
 \openout4 = `personalization.vrb'.
 
- (./personalization.vrb) [24
+ (./personalization.vrb
+./personalization.vrb:10: Extra }, or forgotten \endgroup.
+l.10 }
+      
+? 
+) [24
 
 ]
 \openout4 = `personalization.vrb'.
 
  (./personalization.vrb) [25
+
+]
+\openout4 = `personalization.vrb'.
+
+ (./personalization.vrb) [26
 
 ]
 \tf@nav=\write6
@@ -1908,12 +1922,12 @@ l.20 &  .1500 &
 \tf@snm=\write8
 \openout8 = `personalization.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 890.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 890.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 935.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 935.
 
 (./personalization.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 890.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 890.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 935.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 935.
 Package rerunfilecheck Info: File `personalization.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
@@ -1922,10 +1936,10 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 32484 strings out of 480608
- 690975 string characters out of 5903631
+ 32490 strings out of 480608
+ 691050 string characters out of 5903631
  931560 words of memory out of 5000000
- 47566 multiletter control sequences out of 15000+600000
+ 47568 multiletter control sequences out of 15000+600000
  555343 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  58i,15n,69p,853b,1097s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1956,10 +1970,10 @@ xmf-dist/fonts/type1/public/cm-super/sfsx0700.pfb></usr/local/texlive/2020/texm
 f-dist/fonts/type1/public/cm-super/sfsx0900.pfb></usr/local/texlive/2020/texmf-
 dist/fonts/type1/public/cm-super/sfsx1000.pfb></usr/local/texlive/2020/texmf-di
 st/fonts/type1/public/cm-super/sftt0900.pfb>
-Output written on personalization.pdf (25 pages, 512088 bytes).
+Output written on personalization.pdf (26 pages, 517802 bytes).
 PDF statistics:
- 806 PDF objects out of 1000 (max. 8388607)
- 734 compressed objects within 8 object streams
- 52 named destinations out of 1000 (max. 500000)
+ 832 PDF objects out of 1000 (max. 8388607)
+ 759 compressed objects within 8 object streams
+ 54 named destinations out of 1000 (max. 500000)
  59 words of extra memory for PDF output out of 10000 (max. 10000000)
 

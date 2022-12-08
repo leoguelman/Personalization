@@ -1,19 +1,37 @@
-\frametitle{References}
+\frametitle{Other points}
+
+
 
 \begin{itemize}
 
-\item  Elias Bareinboim, Andrew Forney, and Judea Pearl. 2015. Bandits with unobserved confounders: a causal approach. In Proceedings of the 28th International Conference on Neural Information Processing Systems - Volume 1 (NIPS'15).
+\scriptsize{
+
+\item Review Pearl P. 94+. What is the difference between individual level counterfactuals and ETT with conditioning on intent (and observed features)?
+
+\scriptsize{
 
 \begin{itemize}
 
-\item Implementation: \url{https://github.com/leoguelman/mabuc}
+\item ETT still represents an average effect conditional on $X$ and intent, it is NOT represent the effect for a specific individual. The latter requires a parametric model (and of course the causal graph). If for example, we have latent counfounders which interact with treatment, and the functional form of that interaction is specific to a given individual, then the Personalization approach I'm describing in this deck cannot recover the individual treatment effect. Again, I can only speak about the average treatment effect on the treated conditional on covariates and intent (see also paper "on the distinction between CATE and ITE".
+
+\item For ETT, I either (i) need the causal graph, so I can use the backdoor criterion for adjustment, or (ii) in the binary treatment case, if I have access to both observational and experimental data, I can get away without the graph.
 
 \end{itemize}
 
-\item Forney, A., Pearl, J. ; Bareinboim, E.. (2017). Counterfactual Data-Fusion for Online Reinforcement Learners. Proceedings of the 34th International Conference on Machine Learning, in Proceedings of Machine Learning Research 70:1156-1164
+}
 
+\item What happens with more than 1 latent confounder? I believe I have this in my notes somewhere
 
+\begin{itemize}
+
+\item For example, if I have two unobserved confounders as in the MABUC paper, in that case RDC still gives me the oracle payout just because of the configuration of the payout table. In my notes (see Notes for white paper - Page A - around page 29, I have an example of a configuration of payout where I cannot get the oracle by conditioning on intent.
+
+\end{itemize}
+
+}
 
 
 \end{itemize}
+
+
 
