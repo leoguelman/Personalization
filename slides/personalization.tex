@@ -156,7 +156,7 @@
 \begin{document}
 
 
-\title[Personalization with Latent Confounders]{Personalization with Latent Confounders}
+\title[Personalization with Latent Confounders]{Personalized Marketing with Latent Confounders}
 \author[Leo Guelman]{Leo Guelman}
 \institute[RBC Royal Bank]{RBC Royal Bank}
 \date[December 2022]
@@ -169,93 +169,133 @@
 %%%%Slide
 
 \begin{frame}
-[fragile]\frametitle{}
+[fragile]\frametitle{Inspiration for Personalized Marketing}
 
 % This is Ronald Fisher, he was a statistician and probably one of the most relevant figures in 20th century statistics 
 % He's been probably most famous for his contribution to experimental design (a.k.a. A/B testing).
 % He was the first to propose randomization in experiments as mechanism to eliminate confounding bias, and be able to disentangle causal relationships
 % To this day A/B testing (or RCTs in clinical trials) is considered the Gold Standard to learn causal relationships in Clinical Trials and Marketing.
 
-\begin{figure}[t]
-\includegraphics[width=3cm]{figures/fisher.jpg}
-\caption{Ronald Fisher (1890-1962)}
-\centering
-\end{figure}
-
-\end{frame}
-
-
-%%%%Slide
-
-\begin{frame}
-[fragile]\frametitle{}
-
-% If there is a singe takeaway message from what I want to talk about is that, in contrast to the idea that A/B testing should be used as the gold standard to learn causal effects, when the goal is not just to learn average treatment effects (i.e., whether a action is effective on average) but to learn personalized optimal actions, then A/B test may or may not be the best we can do.
-
-% when the goal is to 
-
-\begin{center}
-
-\textcolor{red}{I don;t like this}
-\Large
-A/B Testing is likely NOT 'gold standard' for Personalized Decision-Making.
-\end{center}
-
-\end{frame}
+%\begin{figure}[t]
+%\includegraphics[width=3cm]{figures/fisher.jpg}
+%\caption{Ronald Fisher (1890-1962)}
+%\centering
+%\end{figure}
 
 
 
+\begin{columns}[T] % align columns
+\begin{column}{.48\textwidth}
 
-
-%%%%Slide
-
-\begin{frame}
-[fragile]\frametitle{Personalization with Unobserved Confounders}
+\vskip25pt
 
 \small{
 
 \begin{itemize}
 
-\item The value of Personalization is founded on the premise that individuals have heterogenous response to actions.
+\item Personalization is founded on the premise that individuals have heterogenous response to actions.
 % the optimal action for person A and person B might be different. 
 
-\pause
+\vskip7pt
 
 \item Personalization algorithms aim to improve decision-making by identifying and exploiting this heterogeneity.
-
-\pause
-
-\item However, latent confounders (i.e., unobserved variables affecting both the actions and the outcome variables) pose a unique challenge to personalization. 
-% These latent confounders are pretty much the norm, not the exception.
-% For latent confounders to be a problem, there must be an interaction effect between them and the treatment (so there is some heterogeneity that is due to the unobserved confounders) 
-
-\pause
-
-\item In contrast to the general notion that Randomized Controlled Experiments (a.k.a. A/B Tests) are `gold standard', in this setting they might actually result in loss of information. 
-
-\pause
-
-\item Counterfactual-based decision-making can address these problems and lead to a coherent fusion of observational and experimental data.
-
-%\item The practice of Data Science often places significant focus on adopting sound technical methods.
-
-%\item However, much less effort is often placed on business problem identification.
-
-%\item Using Personalized Marketing problem as a motivating example:
-
-%\begin{itemize}
-
-%\item Show (fiction) story on how 4 different Data Scientists might approach this problem and get different conclusions from data.
-
-%\item Show that the different conclusions emerge as a result of slightly different interpretation of the business question being asked.
-
-%\end{itemize}
 
 \end{itemize}
 }
 
+
+\end{column}%
+\hfill%
+
+
+\begin{column}{.48\textwidth}
+
+
+\begin{figure}[t]
+\includegraphics[width=5cm]{figures/personalizedmed.jpg}
+\centering
+\end{figure}
+
+
+\end{column}%
+\end{columns}
+
+
 \end{frame}
 
+%%%%Slide
+
+\begin{frame}
+[fragile]\frametitle{Estimating Treatment Effects: \textbf{Non}-Personalized Paradigm}
+
+\small{
+\begin{itemize}
+\item A/B Tests are `gold standard' in the One-Treatment-Fits-All paradigm because they remove the influence of unobserved confounders (variables that influence both the treatment and the outcome). 
+\end{itemize}
+}
+
+\vskip20pt
+
+
+\begin{columns}[T] % align columns
+\begin{column}{.48\textwidth}
+
+\begin{figure}[t]
+\includegraphics[width=4cm]{figures/ab1.png}
+\centering
+\end{figure}
+
+
+\end{column}%
+\hfill%
+
+\pause
+
+\begin{column}{.48\textwidth}
+
+\vskip-10pt
+
+\begin{figure}[t]
+\includegraphics[width=4cm]{figures/ab2.png}
+\centering
+\end{figure}
+
+
+\end{column}%
+\end{columns}
+
+\end{frame}
+
+%%%%Slide
+
+\begin{frame}
+[fragile]\frametitle{Estimating Treatment Effects: Personalized Paradigm}
+
+% If there is a singe takeaway message from what I want to talk about is that, in contrast to the idea that A/B testing should be used as the gold standard to learn causal effects, when the goal is not just to learn average treatment effects (i.e., whether a action is effective on average) but to learn personalized optimal actions, then A/B test may or may not be the best we can do.
+
+% when the goal is to 
+
+\textbf{In the presence of unobserved confounders (most plausible scenario), experimental data is likely not `gold standard' for estimating heterogenous treatment effects.}
+
+\pause
+
+\vskip20pt
+
+In what follows, I'll use a Personalized Marketing problem as a motivating example, and show:
+
+\vskip10pt
+
+\begin{itemize}
+
+\item How 4 Data Scientists might approach this problem and get different conclusions for the ``optimal'' treatment/action to implement. 
+
+\item The different conclusions emerge as a result of slightly different interpretation of the business problem. 
+
+\item When the goal is to implement the action that maximizes expected profit \emph{counterfactual}-based decision-making outperforms all other approaches. 
+
+\end{itemize}
+
+\end{frame}
 
 %%%%Slide
 
@@ -267,7 +307,7 @@ A/B Testing is likely NOT 'gold standard' for Personalized Decision-Making.
 \item \textbf{Business objective:}  Sell a credit card to new-to-RBC clients. 
 
 
-\item \textbf{Past campaign:} All new-to-RBC clients who visited the RBC public site, get a credit card offer $+$ iPad incentive.
+\item \textbf{Current campaign: One-Treatment-Fits-All paradigm}. All new-to-RBC clients who visited the RBC public site, get a credit card offer $+$ iPad incentive.
 
 
 \begin{figure}
@@ -276,7 +316,7 @@ A/B Testing is likely NOT 'gold standard' for Personalized Decision-Making.
 
 \vskip20pt
 
-\item \textbf{The goal is to personalize the incentive:} Identify which new-to-RBC clients should receive an iPad incentive in the future to maximize the expected profitability of the campaign. 
+\item \textbf{Future campaign: Personalize the incentive}. Identify which new-to-RBC clients should receive an iPad incentive in the future to maximize the expected profitability of the campaign. 
 
 \end{itemize}
 
@@ -325,7 +365,8 @@ A/B Testing is likely NOT 'gold standard' for Personalized Decision-Making.
 
 \begin{equation*}
 \begin{align*}
-V :=& M~$\oplus{}$ R  \\
+P(m ,r)=& 0.25~\forall~m \in M, r \in R \\ 
+V :=& M$\oplus$R  \\
 I :=&  V 
 \end{align*}
 \end{equation*}
@@ -363,7 +404,7 @@ $I=0$ &  0.50 & \cellcolor{blue!25}{0.10} & \cellcolor{blue!25}{0.05} & 0.30 \\
 \begin{column}{.48\textwidth}
 
 \begin{center}
-EDC  $\rightarrow$ $\underset{I \in {0,1}}{\mathrm{argmax}}~E[\pi|I, M]$
+EDC  $\rightarrow$ $\underset{I \in {0,1}}{\mathrm{argmax}}~E[\pi|I, M, V=1]$
 \end{center}
 
 \vskip10pt
@@ -710,7 +751,8 @@ RDC  $\rightarrow$ $\underset{a' \in~{0,1}}{\mathrm{argmax}}~E[\pi_{a'}| I=a, M]
 
 \pause
 
-\scriptsize{
+
+\scriptsize
 \begin{equation*}
 \begin{align*}
 P(\pi_{a'}, M) &= P(\pi_{a'}, M, a') +  P(\pi_{a'}, M, a) \\
@@ -718,10 +760,12 @@ P(\pi_{a'}, M) &= P(\pi_{a'}, M, a') +  P(\pi_{a'}, M, a) \\
  P(\pi_{a'} | M)  &= P(\pi_{a'} | M, a') P( a' | M)  + P(\pi_{a'} | M, a) P(a | M) \\
                         &= P(\pi | M, a') P( a' | M)  + P(\pi_{a'} | M, a) P(a | M) ~\text{(Consistency)} \\ \\
 P(\pi_{a'} | M, a) &= \frac{1}{P(a|M)} \Bigl[P(\pi_{a'} | M) -  P(\pi | M, a') P( a' | M) \Bigr] \\
-&= \boxed{\frac{1}{P(a|M)} \Bigl[P\Big(\pi | M, do(a')\Big) -  P(\pi | M, a') P( a' | M) \Bigr]}
+&=\boxed{{\underbrace{\frac{1}{P(a|M)}}_{\text{\textcolor{blue}{observational}}}}   {\overbrace{ \Bigl[P\Big(\pi | M, do(a')\Big) }^{\text{\textcolor{blue}{experimental}}}} -  {\underbrace{ P(\pi | M, a') P( a' | M) \Bigr]}_{\text{\textcolor{blue}{observational}}}}}
 \end{align*}
 \end{equation*}
-}
+
+ %{\overbrace{ P(\pi | M, a') P( a' | M) \Bigr]}}^{\text{observational}}}
+%  {\overbrace{ P(\pi | M, a') P( a' | M)  }^{\text{observational}}}
 
 \end{frame}
 
