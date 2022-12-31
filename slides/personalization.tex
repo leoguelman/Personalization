@@ -212,7 +212,7 @@
 
 
 \begin{figure}[t]
-\includegraphics[width=5cm]{figures/personalizedmed.jpg}
+\includegraphics[width=5cm]{figures/personalizedmedv2.jpg}
 \centering
 \end{figure}
 
@@ -229,9 +229,7 @@
 [fragile]\frametitle{Estimating Treatment Effects: \textbf{Non}-Personalized Paradigm}
 
 \small{
-\begin{itemize}
-\item A/B Tests are `gold standard' in the One-Treatment-Fits-All paradigm because they remove the influence of unobserved confounders (variables that influence both the treatment and the outcome). 
-\end{itemize}
+A/B Tests are `gold standard' in the One-Treatment-Fits-All paradigm because they remove the influence of unobserved confounders (variables that influence both the treatment and the outcome). 
 }
 
 \vskip20pt
@@ -275,23 +273,17 @@
 
 % when the goal is to 
 
-\textbf{In the presence of unobserved confounders (most plausible scenario), experimental data is likely not `gold standard' for estimating heterogenous treatment effects.}
+\begin{itemize}
 
-\pause
-
-\vskip20pt
-
-In what follows, I'll use a Personalized Marketing problem as a motivating example, and show:
+\item In the presence of unobserved confounders (most plausible scenario), experimental data is likely not `gold standard' for estimating heterogenous treatment effects.
 
 \vskip10pt
 
-\begin{itemize}
+\item  A coherent fusion of experimental and observational data that results from a \emph{counterfactual}-based decision criterion is likely to outperform other approaches. 
 
-\item How 4 Data Scientists might approach this problem and get different conclusions for the ``optimal'' treatment/action to implement. 
+\vskip10pt
 
-\item The different conclusions emerge as a result of slightly different interpretation of the business problem. 
-
-\item When the goal is to implement the action that maximizes expected profit \emph{counterfactual}-based decision-making outperforms all other approaches. 
+\item In what follows, I'll use a Personalized Marketing problem as a motivating example to discuss the statements above. 
 
 \end{itemize}
 
@@ -350,7 +342,7 @@ In what follows, I'll use a Personalized Marketing problem as a motivating examp
 
 \vskip 5pt
 
-\caption{Past campaign `true' causal DAG.}
+\caption{`True' Causal Graph (current campaign).}
 
 \end{figure}
 
@@ -404,7 +396,7 @@ $I=0$ &  0.50 & \cellcolor{blue!25}{0.10} & \cellcolor{blue!25}{0.05} & 0.30 \\
 \begin{column}{.48\textwidth}
 
 \begin{center}
-EDC  $\rightarrow$ $\underset{I \in {0,1}}{\mathrm{argmax}}~E[\pi|I, M, V=1]$
+EDC  $\rightarrow$ $\underset{I \in {0,1}}{\mathrm{argmax}}~E[\pi|I, M]$
 \end{center}
 
 \vskip10pt
@@ -460,13 +452,13 @@ $I=0$ &  0.50 & \cellcolor{blue!25}{0.10} & \cellcolor{blue!25}{0.05} & 0.30 \\
 \small{
 \begin{itemize}
 \item If Visit Site $\land$ Married $\rightarrow$ Purchase Incentive $\rightarrow~E[\pi] = \textbf{0.25}  $
-\item If Visit Site $\land$ Not Married $\rightarrow$ No Purchase Incentive  $\rightarrow~E[\pi] = \textbf{0.05} $
+\item If Visit Site $\land$ Not Married $\rightarrow$ No Purchase Incentive  $\rightarrow~E[\pi] = \textbf{0.30} $
 \end{itemize}
 }
 
 \vskip10pt
 
-Expected profit = $\boxed{\mathbf{0.15}}$ = (0.25+0.05)/2.
+Expected profit = $\boxed{\mathbf{0.275}}$ = (0.25+0.30)/2.
 
 
 
@@ -776,8 +768,6 @@ P(\pi_{a'} | M, a) &= \frac{1}{P(a|M)} \Bigl[P(\pi_{a'} | M) -  P(\pi | M, a') P
 
 \begin{columns}[T] % align columns
 \begin{column}{.48\textwidth}
-\textcolor{red}{I should have expectation instead of probability dist}.
-
 
 \begin{scriptsize}
 
@@ -872,7 +862,7 @@ EDC &
 
   
     
-&  .1500 &\\ \hline
+&  .2750 &\\ \hline
 PVR & \textbf{Never Purchase Incentive} & .4000 \\ \\ \hline
 ABT & \textbf{Always Purchase Incentive} &  .3150  \\ \\ \hline
 RDC & 
@@ -895,19 +885,20 @@ Oracle & & \textbf{.4375} \\ \\  \hline
 %%%%Slide
 
 \begin{frame}
-[fragile]\frametitle{Key Takeaways}
+[fragile]\frametitle{Remarks}
 
 \begin{itemize}
 
-\item A/B testing is not always the `Gold Standard' for learning causal effects 
+\item If the goal is to learn personalized actions, experimental data alone is sub-optimal in the presence of unobserved confounders. 
 
-\item If (i) the goal is to learn optimal personalized actions, and (ii) we have unobserved confounders (very likely!), and (iii) these confounders interact with the action: then Counterfactual-based decision-making may outperform Causal-decision making. 
+\vskip10pt
 
-\textcolor{red}{But even if the unobserved feature is not technically a confounder, but there is interaction between the unobserved variable and the treatment, Counterfactual-based decision-making may also outperform Causal-decision making}.
-}
+\item Combining experimental and observational data under a Regret Decision Criterion (RDC) can provide information about the unobserved confounders, and hence outperform alternative optimization criteria. 
+
+\vskip10pt
 
 \item The expression derived from RDC works only in the binary treatment case. RDC-type randomization \href{https://proceedings.mlr.press/v70/forney17a.html}{(Forney et al., 2017) }
-was proposed to estimate the counterfactual expressions empirically from an arbitrary number of treatments. 
+was proposed to estimate counterfactual expressions empirically from an arbitrary number of treatments. 
 
 \end{itemize}
 
@@ -932,47 +923,6 @@ was proposed to estimate the counterfactual expressions empirically from an arbi
 
 
 \end{itemize}
-
-\end{frame}
-
-
-\begin{frame}
-[fragile]\frametitle{Other points}
-
-
-
-\begin{itemize}
-
-\scriptsize{
-
-\item Review Pearl P. 94+. What is the difference between individual level counterfactuals and ETT with conditioning on intent (and observed features)? 
-
-\scriptsize{
-
-\begin{itemize}
-
-\item ETT still represents an average effect conditional on $X$ and intent, it is NOT represent the effect for a specific individual. The latter requires a parametric model (and of course the causal graph). If for example, we have latent counfounders which interact with treatment, and the functional form of that interaction is specific to a given individual, then the Personalization approach I'm describing in this deck cannot recover the individual treatment effect. Again, I can only speak about the average treatment effect on the treated conditional on covariates and intent (see also paper "on the distinction between CATE and ITE".
-
-\item For ETT, I either (i) need the causal graph, so I can use the backdoor criterion for adjustment, or (ii) in the binary treatment case, if I have access to both observational and experimental data, I can get away without the graph. 
-
-\end{itemize}
-
-}
-
-\item What happens with more than 1 latent confounder? I believe I have this in my notes somewhere
-
-\begin{itemize}
-
-\item For example, if I have two unobserved confounders as in the MABUC paper, in that case RDC still gives me the oracle payout just because of the configuration of the payout table. In my notes (see Notes for white paper - Page A - around page 29, I have an example of a configuration of payout where I cannot get the oracle by conditioning on intent. 
-
-\end{itemize}
-
-}
-
-
-\end{itemize}
-
-
 
 \end{frame}
 
