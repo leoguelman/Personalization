@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  31 DEC 2022 11:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  31 DEC 2022 11:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1903,6 +1903,92 @@ l.22
 ? 
 ) [19
 
+] (./personalization.vrb
+
+./personalization.vrb:14: Package amsmath Error: Erroneous nesting of equation 
+structures;
+(amsmath)                trying to recover with `aligned'.
+
+See the amsmath package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 \end{align*}
+                 
+? 
+
+Overfull \hbox (11.96925pt too wide) detected at line 15
+[][]
+ []
+
+
+./personalization.vrb:17: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.17 ...\pi_{I=1} | M=0, I=0)} = \textbf{0.50} \\ 
+                                                  $
+? 
+./personalization.vrb:17: Missing $ inserted.
+<inserted text> 
+                $
+l.17 ...\pi_{I=1} | M=0, I=0)} = \textbf{0.50} \\ 
+                                                  $
+? 
+./personalization.vrb:18: Missing $ inserted.
+<inserted text> 
+                $
+l.18 
+     
+? 
+
+./personalization.vrb:19: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.19 ...\pi_{I=0} | M=1, I=1)} = \textbf{0.50} \\ 
+                                                  $
+? 
+./personalization.vrb:19: Missing $ inserted.
+<inserted text> 
+                $
+l.19 ...\pi_{I=0} | M=1, I=1)} = \textbf{0.50} \\ 
+                                                  $
+? 
+./personalization.vrb:20: Missing $ inserted.
+<inserted text> 
+                $
+l.20 
+     
+? 
+
+./personalization.vrb:21: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 ...\pi_{I=0} | M=0, I=1)} = \textbf{0.30} \\ 
+                                                  $
+? 
+./personalization.vrb:21: Missing $ inserted.
+<inserted text> 
+                $
+l.21 ...\pi_{I=0} | M=0, I=1)} = \textbf{0.30} \\ 
+                                                  $
+? 
+./personalization.vrb:22: Missing $ inserted.
+<inserted text> 
+                $
+l.22 
+     
+? 
+) [20
+
 ]
 \openout4 = `personalization.vrb'.
 
@@ -1913,17 +1999,17 @@ l.22
 l.20 &  .2750 &
                \\ \hline
 ? 
-) [20
-
-]
-\openout4 = `personalization.vrb'.
-
- (./personalization.vrb) [21
+) [21
 
 ]
 \openout4 = `personalization.vrb'.
 
  (./personalization.vrb) [22
+
+]
+\openout4 = `personalization.vrb'.
+
+ (./personalization.vrb) [23
 
 ]
 \tf@nav=\write6
@@ -1935,12 +2021,12 @@ l.20 &  .2750 &
 \tf@snm=\write8
 \openout8 = `personalization.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 929.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 929.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 931.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 931.
 
 (./personalization.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 929.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 929.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 931.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 931.
 Package rerunfilecheck Info: File `personalization.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
@@ -1949,9 +2035,9 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 32488 strings out of 480608
- 691114 string characters out of 5903631
- 932560 words of memory out of 5000000
+ 32492 strings out of 480608
+ 691173 string characters out of 5903631
+ 936560 words of memory out of 5000000
  47578 multiletter control sequences out of 15000+600000
  556931 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1985,10 +2071,10 @@ dist/fonts/type1/public/cm-super/sfsx0900.pfb></usr/local/texlive/2020/texmf-di
 st/fonts/type1/public/cm-super/sfsx1000.pfb></usr/local/texlive/2020/texmf-dist
 /fonts/type1/public/cm-super/sfsx1440.pfb></usr/local/texlive/2020/texmf-dist/f
 onts/type1/public/cm-super/sftt0900.pfb>
-Output written on personalization.pdf (22 pages, 859427 bytes).
+Output written on personalization.pdf (23 pages, 862629 bytes).
 PDF statistics:
- 737 PDF objects out of 1000 (max. 8388607)
- 663 compressed objects within 7 object streams
- 46 named destinations out of 1000 (max. 500000)
+ 763 PDF objects out of 1000 (max. 8388607)
+ 688 compressed objects within 7 object streams
+ 48 named destinations out of 1000 (max. 500000)
  69 words of extra memory for PDF output out of 10000 (max. 10000000)
 
