@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  31 DEC 2022 11:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  3 JAN 2023 10:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1566,8 +1566,19 @@ l.44 \end{align*}
 \openout4 = `personalization.vrb'.
 
  (./personalization.vrb
+<figures/four.png, id=257, 783.92876pt x 170.6375pt>
+File: figures/four.png Graphic file (type png)
+<use figures/four.png>
+Package pdftex.def Info: figures/four.png  used on input line 4.
+(pdftex.def)             Requested size: 227.62204pt x 49.54608pt.
+) [9
 
-./personalization.vrb:19: Package amsmath Error: Erroneous nesting of equation 
+ <./figures/four.png>]
+\openout4 = `personalization.vrb'.
+
+ (./personalization.vrb
+
+./personalization.vrb:21: Package amsmath Error: Erroneous nesting of equation 
 structures;
 (amsmath)                trying to recover with `aligned'.
 
@@ -1575,18 +1586,18 @@ See the amsmath package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.19 \end{align*}
+l.21 \end{align*}
                  
 ? 
 
 LaTeX Font Warning: Font shape `T1/cmss/b/n' undefined
-(Font)              using `T1/cmss/m/n' instead on input line 69.
+(Font)              using `T1/cmss/m/n' instead on input line 71.
 
-) [9
+) [10
 
 ] (./personalization.vrb
 
-./personalization.vrb:19: Package amsmath Error: Erroneous nesting of equation 
+./personalization.vrb:21: Package amsmath Error: Erroneous nesting of equation 
 structures;
 (amsmath)                trying to recover with `aligned'.
 
@@ -1594,33 +1605,48 @@ See the amsmath package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.19 \end{align*}
+l.21 \end{align*}
                  
 ? 
-) [10
+) [11
+
+] (./personalization.vrb
+
+./personalization.vrb:21: Package amsmath Error: Erroneous nesting of equation 
+structures;
+(amsmath)                trying to recover with `aligned'.
+
+See the amsmath package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 \end{align*}
+                 
+? 
+) [12
 
 ]
 \openout4 = `personalization.vrb'.
 
  (./personalization.vrb
 
-./personalization.vrb:23: Package tikz Error: Giving up on this path. Did you f
+./personalization.vrb:24: Package tikz Error: Giving up on this path. Did you f
 orget a semicolon?.
 
 See the tikz package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.23 \end{tikzpicture}
+l.24 \end{tikzpicture}
                       
 ? 
 
-Overfull \hbox (18.65956pt too wide) in paragraph at lines 23--24
+Overfull \hbox (18.65956pt too wide) in paragraph at lines 24--25
  [] 
  []
 
 
-./personalization.vrb:42: Package amsmath Error: Erroneous nesting of equation 
+./personalization.vrb:43: Package amsmath Error: Erroneous nesting of equation 
 structures;
 (amsmath)                trying to recover with `aligned'.
 
@@ -1628,70 +1654,37 @@ See the amsmath package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.42 \end{align*}
+l.43 \end{align*}
                  
 ? 
-./personalization.vrb:42: Missing } inserted.
+./personalization.vrb:43: Missing } inserted.
 <inserted text> 
                 }
-l.42 \end{align*}
+l.43 \end{align*}
                  
 ? 
-./personalization.vrb:42: Missing $ inserted.
+./personalization.vrb:43: Missing $ inserted.
 <inserted text> 
                 $
-l.42 \end{align*}
+l.43 \end{align*}
                  
 ? 
-./personalization.vrb:42: Missing $ inserted.
+./personalization.vrb:43: Missing $ inserted.
 <inserted text> 
                 $
-l.42 \end{align*}
+l.43 \end{align*}
                  
 ? 
-./personalization.vrb:42: Undefined control sequence.
+./personalization.vrb:43: Undefined control sequence.
 \math@cr@@@ ...t@ {&\kern -\alignsep@ }\fi \next@ 
                                                   \cr 
-l.42 \end{align*}
+l.43 \end{align*}
                  
 ? 
-./personalization.vrb:42: Missing { inserted.
+./personalization.vrb:43: Missing { inserted.
 <inserted text> 
                 {
-l.42 \end{align*}
-                 
-? 
-) [11
-
-]
-\openout4 = `personalization.vrb'.
-
- (./personalization.vrb
-
-./personalization.vrb:20: Package amsmath Error: Erroneous nesting of equation 
-structures;
-(amsmath)                trying to recover with `aligned'.
-
-See the amsmath package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.20 \end{align*}
-                 
-? 
-) [12
-
-] (./personalization.vrb
-
-./personalization.vrb:20: Package amsmath Error: Erroneous nesting of equation 
-structures;
-(amsmath)                trying to recover with `aligned'.
-
-See the amsmath package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.20 \end{align*}
+l.43 \end{align*}
                  
 ? 
 ) [13
@@ -1700,12 +1693,8 @@ l.20 \end{align*}
 \openout4 = `personalization.vrb'.
 
  (./personalization.vrb
-Overfull \hbox (18.65956pt too wide) in paragraph at lines 22--23
- [] 
- []
 
-
-./personalization.vrb:42: Package amsmath Error: Erroneous nesting of equation 
+./personalization.vrb:22: Package amsmath Error: Erroneous nesting of equation 
 structures;
 (amsmath)                trying to recover with `aligned'.
 
@@ -1713,47 +1702,14 @@ See the amsmath package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.42 \end{align*}
-                 
-? 
-./personalization.vrb:42: Missing } inserted.
-<inserted text> 
-                }
-l.42 \end{align*}
-                 
-? 
-./personalization.vrb:42: Missing $ inserted.
-<inserted text> 
-                $
-l.42 \end{align*}
-                 
-? 
-./personalization.vrb:42: Missing $ inserted.
-<inserted text> 
-                $
-l.42 \end{align*}
-                 
-? 
-./personalization.vrb:42: Undefined control sequence.
-\math@cr@@@ ...t@ {&\kern -\alignsep@ }\fi \next@ 
-                                                  \cr 
-l.42 \end{align*}
-                 
-? 
-./personalization.vrb:42: Missing { inserted.
-<inserted text> 
-                {
-l.42 \end{align*}
+l.22 \end{align*}
                  
 ? 
 ) [14
 
-]
-\openout4 = `personalization.vrb'.
+] (./personalization.vrb
 
- (./personalization.vrb
-
-./personalization.vrb:19: Package amsmath Error: Erroneous nesting of equation 
+./personalization.vrb:22: Package amsmath Error: Erroneous nesting of equation 
 structures;
 (amsmath)                trying to recover with `aligned'.
 
@@ -1761,14 +1717,14 @@ See the amsmath package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.19 \end{align*}
+l.22 \end{align*}
                  
 ? 
 ) [15
 
 ] (./personalization.vrb
 
-./personalization.vrb:19: Package amsmath Error: Erroneous nesting of equation 
+./personalization.vrb:22: Package amsmath Error: Erroneous nesting of equation 
 structures;
 (amsmath)                trying to recover with `aligned'.
 
@@ -1776,7 +1732,7 @@ See the amsmath package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.19 \end{align*}
+l.22 \end{align*}
                  
 ? 
 ) [16
@@ -1785,8 +1741,12 @@ l.19 \end{align*}
 \openout4 = `personalization.vrb'.
 
  (./personalization.vrb
+Overfull \hbox (18.65956pt too wide) in paragraph at lines 23--24
+ [] 
+ []
 
-./personalization.vrb:19: Package amsmath Error: Erroneous nesting of equation 
+
+./personalization.vrb:43: Package amsmath Error: Erroneous nesting of equation 
 structures;
 (amsmath)                trying to recover with `aligned'.
 
@@ -1794,32 +1754,47 @@ See the amsmath package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.19 \end{align*}
+l.43 \end{align*}
+                 
+? 
+./personalization.vrb:43: Missing } inserted.
+<inserted text> 
+                }
+l.43 \end{align*}
+                 
+? 
+./personalization.vrb:43: Missing $ inserted.
+<inserted text> 
+                $
+l.43 \end{align*}
+                 
+? 
+./personalization.vrb:43: Missing $ inserted.
+<inserted text> 
+                $
+l.43 \end{align*}
+                 
+? 
+./personalization.vrb:43: Undefined control sequence.
+\math@cr@@@ ...t@ {&\kern -\alignsep@ }\fi \next@ 
+                                                  \cr 
+l.43 \end{align*}
+                 
+? 
+./personalization.vrb:43: Missing { inserted.
+<inserted text> 
+                {
+l.43 \end{align*}
                  
 ? 
 ) [17
-
-] (./personalization.vrb
-
-./personalization.vrb:19: Package amsmath Error: Erroneous nesting of equation 
-structures;
-(amsmath)                trying to recover with `aligned'.
-
-See the amsmath package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.19 \end{align*}
-                 
-? 
-) [18
 
 ]
 \openout4 = `personalization.vrb'.
 
  (./personalization.vrb
 
-./personalization.vrb:14: Package amsmath Error: Erroneous nesting of equation 
+./personalization.vrb:20: Package amsmath Error: Erroneous nesting of equation 
 structures;
 (amsmath)                trying to recover with `aligned'.
 
@@ -1827,85 +1802,14 @@ See the amsmath package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.14 \end{align*}
+l.20 \end{align*}
                  
 ? 
-
-Overfull \hbox (11.96925pt too wide) detected at line 15
-[][]
- []
-
-
-./personalization.vrb:17: LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.17 ...\pi_{I=1} | M=0, I=0)} = \textbf{0.50} \\ 
-                                                  $
-? 
-./personalization.vrb:17: Missing $ inserted.
-<inserted text> 
-                $
-l.17 ...\pi_{I=1} | M=0, I=0)} = \textbf{0.50} \\ 
-                                                  $
-? 
-./personalization.vrb:18: Missing $ inserted.
-<inserted text> 
-                $
-l.18 
-     
-? 
-
-./personalization.vrb:19: LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.19 ...\pi_{I=0} | M=1, I=1)} = \textbf{0.50} \\ 
-                                                  $
-? 
-./personalization.vrb:19: Missing $ inserted.
-<inserted text> 
-                $
-l.19 ...\pi_{I=0} | M=1, I=1)} = \textbf{0.50} \\ 
-                                                  $
-? 
-./personalization.vrb:20: Missing $ inserted.
-<inserted text> 
-                $
-l.20 
-     
-? 
-
-./personalization.vrb:21: LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.21 ...\pi_{I=0} | M=0, I=1)} = \textbf{0.30} \\ 
-                                                  $
-? 
-./personalization.vrb:21: Missing $ inserted.
-<inserted text> 
-                $
-l.21 ...\pi_{I=0} | M=0, I=1)} = \textbf{0.30} \\ 
-                                                  $
-? 
-./personalization.vrb:22: Missing $ inserted.
-<inserted text> 
-                $
-l.22 
-     
-? 
-) [19
+) [18
 
 ] (./personalization.vrb
 
-./personalization.vrb:14: Package amsmath Error: Erroneous nesting of equation 
+./personalization.vrb:20: Package amsmath Error: Erroneous nesting of equation 
 structures;
 (amsmath)                trying to recover with `aligned'.
 
@@ -1913,81 +1817,226 @@ See the amsmath package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.14 \end{align*}
+l.20 \end{align*}
+                 
+? 
+) [19
+
+]
+\openout4 = `personalization.vrb'.
+
+ (./personalization.vrb
+
+./personalization.vrb:20: Package amsmath Error: Erroneous nesting of equation 
+structures;
+(amsmath)                trying to recover with `aligned'.
+
+See the amsmath package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.20 \end{align*}
+                 
+? 
+) [20
+
+] (./personalization.vrb
+
+./personalization.vrb:20: Package amsmath Error: Erroneous nesting of equation 
+structures;
+(amsmath)                trying to recover with `aligned'.
+
+See the amsmath package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.20 \end{align*}
+                 
+? 
+) [21
+
+]
+\openout4 = `personalization.vrb'.
+
+ (./personalization.vrb
+
+./personalization.vrb:15: Package amsmath Error: Erroneous nesting of equation 
+structures;
+(amsmath)                trying to recover with `aligned'.
+
+See the amsmath package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.15 \end{align*}
                  
 ? 
 
-Overfull \hbox (11.96925pt too wide) detected at line 15
+Overfull \hbox (11.96925pt too wide) detected at line 16
 [][]
  []
 
 
-./personalization.vrb:17: LaTeX Error: There's no line here to end.
+./personalization.vrb:18: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.17 ...\pi_{I=1} | M=0, I=0)} = \textbf{0.50} \\ 
-                                                  $
-? 
-./personalization.vrb:17: Missing $ inserted.
-<inserted text> 
-                $
-l.17 ...\pi_{I=1} | M=0, I=0)} = \textbf{0.50} \\ 
+l.18 ...\pi_{I=1} | M=0, I=0)} = \textbf{0.50} \\ 
                                                   $
 ? 
 ./personalization.vrb:18: Missing $ inserted.
 <inserted text> 
                 $
-l.18 
-     
-? 
-
-./personalization.vrb:19: LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.19 ...\pi_{I=0} | M=1, I=1)} = \textbf{0.50} \\ 
+l.18 ...\pi_{I=1} | M=0, I=0)} = \textbf{0.50} \\ 
                                                   $
 ? 
 ./personalization.vrb:19: Missing $ inserted.
 <inserted text> 
                 $
-l.19 ...\pi_{I=0} | M=1, I=1)} = \textbf{0.50} \\ 
-                                                  $
-? 
-./personalization.vrb:20: Missing $ inserted.
-<inserted text> 
-                $
-l.20 
+l.19 
      
 ? 
 
-./personalization.vrb:21: LaTeX Error: There's no line here to end.
+./personalization.vrb:20: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.21 ...\pi_{I=0} | M=0, I=1)} = \textbf{0.30} \\ 
+l.20 ...\pi_{I=0} | M=1, I=1)} = \textbf{0.50} \\ 
+                                                  $
+? 
+./personalization.vrb:20: Missing $ inserted.
+<inserted text> 
+                $
+l.20 ...\pi_{I=0} | M=1, I=1)} = \textbf{0.50} \\ 
                                                   $
 ? 
 ./personalization.vrb:21: Missing $ inserted.
 <inserted text> 
                 $
-l.21 ...\pi_{I=0} | M=0, I=1)} = \textbf{0.30} \\ 
+l.21 
+     
+? 
+
+./personalization.vrb:22: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22 ...\pi_{I=0} | M=0, I=1)} = \textbf{0.30} \\ 
                                                   $
 ? 
 ./personalization.vrb:22: Missing $ inserted.
 <inserted text> 
                 $
-l.22 
+l.22 ...\pi_{I=0} | M=0, I=1)} = \textbf{0.30} \\ 
+                                                  $
+? 
+./personalization.vrb:23: Missing $ inserted.
+<inserted text> 
+                $
+l.23 
      
 ? 
-) [20
+)
+Overfull \vbox (3.58234pt too high) detected at line 864
+ []
+
+[22
+
+] (./personalization.vrb
+
+./personalization.vrb:15: Package amsmath Error: Erroneous nesting of equation 
+structures;
+(amsmath)                trying to recover with `aligned'.
+
+See the amsmath package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.15 \end{align*}
+                 
+? 
+
+Overfull \hbox (11.96925pt too wide) detected at line 16
+[][]
+ []
+
+
+./personalization.vrb:18: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.18 ...\pi_{I=1} | M=0, I=0)} = \textbf{0.50} \\ 
+                                                  $
+? 
+./personalization.vrb:18: Missing $ inserted.
+<inserted text> 
+                $
+l.18 ...\pi_{I=1} | M=0, I=0)} = \textbf{0.50} \\ 
+                                                  $
+? 
+./personalization.vrb:19: Missing $ inserted.
+<inserted text> 
+                $
+l.19 
+     
+? 
+
+./personalization.vrb:20: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.20 ...\pi_{I=0} | M=1, I=1)} = \textbf{0.50} \\ 
+                                                  $
+? 
+./personalization.vrb:20: Missing $ inserted.
+<inserted text> 
+                $
+l.20 ...\pi_{I=0} | M=1, I=1)} = \textbf{0.50} \\ 
+                                                  $
+? 
+./personalization.vrb:21: Missing $ inserted.
+<inserted text> 
+                $
+l.21 
+     
+? 
+
+./personalization.vrb:22: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22 ...\pi_{I=0} | M=0, I=1)} = \textbf{0.30} \\ 
+                                                  $
+? 
+./personalization.vrb:22: Missing $ inserted.
+<inserted text> 
+                $
+l.22 ...\pi_{I=0} | M=0, I=1)} = \textbf{0.30} \\ 
+                                                  $
+? 
+./personalization.vrb:23: Missing $ inserted.
+<inserted text> 
+                $
+l.23 
+     
+? 
+)
+Overfull \vbox (3.58234pt too high) detected at line 864
+ []
+
+[23
 
 ]
 \openout4 = `personalization.vrb'.
@@ -1999,17 +2048,17 @@ l.22
 l.20 &  .2750 &
                \\ \hline
 ? 
-) [21
+) [24
 
 ]
 \openout4 = `personalization.vrb'.
 
- (./personalization.vrb) [22
+ (./personalization.vrb) [25
 
 ]
 \openout4 = `personalization.vrb'.
 
- (./personalization.vrb) [23
+ (./personalization.vrb) [26
 
 ]
 \tf@nav=\write6
@@ -2021,12 +2070,12 @@ l.20 &  .2750 &
 \tf@snm=\write8
 \openout8 = `personalization.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 931.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 931.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 952.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 952.
 
 (./personalization.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 931.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 931.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 952.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 952.
 Package rerunfilecheck Info: File `personalization.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
@@ -2035,13 +2084,13 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 32492 strings out of 480608
- 691173 string characters out of 5903631
+ 32520 strings out of 480608
+ 691688 string characters out of 5903631
  936560 words of memory out of 5000000
- 47578 multiletter control sequences out of 15000+600000
+ 47593 multiletter control sequences out of 15000+600000
  556931 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 58i,22n,69p,853b,1097s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 58i,22n,69p,853b,1102s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 </usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.p
 fb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pf
@@ -2071,10 +2120,10 @@ dist/fonts/type1/public/cm-super/sfsx0900.pfb></usr/local/texlive/2020/texmf-di
 st/fonts/type1/public/cm-super/sfsx1000.pfb></usr/local/texlive/2020/texmf-dist
 /fonts/type1/public/cm-super/sfsx1440.pfb></usr/local/texlive/2020/texmf-dist/f
 onts/type1/public/cm-super/sftt0900.pfb>
-Output written on personalization.pdf (23 pages, 862629 bytes).
+Output written on personalization.pdf (26 pages, 1021491 bytes).
 PDF statistics:
- 763 PDF objects out of 1000 (max. 8388607)
- 688 compressed objects within 7 object streams
- 48 named destinations out of 1000 (max. 500000)
- 69 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 846 PDF objects out of 1000 (max. 8388607)
+ 765 compressed objects within 8 object streams
+ 54 named destinations out of 1000 (max. 500000)
+ 74 words of extra memory for PDF output out of 10000 (max. 10000000)
 

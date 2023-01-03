@@ -390,7 +390,20 @@ $I=0$ &  0.50 & \cellcolor{blue!25}{0.10} & \cellcolor{blue!25}{0.05} & 0.30 \\
 %%%%Slide
 
 \begin{frame}
-[fragile]\frametitle{Approach 1: Empirical Decision Criterion (EDC)}
+[fragile]\frametitle{Four Approaches to Personalizing the Incentive}
+
+\begin{figure}[t]
+\includegraphics[width=8cm]{figures/four.png}
+\centering
+\end{figure}
+
+\end{frame}
+
+%%%%Slide
+
+\begin{frame}
+[fragile]\frametitle{DS \#1: Empirical Decision Criterion (EDC)}
+\framesubtitle{Associational Inference}
 
 \begin{columns}[T] % align columns
 \begin{column}{.48\textwidth}
@@ -399,6 +412,7 @@ $I=0$ &  0.50 & \cellcolor{blue!25}{0.10} & \cellcolor{blue!25}{0.05} & 0.30 \\
 EDC  $\rightarrow$ $\underset{I \in {0,1}}{\mathrm{argmax}}~E[\pi|I, M]$
 \end{center}
 
+\pause
 \vskip10pt
 
 
@@ -468,7 +482,8 @@ Expected profit = $\boxed{\mathbf{0.275}}$ = (0.25+0.30)/2.
 %%%%Slide
 
 \begin{frame}
-[fragile]\frametitle{Approach 2: Post-Visit Randomization (PVR)}
+[fragile]\frametitle{DS \#2: Post-Visit Randomization (PVR)}
+\framesubtitle{Interventional Inference}
 
 \begin{columns}[T] % align columns
 \begin{column}{.48\textwidth}
@@ -522,7 +537,8 @@ I :=&  V \textcolor{blue}{\land C}
 %%%%Slide
 
 \begin{frame}
-[fragile]\frametitle{Approach 2: Post-Visit Randomization (PVR) - cont'd}
+[fragile]\frametitle{DS \#2: Post-Visit Randomization (PVR) - cont'd}
+\framesubtitle{Interventional Inference}
 
 
 \begin{columns}[T] % align columns
@@ -533,6 +549,7 @@ PVR $\rightarrow$ $\underset{I \in {0,1}}{\mathrm{argmax}}~E[\pi| do(I), M, V=1]
 \end{center}
 
 \vskip10pt
+\pause
 
 
 \begin{equation*}
@@ -602,7 +619,8 @@ Expected profit = $\boxed{\mathbf{0.40}}$ = (0.50+0.30)/2.
 
 
 \begin{frame}
-[fragile]\frametitle{Approach 3: A/B Test on All New-to-RBC Clients}
+[fragile]\frametitle{DS \#3: A/B Test on All New-to-RBC Clients}
+\framesubtitle{Interventional Inference}
 
 \begin{columns}[T] % align columns
 \begin{column}{.48\textwidth}
@@ -628,7 +646,7 @@ Expected profit = $\boxed{\mathbf{0.40}}$ = (0.50+0.30)/2.
 \vskip 5pt
 
 
-\caption{Causal DAG with A/B Test on All New-to-Bank Clients.}
+\caption{Causal DAG with A/B Test on all New-to-RBC clients.}
 
 \end{figure}
 
@@ -659,7 +677,8 @@ I :=&  \textcolor{blue}{C}
 
 
 \begin{frame}
-[fragile]\frametitle{Approach 3: A/B Test on All New-to-RBC Clients - cont'd}
+[fragile]\frametitle{DS \#3: A/B Test on All New-to-RBC Clients - cont'd}
+\framesubtitle{Interventional Inference}
 
 \begin{columns}[T] % align columns
 \begin{column}{.48\textwidth}
@@ -735,7 +754,8 @@ Expected profit = $\boxed{\mathbf{0.315}}$ = (0.35+0.275)/2.
 %%%%Slide
 
 \begin{frame}
-[fragile]\frametitle{Approach 4: Regret Decision Criterion (RDC)}
+[fragile]\frametitle{DS \#4: Regret Decision Criterion (RDC)}
+\framesubtitle{Counterfactual Inference}
 
 RDC  $\rightarrow$ $\underset{a' \in~{0,1}}{\mathrm{argmax}}~E[\pi_{a'}| I=a, M]$
 
@@ -764,7 +784,8 @@ P(\pi_{a'} | M, a) &= \frac{1}{P(a|M)} \Bigl[P(\pi_{a'} | M) -  P(\pi | M, a') P
 %%%%Slide
 
 \begin{frame}
-[fragile]\frametitle{Approach 4: Regret Decision Criterion (RDC) - cont'd}
+[fragile]\frametitle{DS \#4: Regret Decision Criterion (RDC) - cont'd}
+\framesubtitle{Counterfactual Inference}
 
 \begin{columns}[T] % align columns
 \begin{column}{.48\textwidth}
