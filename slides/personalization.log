@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  3 JAN 2023 10:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  3 JAN 2023 11:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1872,7 +1872,7 @@ l.15 \end{align*}
                  
 ? 
 
-Overfull \hbox (11.96925pt too wide) detected at line 16
+Overfull \hbox (11.93588pt too wide) detected at line 16
 [][]
  []
 
@@ -1962,7 +1962,7 @@ l.15 \end{align*}
                  
 ? 
 
-Overfull \hbox (11.96925pt too wide) detected at line 16
+Overfull \hbox (11.93588pt too wide) detected at line 16
 [][]
  []
 
@@ -2120,7 +2120,7 @@ dist/fonts/type1/public/cm-super/sfsx0900.pfb></usr/local/texlive/2020/texmf-di
 st/fonts/type1/public/cm-super/sfsx1000.pfb></usr/local/texlive/2020/texmf-dist
 /fonts/type1/public/cm-super/sfsx1440.pfb></usr/local/texlive/2020/texmf-dist/f
 onts/type1/public/cm-super/sftt0900.pfb>
-Output written on personalization.pdf (26 pages, 1021491 bytes).
+Output written on personalization.pdf (26 pages, 1021465 bytes).
 PDF statistics:
  846 PDF objects out of 1000 (max. 8388607)
  765 compressed objects within 8 object streams
