@@ -229,7 +229,7 @@
 [fragile]\frametitle{Estimating Treatment Effects: \textbf{Non}-Personalized Paradigm}
 
 \small{
-A/B Tests are `gold standard' in the One-Treatment-Fits-All paradigm because they remove the influence of unobserved confounders (variables that influence both the treatment and the outcome). 
+A/B Tests are `gold standard' in the One-Treatment-Fits-All paradigm because they remove the influence of unobserved confounders (unmeasured variables that influence both the treatment and the outcome). 
 }
 
 \vskip20pt
@@ -357,7 +357,8 @@ A/B Tests are `gold standard' in the One-Treatment-Fits-All paradigm because the
 
 \begin{equation*}
 \begin{align*}
-P(m ,r)=& 0.25~\forall~m \in M, r \in R \\ 
+P(R=1)=&0.5~,~P(M=1)=0.5 \\
+%P(m ,r)=& 0.25~\forall~m \in M, r \in R \\ 
 V :=& M$\oplus$R  \\
 I :=&  V 
 \end{align*}
