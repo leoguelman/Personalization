@@ -234,6 +234,8 @@ A/B Tests are `gold standard' in the One-Treatment-Fits-All paradigm because the
 
 \vskip20pt
 
+\pause
+
 
 \begin{columns}[T] % align columns
 \begin{column}{.48\textwidth}
@@ -279,11 +281,11 @@ A/B Tests are `gold standard' in the One-Treatment-Fits-All paradigm because the
 
 \vskip10pt
 
-\item The experiments destroy information about client intent, which provides information about the unobserved confounders.
+\item Experiments `destroy' information that can be valuable to identify the values of unobserved confounders.
 
 \vskip10pt
 
-\item Counterfactual-based decision making, which leads to a fusion of experimental and observational data, has a better chance to succeed when the goal is personalization. 
+\item Counterfactual-based decision making, which leads to a fusion of experimental and observational data, might be optimal for personalization. 
 
 \end{itemize}
 
@@ -300,7 +302,7 @@ A/B Tests are `gold standard' in the One-Treatment-Fits-All paradigm because the
 \item \textbf{Business objective:}  Sell a credit card to new-to-RBC clients. 
 
 
-\item \textbf{Current campaign: One-Treatment-Fits-All paradigm}. All new-to-RBC clients who visited the RBC public site, get a credit card offer $+$ iPad incentive.
+\item \textbf{Current campaign: One-Treatment-Fits-All paradigm}. All new-to-RBC clients who visited the RBC public site get a credit card offer $+$ iPad incentive.
 
 
 \begin{figure}
@@ -393,6 +395,11 @@ $I=0$ &  0.50 & \cellcolor{blue!25}{0.10} & \cellcolor{blue!25}{0.05} & 0.30 \\
 
 \begin{frame}
 [fragile]\frametitle{Four Approaches to Personalizing the Incentive}
+
+
+\textbf{Goal}: Identify which new-to-RBC clients should receive an iPad incentive in the future to maximize the expected profitability of the campaign.
+
+\vskip20pt
 
 \begin{figure}[t]
 \includegraphics[width=8cm]{figures/four.png}
