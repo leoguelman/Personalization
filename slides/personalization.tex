@@ -226,7 +226,7 @@
 %%%%Slide
 
 \begin{frame}
-[fragile]\frametitle{Estimating Treatment Effects: \textbf{Non}-Personalized Paradigm}
+[fragile]\frametitle{Estimating Treatment Effects: \textbf{Non-Personalized Paradigm}}
 
 \small{
 A/B Tests are `gold standard' in the One-Treatment-Fits-All paradigm because they remove the influence of unobserved confounders (unmeasured variables that influence both the treatment and the outcome). 
@@ -267,7 +267,7 @@ A/B Tests are `gold standard' in the One-Treatment-Fits-All paradigm because the
 %%%%Slide
 
 \begin{frame}
-[fragile]\frametitle{Estimating Treatment Effects: Personalized Paradigm}
+[fragile]\frametitle{Estimating Treatment Effects: \textbf{Personalized Paradigm}}
 
 % If there is a singe takeaway message from what I want to talk about is that, in contrast to the idea that A/B testing should be used as the gold standard to learn causal effects, when the goal is not just to learn average treatment effects (i.e., whether a action is effective on average) but to learn personalized optimal actions, then A/B test may or may not be the best we can do.
 
@@ -275,24 +275,25 @@ A/B Tests are `gold standard' in the One-Treatment-Fits-All paradigm because the
 
 \begin{itemize}
 
-\item In the presence of unobserved confounders (most plausible scenario), experimental data is likely not `gold standard' for estimating heterogenous treatment effects.
+\item In the presence of unobserved confounders, experimental data is not `gold standard' for estimating heterogenous treatment effects (required for personalization)
 
 \vskip10pt
 
-\item  A coherent fusion of experimental and observational data that results from a \emph{counterfactual}-based decision criterion is likely to outperform other approaches. 
+\item The experiments destroy information about client intent, which provides information about the unobserved confounders.
 
 \vskip10pt
 
-\item In what follows, I'll use a Personalized Marketing problem as a motivating example to discuss the statements above. 
+\item Counterfactual-based decision making, which leads to a fusion of experimental and observational data, has a better chance to succeed when the goal is personalization. 
 
 \end{itemize}
+
 
 \end{frame}
 
 %%%%Slide
 
 \begin{frame}
-[fragile]\frametitle{The Business Setting}
+[fragile]\frametitle{Motivating Example}
 
 \begin{itemize}
 
@@ -791,14 +792,15 @@ P(\pi_{a'} | M, a) &= \frac{1}{P(a|M)} \Bigl[P(\pi_{a'} | M) -  P(\pi | M, a') P
 \begin{columns}[T] % align columns
 \begin{column}{.48\textwidth}
 
-\begin{scriptsize}
+\begin{footnotesize}
 
 $\boxed{E(\pi_{I=1} | M=1, I=0)} = $
 \begin{equation*}
 \begin{align*}
  \frac{1}{P(I=0|M=1)} \Bigl[E\Big(\pi | M=1, do(I=1)\Big) -  \\
  E(\pi | M=1, I=1) P( I=1 | M=1) \Bigr].  & \\
- = \frac{1}{1/2} (0.350-0.25  \times \frac{1}{1/2})  & = \textbf{0.45}
+ = \frac{1}{1/2} (0.350-0.25  \times \frac{1}{1/2})  & = \textbf{0.45} \\
+  > 0.05 = E(\pi_{I=0} | M=1, I=0).
 \end{align*}
 \end{equation*}
 
@@ -808,7 +810,7 @@ $\boxed{E(\pi_{I=0} | M=1, I=1)} = \textbf{0.50} \\ $
 
 $\boxed{E(\pi_{I=0} | M=0, I=1)} = \textbf{0.30} \\ $ 
 
-\end{scriptsize}
+\end{footnotesize}
 
 
 \end{column}%
@@ -859,7 +861,7 @@ $I=0$ &  0.50 & \cellcolor{blue!25}{0.10} & \cellcolor{blue!25}{0.05} & 0.30 \\
 
 \vskip5pt
 
-Expected profit = $\boxed{\mathbf{0.4375}}$ = (0.50 + 0.30+ 0.45+0.50)/4.
+Expected profit = $\boxed{\mathbf{0.4375}}$ = (0.45 + 0.50+ 0.50 +0.30)/4.
 }
 
 \end{frame}
