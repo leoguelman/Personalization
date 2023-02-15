@@ -1,0 +1,17 @@
+\frametitle{References}
+
+\begin{itemize}
+
+\item  Elias Bareinboim, Andrew Forney, and Judea Pearl. 2015. Bandits with unobserved confounders: a causal approach. In Proceedings of the 28th International Conference on Neural Information Processing Systems - Volume 1 (NIPS'15).
+
+\begin{itemize}
+
+\item Implementation: \url{https://github.com/leoguelman/mabuc}
+
+\end{itemize}
+
+\item Forney, A., Pearl, J. ; Bareinboim, E.. (2017). Counterfactual Data-Fusion for Online Reinforcement Learners. Proceedings of the 34th International Conference on Machine Learning, in Proceedings of Machine Learning Research 70:1156-1164
+
+
+\end{itemize}
+
