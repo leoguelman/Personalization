@@ -458,7 +458,7 @@ $I=0$ &  0.50 & \cellcolor{blue!25}{0.10} & \cellcolor{blue!25}{0.05} & 0.30 \\
 \begin{column}{.48\textwidth}
 
 \begin{center}
-D^*_{\text{AI}}(M) = ~$\underset{I \in {0,1}}{\mathrm{argmax}}~E[\pi|I, M]$
+$\mathcal{D}^*_{\text{AI}}(M) = ~$\underset{I \in {0,1}}{\mathrm{argmax}}~E[\pi|I, M]$
 \end{center}
 
 \pause
@@ -606,7 +606,7 @@ I :=&  V \textcolor{blue}{\land C}
 \begin{column}{.55\textwidth}
 
 \begin{center}
-D^*_{\text{IPVR}}(M) = $\underset{I \in {0,1}}{\mathrm{argmax}}~E[\pi| do(I), M, V=1]$
+$\mathcal{D}^*_{\text{IPVR}}(M) = ~$\underset{I \in {0,1}}{\mathrm{argmax}}~E[\pi| do(I), M, V=1]$
 \end{center}
 
 \vskip10pt
@@ -757,7 +757,7 @@ I :=&  \textcolor{blue}{C}
 \begin{column}{.48\textwidth}
 
 \begin{center}
-D^*_{\text{IFR}}(M) = $\underset{I \in {0,1}}{\mathrm{argmax}}~E[\pi|do(I), M]$
+$\mathcal{D}^*_{\text{IFR}}(M) = ~$\underset{I \in {0,1}}{\mathrm{argmax}}~E[\pi|do(I), M]$
 \end{center}
 
 \vskip10pt
@@ -836,12 +836,39 @@ Expected profit = $\boxed{\mathbf{0.315}}$ = (0.35+0.275)/2.
 };
 \end{tikzpicture}
 
-D^*_{\text{CI}}(M, I) = $\underset{a' \in~{0,1}}{\mathrm{argmax}}~E[\pi_{a'}| I=a, M]$
+\vskip-80pt
 
-\vskip10pt
+$\mathcal{D}^*_{\text{CI}}(M, I) = ~$\underset{a' \in~{0,1}}{\mathrm{argmax}}~E[\pi_{a'}| I=a, M]$
 
 \pause
 
+\vskip5pt
+
+\begin{enumerate}
+
+\item Do I need to assume a parametric model to identify this causal estimand?
+
+\item Do I need to assume that the conditioning set $\{M\}$ satisfies the \emph{backdoor criterion} to identify this causal estimand?
+
+\end{enumerate}
+
+\end{frame}
+
+%%%%Slide
+
+\begin{frame}
+[fragile]\frametitle{4. Counterfactual Inference}
+
+\begin{tikzpicture}[remember picture, overlay]
+\node[left] at (current page.33) 
+{
+    \includegraphics[width=0.1\textwidth]{figures/ds4.png}
+};
+\end{tikzpicture}
+
+$\mathcal{D}^*_{\text{CI}}(M, I) = ~$\underset{a' \in~{0,1}}{\mathrm{argmax}}~E[\pi_{a'}| I=a, M]$
+
+\vskip5pt
 
 \scriptsize
 \begin{equation*}
@@ -962,7 +989,7 @@ Expected profit = $\boxed{\mathbf{0.4375}}$ = (0.45 + 0.50+ 0.50 +0.30)/4.
    \toprule
    \textbf{Criterion} & \textbf{Decision Rule} & $E[\pi] $ \\  
    \midrule
-EDC & 
+$\mathcal{D}_{AI}$ & 
 
 \begin{itemize}
 \item If Visit Site $\land$ Married $\rightarrow$ \textbf{Purchase Incentive} 
@@ -972,9 +999,9 @@ EDC &
   
     
 &  .2750 &\\ \hline
-PVR & \textbf{Never Purchase Incentive} & .4000 \\ \\ \hline
-ABT & \textbf{Always Purchase Incentive} &  .3150  \\ \\ \hline
-RDC & 
+$\mathcal{D}_{IPVR}$& \textbf{Never Purchase Incentive} & .4000 \\ \\ \hline
+$\mathcal{D}_{IFR}$& \textbf{Always Purchase Incentive} &  .3150  \\ \\ \hline
+$\mathcal{D}_{CI}$ & 
 
 \begin{itemize}
 \item If Visit Site $\land$ Married $\rightarrow$ \textbf{No Purchase Incentive} 
@@ -984,7 +1011,7 @@ RDC &
 \end{itemize}
 
 & \textbf{.4375}  \\ \hline
-Oracle & & \textbf{.4375} \\ \\ 
+$\mathcal{D}_{\text{Oracle}}$ & & \textbf{.4375} \\ \\ 
    \bottomrule
    \end{tabular}
 \end{table}
@@ -998,69 +1025,53 @@ Oracle & & \textbf{.4375} \\ \\
 
 \begin{itemize}
 
-\item If the goal is to learn personalized actions, experimental data alone is sub-optimal in the presence of unobserved confounders. 
+\item Experimental data are `gold standard' in the non-personalized paradigm because they remove the influence of unobserved confounders.
 
-\vskip10pt
+\vskip12pt
 
-\item Combining experimental and observational data under a Regret Decision Criterion (RDC) can provide information about the unobserved confounders, and hence outperform alternative optimization criteria. 
+\item In the personalization paradigm, experimental data alone is not `gold standard' for estimating heterogeneous treatment effects in the presence of unobserved and heterogenous confounders.
 
-\vskip10pt
+\vskip12pt
+
+\item Experiments `destroy' information that can be valuable to identify the values of unobserved confounders.
+
+\vskip12pt
+
+\item Counterfactual-based decision making, which leads to a fusion of experimental and observational data, might be optimal for personalization. 
+
+\vskip12pt
+
+
+\end{itemize}
+
+\end{frame}
+
+%%%%Slide
+
+
+\begin{frame}
+[fragile]\frametitle{Further Reading}
+
+\begin{itemize}
 
 \item The expression derived from RDC works only in the binary treatment case. RDC-type randomization \href{https://proceedings.mlr.press/v70/forney17a.html}{(Forney et al., 2017) }
 was proposed to estimate counterfactual expressions empirically from an arbitrary number of treatments. 
 
-\end{itemize}
+\vskip15pt
 
-\end{frame}
-
-%%%%Slide
-
-
-\begin{frame}
-[fragile]\frametitle{Estimating Treatment Effects: \textbf{Personalized Paradigm}}
-
-% If there is a singe takeaway message from what I want to talk about is that, in contrast to the idea that A/B testing should be used as the gold standard to learn causal effects, when the goal is not just to learn average treatment effects (i.e., whether a action is effective on average) but to learn personalized optimal actions, then A/B test may or may not be the best we can do.
-
-% when the goal is to 
-
-\begin{itemize}
-
-\item A/B Tests are `gold standard' in the One-Treatment-Fits-All paradigm because they remove the influence of unobserved confounders (unmeasured variables that influence both the treatment and the outcome). 
-
-\item In the presence of unobserved confounders, experimental data is not `gold standard' for estimating heterogenous treatment effects (required for personalization)
+\item This presentation is fundamentally inspired by this paper: 
 
 \vskip10pt
 
-\item Experiments `destroy' information that can be valuable to identify the values of unobserved confounders.
-
-\vskip10pt
-
-\item Counterfactual-based decision making, which leads to a fusion of experimental and observational data, might be optimal for personalization. 
-
-\end{itemize}
-
-
-\end{frame}
-
-
-
-%%%%Slide
-
-
-\begin{frame}
-[fragile]\frametitle{References}
-
 \begin{itemize}
 
-\item  Elias Bareinboim, Andrew Forney, and Judea Pearl. 2015. Bandits with unobserved confounders: a causal approach. In Proceedings of the 28th International Conference on Neural Information Processing Systems - Volume 1 (NIPS'15). 
 
-\begin{itemize}
+\item Elias Bareinboim, Andrew Forney, and Judea Pearl. 2015. Bandits with unobserved confounders: a causal approach. In Proceedings of the 28th International Conference on Neural Information Processing Systems - Volume 1 (NIPS'15). 
+
 
 \item Implementation: \url{https://github.com/leoguelman/mabuc}
 
 \end{itemize}
-
-\item Forney, A., Pearl, J. ; Bareinboim, E.. (2017). Counterfactual Data-Fusion for Online Reinforcement Learners. Proceedings of the 34th International Conference on Machine Learning, in Proceedings of Machine Learning Research 70:1156-1164 
 
 
 \end{itemize}

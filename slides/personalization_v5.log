@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  17 FEB 2023 16:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  17 FEB 2023 16:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1592,13 +1592,6 @@ Package pdftex.def Info: figures/ds1.png  used on input line 6.
 ./personalization_v5.vrb:14: Missing $ inserted.
 <inserted text> 
                 $
-l.14 D^
-       *_{\text{AI}}(M) = ~$\underset{I \in {0,1}}{\mathrm{argmax}}~E[\pi|I,...
-
-? 
-./personalization_v5.vrb:14: Missing $ inserted.
-<inserted text> 
-                $
 l.14 ... ~$\underset{I \in {0,1}}{\mathrm{argmax}}
                                                   ~E[\pi|I, M]$
 ? 
@@ -1637,13 +1630,6 @@ Package pdftex.def Info: figures/ds1.png  used on input line 6.
 ./personalization_v5.vrb:14: Missing $ inserted.
 <inserted text> 
                 $
-l.14 D^
-       *_{\text{AI}}(M) = ~$\underset{I \in {0,1}}{\mathrm{argmax}}~E[\pi|I,...
-
-? 
-./personalization_v5.vrb:14: Missing $ inserted.
-<inserted text> 
-                $
 l.14 ... ~$\underset{I \in {0,1}}{\mathrm{argmax}}
                                                   ~E[\pi|I, M]$
 ? 
@@ -1679,13 +1665,6 @@ File: figures/ds1.png Graphic file (type png)
 Package pdftex.def Info: figures/ds1.png  used on input line 6.
 (pdftex.def)             Requested size: 34.42212pt x 33.44868pt.
 
-./personalization_v5.vrb:14: Missing $ inserted.
-<inserted text> 
-                $
-l.14 D^
-       *_{\text{AI}}(M) = ~$\underset{I \in {0,1}}{\mathrm{argmax}}~E[\pi|I,...
-
-? 
 ./personalization_v5.vrb:14: Missing $ inserted.
 <inserted text> 
                 $
@@ -1800,20 +1779,13 @@ Package pdftex.def Info: figures/ds2.png  used on input line 6.
 ./personalization_v5.vrb:15: Missing $ inserted.
 <inserted text> 
                 $
-l.15 D^
-       *_{\text{IPVR}}(M) = $\underset{I \in {0,1}}{\mathrm{argmax}}~E[\pi| ...
-
-? 
-./personalization_v5.vrb:15: Missing $ inserted.
-<inserted text> 
-                $
-l.15 ...= $\underset{I \in {0,1}}{\mathrm{argmax}}
+l.15 ... ~$\underset{I \in {0,1}}{\mathrm{argmax}}
                                                   ~E[\pi| do(I), M, V=1]$
 ? 
 ./personalization_v5.vrb:15: Extra }, or forgotten $.
 \underset ...{\mathop {\kern \z@ #2}\limits _{#1}}
                                                   
-l.15 ...= $\underset{I \in {0,1}}{\mathrm{argmax}}
+l.15 ... ~$\underset{I \in {0,1}}{\mathrm{argmax}}
                                                   ~E[\pi| do(I), M, V=1]$
 ? 
 ./personalization_v5.vrb:16: Missing } inserted.
@@ -1845,20 +1817,13 @@ Package pdftex.def Info: figures/ds2.png  used on input line 6.
 ./personalization_v5.vrb:15: Missing $ inserted.
 <inserted text> 
                 $
-l.15 D^
-       *_{\text{IPVR}}(M) = $\underset{I \in {0,1}}{\mathrm{argmax}}~E[\pi| ...
-
-? 
-./personalization_v5.vrb:15: Missing $ inserted.
-<inserted text> 
-                $
-l.15 ...= $\underset{I \in {0,1}}{\mathrm{argmax}}
+l.15 ... ~$\underset{I \in {0,1}}{\mathrm{argmax}}
                                                   ~E[\pi| do(I), M, V=1]$
 ? 
 ./personalization_v5.vrb:15: Extra }, or forgotten $.
 \underset ...{\mathop {\kern \z@ #2}\limits _{#1}}
                                                   
-l.15 ...= $\underset{I \in {0,1}}{\mathrm{argmax}}
+l.15 ... ~$\underset{I \in {0,1}}{\mathrm{argmax}}
                                                   ~E[\pi| do(I), M, V=1]$
 ? 
 ./personalization_v5.vrb:16: Missing } inserted.
@@ -1890,20 +1855,13 @@ Package pdftex.def Info: figures/ds2.png  used on input line 6.
 ./personalization_v5.vrb:15: Missing $ inserted.
 <inserted text> 
                 $
-l.15 D^
-       *_{\text{IPVR}}(M) = $\underset{I \in {0,1}}{\mathrm{argmax}}~E[\pi| ...
-
-? 
-./personalization_v5.vrb:15: Missing $ inserted.
-<inserted text> 
-                $
-l.15 ...= $\underset{I \in {0,1}}{\mathrm{argmax}}
+l.15 ... ~$\underset{I \in {0,1}}{\mathrm{argmax}}
                                                   ~E[\pi| do(I), M, V=1]$
 ? 
 ./personalization_v5.vrb:15: Extra }, or forgotten $.
 \underset ...{\mathop {\kern \z@ #2}\limits _{#1}}
                                                   
-l.15 ...= $\underset{I \in {0,1}}{\mathrm{argmax}}
+l.15 ... ~$\underset{I \in {0,1}}{\mathrm{argmax}}
                                                   ~E[\pi| do(I), M, V=1]$
 ? 
 ./personalization_v5.vrb:16: Missing } inserted.
@@ -1996,20 +1954,13 @@ Package pdftex.def Info: figures/ds3.png  used on input line 6.
 ./personalization_v5.vrb:14: Missing $ inserted.
 <inserted text> 
                 $
-l.14 D^
-       *_{\text{IFR}}(M) = $\underset{I \in {0,1}}{\mathrm{argmax}}~E[\pi|do...
-
-? 
-./personalization_v5.vrb:14: Missing $ inserted.
-<inserted text> 
-                $
-l.14 ...= $\underset{I \in {0,1}}{\mathrm{argmax}}
+l.14 ... ~$\underset{I \in {0,1}}{\mathrm{argmax}}
                                                   ~E[\pi|do(I), M]$
 ? 
 ./personalization_v5.vrb:14: Extra }, or forgotten $.
 \underset ...{\mathop {\kern \z@ #2}\limits _{#1}}
                                                   
-l.14 ...= $\underset{I \in {0,1}}{\mathrm{argmax}}
+l.14 ... ~$\underset{I \in {0,1}}{\mathrm{argmax}}
                                                   ~E[\pi|do(I), M]$
 ? 
 ./personalization_v5.vrb:15: Missing } inserted.
@@ -2041,20 +1992,13 @@ Package pdftex.def Info: figures/ds3.png  used on input line 6.
 ./personalization_v5.vrb:14: Missing $ inserted.
 <inserted text> 
                 $
-l.14 D^
-       *_{\text{IFR}}(M) = $\underset{I \in {0,1}}{\mathrm{argmax}}~E[\pi|do...
-
-? 
-./personalization_v5.vrb:14: Missing $ inserted.
-<inserted text> 
-                $
-l.14 ...= $\underset{I \in {0,1}}{\mathrm{argmax}}
+l.14 ... ~$\underset{I \in {0,1}}{\mathrm{argmax}}
                                                   ~E[\pi|do(I), M]$
 ? 
 ./personalization_v5.vrb:14: Extra }, or forgotten $.
 \underset ...{\mathop {\kern \z@ #2}\limits _{#1}}
                                                   
-l.14 ...= $\underset{I \in {0,1}}{\mathrm{argmax}}
+l.14 ... ~$\underset{I \in {0,1}}{\mathrm{argmax}}
                                                   ~E[\pi|do(I), M]$
 ? 
 ./personalization_v5.vrb:15: Missing } inserted.
@@ -2087,42 +2031,23 @@ File: figures/ds4.png Graphic file (type png)
 Package pdftex.def Info: figures/ds4.png  used on input line 6.
 (pdftex.def)             Requested size: 34.42212pt x 30.46193pt.
 
-./personalization_v5.vrb:10: Missing $ inserted.
+./personalization_v5.vrb:12: Missing $ inserted.
 <inserted text> 
                 $
-l.10 D^
-       *_{\text{CI}}(M, I) = $\underset{a' \in~{0,1}}{\mathrm{argmax}}~E[\pi...
-
-? 
-./personalization_v5.vrb:10: Missing $ inserted.
-<inserted text> 
-                $
-l.10 ... $\underset{a' \in~{0,1}}{\mathrm{argmax}}
+l.12 ...~$\underset{a' \in~{0,1}}{\mathrm{argmax}}
                                                   ~E[\pi_{a'}| I=a, M]$
 ? 
-./personalization_v5.vrb:10: Extra }, or forgotten $.
+./personalization_v5.vrb:12: Extra }, or forgotten $.
 \underset ...{\mathop {\kern \z@ #2}\limits _{#1}}
                                                   
-l.10 ... $\underset{a' \in~{0,1}}{\mathrm{argmax}}
+l.12 ...~$\underset{a' \in~{0,1}}{\mathrm{argmax}}
                                                   ~E[\pi_{a'}| I=a, M]$
 ? 
-
-./personalization_v5.vrb:26: Package amsmath Error: Erroneous nesting of equati
-on structures;
-(amsmath)                trying to recover with `aligned'.
-
-See the amsmath package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.26 \end{align*}
-                 
-? 
 )
-./personalization_v5.tex:861: Missing } inserted.
+./personalization_v5.tex:855: Missing } inserted.
 <inserted text> 
                 }
-l.861 \end{frame}
+l.855 \end{frame}
                  
 ? 
 [19
@@ -2133,27 +2058,50 @@ File: figures/ds4.png Graphic file (type png)
 Package pdftex.def Info: figures/ds4.png  used on input line 6.
 (pdftex.def)             Requested size: 34.42212pt x 30.46193pt.
 
-./personalization_v5.vrb:10: Missing $ inserted.
+./personalization_v5.vrb:12: Missing $ inserted.
 <inserted text> 
                 $
-l.10 D^
-       *_{\text{CI}}(M, I) = $\underset{a' \in~{0,1}}{\mathrm{argmax}}~E[\pi...
-
+l.12 ...~$\underset{a' \in~{0,1}}{\mathrm{argmax}}
+                                                  ~E[\pi_{a'}| I=a, M]$
 ? 
+./personalization_v5.vrb:12: Extra }, or forgotten $.
+\underset ...{\mathop {\kern \z@ #2}\limits _{#1}}
+                                                  
+l.12 ...~$\underset{a' \in~{0,1}}{\mathrm{argmax}}
+                                                  ~E[\pi_{a'}| I=a, M]$
+? 
+)
+./personalization_v5.tex:855: Missing } inserted.
+<inserted text> 
+                }
+l.855 \end{frame}
+                 
+? 
+[20
+
+]
+\openout4 = `personalization_v5.vrb'.
+
+ (./personalization_v5.vrb
+File: figures/ds4.png Graphic file (type png)
+<use figures/ds4.png>
+Package pdftex.def Info: figures/ds4.png  used on input line 6.
+(pdftex.def)             Requested size: 34.42212pt x 30.46193pt.
+
 ./personalization_v5.vrb:10: Missing $ inserted.
 <inserted text> 
                 $
-l.10 ... $\underset{a' \in~{0,1}}{\mathrm{argmax}}
+l.10 ...~$\underset{a' \in~{0,1}}{\mathrm{argmax}}
                                                   ~E[\pi_{a'}| I=a, M]$
 ? 
 ./personalization_v5.vrb:10: Extra }, or forgotten $.
 \underset ...{\mathop {\kern \z@ #2}\limits _{#1}}
                                                   
-l.10 ... $\underset{a' \in~{0,1}}{\mathrm{argmax}}
+l.10 ...~$\underset{a' \in~{0,1}}{\mathrm{argmax}}
                                                   ~E[\pi_{a'}| I=a, M]$
 ? 
 
-./personalization_v5.vrb:26: Package amsmath Error: Erroneous nesting of equati
+./personalization_v5.vrb:23: Package amsmath Error: Erroneous nesting of equati
 on structures;
 (amsmath)                trying to recover with `aligned'.
 
@@ -2161,17 +2109,17 @@ See the amsmath package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.26 \end{align*}
+l.23 \end{align*}
                  
 ? 
 )
-./personalization_v5.tex:861: Missing } inserted.
+./personalization_v5.tex:888: Missing } inserted.
 <inserted text> 
                 }
-l.861 \end{frame}
+l.888 \end{frame}
                  
 ? 
-[20
+[21
 
 ]
 \openout4 = `personalization_v5.vrb'.
@@ -2261,10 +2209,10 @@ l.30
      
 ? 
 )
-Overfull \vbox (4.83258pt too high) detected at line 950
+Overfull \vbox (4.83258pt too high) detected at line 977
  []
 
-[21
+[22
 
 ] (./personalization_v5.vrb
 File: figures/ds4.png Graphic file (type png)
@@ -2351,10 +2299,10 @@ l.30
      
 ? 
 )
-Overfull \vbox (4.83258pt too high) detected at line 950
+Overfull \vbox (4.83258pt too high) detected at line 977
  []
 
-[22
+[23
 
 ]
 \openout4 = `personalization_v5.vrb'.
@@ -2366,12 +2314,7 @@ Overfull \vbox (4.83258pt too high) detected at line 950
 l.20 &  .2750 &
                \\ \hline
 ? 
-) [23
-
-]
-\openout4 = `personalization_v5.vrb'.
-
- (./personalization_v5.vrb) [24
+) [24
 
 ]
 \openout4 = `personalization_v5.vrb'.
@@ -2381,8 +2324,7 @@ l.20 &  .2750 &
 ]
 \openout4 = `personalization_v5.vrb'.
 
-
-(./personalization_v5.vrb) [26
+ (./personalization_v5.vrb) [26
 
 ]
 \tf@nav=\write6
@@ -2394,11 +2336,12 @@ l.20 &  .2750 &
 \tf@snm=\write8
 \openout8 = `personalization_v5.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1070.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1070.
- (./personalization_v5.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1070.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1070.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1081.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1081.
+
+(./personalization_v5.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1081.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1081.
 
 Package rerunfilecheck Info: File `personalization_v5.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
@@ -2406,16 +2349,13 @@ Package rerunfilecheck Info: File `personalization_v5.out' has not changed.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 32622 strings out of 480608
- 693373 string characters out of 5903631
- 937851 words of memory out of 5000000
- 47683 multiletter control sequences out of 15000+600000
- 561246 words of font info for 88 fonts, out of 8000000 for 9000
+ 32612 strings out of 480608
+ 693273 string characters out of 5903631
+ 937892 words of memory out of 5000000
+ 47673 multiletter control sequences out of 15000+600000
+ 561290 words of font info for 88 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  58i,22n,69p,856b,1097s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
@@ -2438,20 +2378,20 @@ texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/te
 xlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texl
 ive/2020/texmf-dist/fonts/type1/public/amsfonts/symbols/msam5.pfb></usr/local/t
 exlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/tex
-live/2020/texmf-dist/fonts/type1/public/cm-super/sfso0900.pfb></usr/local/texli
-ve/2020/texmf-dist/fonts/type1/public/cm-super/sfss0500.pfb></usr/local/texlive
-/2020/texmf-dist/fonts/type1/public/cm-super/sfss0600.pfb></usr/local/texlive/2
-020/texmf-dist/fonts/type1/public/cm-super/sfss0700.pfb></usr/local/texlive/202
-0/texmf-dist/fonts/type1/public/cm-super/sfss0900.pfb></usr/local/texlive/2020/
-texmf-dist/fonts/type1/public/cm-super/sfss1000.pfb></usr/local/texlive/2020/te
-xmf-dist/fonts/type1/public/cm-super/sfss1440.pfb></usr/local/texlive/2020/texm
-f-dist/fonts/type1/public/cm-super/sfsx0600.pfb></usr/local/texlive/2020/texmf-
-dist/fonts/type1/public/cm-super/sfsx0700.pfb></usr/local/texlive/2020/texmf-di
-st/fonts/type1/public/cm-super/sfsx0900.pfb></usr/local/texlive/2020/texmf-dist
-/fonts/type1/public/cm-super/sfsx1000.pfb></usr/local/texlive/2020/texmf-dist/f
-onts/type1/public/cm-super/sfsx1440.pfb></usr/local/texlive/2020/texmf-dist/fon
+live/2020/texmf-dist/fonts/type1/public/cm-super/sfsi1000.pfb></usr/local/texli
+ve/2020/texmf-dist/fonts/type1/public/cm-super/sfso0900.pfb></usr/local/texlive
+/2020/texmf-dist/fonts/type1/public/cm-super/sfss0500.pfb></usr/local/texlive/2
+020/texmf-dist/fonts/type1/public/cm-super/sfss0600.pfb></usr/local/texlive/202
+0/texmf-dist/fonts/type1/public/cm-super/sfss0700.pfb></usr/local/texlive/2020/
+texmf-dist/fonts/type1/public/cm-super/sfss0900.pfb></usr/local/texlive/2020/te
+xmf-dist/fonts/type1/public/cm-super/sfss1000.pfb></usr/local/texlive/2020/texm
+f-dist/fonts/type1/public/cm-super/sfss1440.pfb></usr/local/texlive/2020/texmf-
+dist/fonts/type1/public/cm-super/sfsx0600.pfb></usr/local/texlive/2020/texmf-di
+st/fonts/type1/public/cm-super/sfsx0700.pfb></usr/local/texlive/2020/texmf-dist
+/fonts/type1/public/cm-super/sfsx0900.pfb></usr/local/texlive/2020/texmf-dist/f
+onts/type1/public/cm-super/sfsx1000.pfb></usr/local/texlive/2020/texmf-dist/fon
 ts/type1/public/cm-super/sftt0900.pfb>
-Output written on personalization_v5.pdf (26 pages, 915805 bytes).
+Output written on personalization_v5.pdf (26 pages, 906294 bytes).
 PDF statistics:
  316 PDF objects out of 1000 (max. 8388607)
  231 compressed objects within 3 object streams
