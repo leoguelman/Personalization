@@ -82,6 +82,7 @@
 \usepackage{algorithm}
 \usepackage{amsfonts}
 \usepackage{booktabs}
+\usepackage{graphicx}
 \usepackage{siunitx}
 
 \usepackage{hyperref}
@@ -149,6 +150,11 @@
 %\setcounter{page}{44}
 %\setbeamertemplate{footline}{}
 
+%gets rid of bottom navigation bars
+\setbeamertemplate{footline}[frame number]{}
+
+%gets rid of navigation symbols
+\setbeamertemplate{navigation symbols}{}
 
 \makeatother
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
@@ -156,7 +162,7 @@
 \begin{document}
 
 
-\title[Personalization with Latent Confounders]{Personalization with Latent Confounders}
+\title[Personalization]{Personalization with Unobserved Heterogeneity}
 \author[Leo Guelman]{Leo Guelman}
 \institute[RBC Royal Bank]{Head Statistician, DNA \\ RBC Royal Bank}
 \date[February 2023]
@@ -193,7 +199,7 @@
 
 \begin{itemize}
 
-\item Personalization is founded on the premise that individuals have heterogenous response to actions.
+\item Personalization is founded on the premise that individuals have heterogeneous responses to actions.
 % the optimal action for person A and person B might be different. 
 
 \vskip7pt
@@ -212,7 +218,7 @@
 
 
 \begin{figure}[t]
-\includegraphics[width=5cm]{figures/personalizedmedv2.jpg}
+\includegraphics[width=5cm]{figures/personalizedmedv3.jpg}
 \centering
 \end{figure}
 
@@ -223,41 +229,63 @@
 
 \end{frame}
 
+
+
 %%%%Slide
 
 \begin{frame}
-[fragile]\frametitle{Estimating Treatment Effects: \textbf{Non-Personalized Paradigm}}
+[fragile]\frametitle{Unobserved and Heterogeneous Confounders}
 
-\small{
-A/B Tests are `gold standard' in the One-Treatment-Fits-All paradigm because they remove the influence of unobserved confounders (unmeasured variables that influence both the treatment and the outcome). 
-}
-
-\vskip20pt
-
-\pause
 
 
 \begin{columns}[T] % align columns
 \begin{column}{.48\textwidth}
 
-\begin{figure}[t]
-\includegraphics[width=4cm]{figures/ab1.png}
-\centering
-\end{figure}
+
+\vskip15pt
+
+\small{
+
+\begin{itemize}
+
+\item Treatment effect ($T$) varies according to the value of unobserved confounders ($U$).
+
+
+\begin{equation*}
+\begin{align*}
+T:=& f(U) + N_T \\
+Y :=& f(T, U, \boldsymbol{T \times U)} + N_Y
+\end{align*}
+\end{equation*}
+
+
+\vskip7pt
+
+\item Likely the norm in observational settings. 
+% the optimal action for person A and person B might be different. 
+
+
+\end{itemize}
+}
 
 
 \end{column}%
-\hfill%
-
-\pause
 
 \begin{column}{.48\textwidth}
 
-\vskip-10pt
+\begin{figure}
+\begin{tikzpicture}
+    \node[state, rectangle] (1) at (0,0)  {\includegraphics[width=.20\textwidth]{figures/pill.png}};
+    \node[state,  rectangle] (2) at (4, 0)  {$Y$};
+    \node[state,  rectangle, dashed]  (3) at (2,1) {$U$};
 
-\begin{figure}[t]
-\includegraphics[width=4cm]{figures/ab2.png}
-\centering
+    \path (1) edge  (2);
+      \path[dashed] (3) edge  (1);
+           \path[dashed] (3) edge  (2);
+  \end{tikzpicture}
+  
+  \caption{Observational setting.}
+
 \end{figure}
 
 
@@ -269,28 +297,34 @@ A/B Tests are `gold standard' in the One-Treatment-Fits-All paradigm because the
 %%%%Slide
 
 \begin{frame}
-[fragile]\frametitle{Estimating Treatment Effects: \textbf{Personalized Paradigm}}
+[fragile]\frametitle{Motivating Questions}
 
-% If there is a singe takeaway message from what I want to talk about is that, in contrast to the idea that A/B testing should be used as the gold standard to learn causal effects, when the goal is not just to learn average treatment effects (i.e., whether a action is effective on average) but to learn personalized optimal actions, then A/B test may or may not be the best we can do.
 
-% when the goal is to 
+Given the high-level goal of personalization, and the context of unobserved heterogeneity:
+
+\vskip10pt
 
 \begin{itemize}
 
-\item In the presence of unobserved confounders, experimental data is not `gold standard' for estimating heterogenous treatment effects (required for personalization)
+\item Alternatives to how I formulate this problem? For instance, what is a suitable causal estimand?
 
-\vskip10pt
+\vskip7pt
 
-\item Experiments `destroy' information that can be valuable to identify the values of unobserved confounders.
+\item What data do I need for identification? 
 
-\vskip10pt
+\vskip7pt
 
-\item Counterfactual-based decision making, which leads to a fusion of experimental and observational data, might be optimal for personalization. 
+\item Is experimental data `gold standard'?
 
 \end{itemize}
 
+\vskip10pt
+
+\textbf{Out-of-scope}: Estimation (e.g., compare different estimators). 
+
 
 \end{frame}
+
 
 %%%%Slide
 
@@ -302,7 +336,7 @@ A/B Tests are `gold standard' in the One-Treatment-Fits-All paradigm because the
 \item \textbf{Business objective:}  Sell a credit card to new-to-RBC clients. 
 
 
-\item \textbf{Current campaign: One-Treatment-Fits-All paradigm}. All new-to-RBC clients who visited the RBC public site get a credit card offer $+$ iPad incentive.
+\item \textbf{Current campaign}. All new-to-RBC clients who visited the RBC public site get a credit card offer $+$ iPad incentive.
 
 
 \begin{figure}
@@ -311,7 +345,7 @@ A/B Tests are `gold standard' in the One-Treatment-Fits-All paradigm because the
 
 \vskip20pt
 
-\item \textbf{Future campaign: Personalize the incentive}. Identify which new-to-RBC clients should receive an iPad incentive in the future to maximize the expected profitability of the campaign. 
+\item \textbf{Business Goal: Personalize the incentive}. Identify which new-to-RBC clients should receive an iPad incentive in the future to maximize the expected profitability of the campaign. 
 
 \end{itemize}
 
@@ -345,7 +379,7 @@ A/B Tests are `gold standard' in the One-Treatment-Fits-All paradigm because the
 
 \vskip 5pt
 
-\caption{`True' Causal Graph (current campaign).}
+\caption{Observational setting.}
 
 \end{figure}
 
@@ -397,7 +431,7 @@ $I=0$ &  0.50 & \cellcolor{blue!25}{0.10} & \cellcolor{blue!25}{0.05} & 0.30 \\
 [fragile]\frametitle{Four Approaches to Personalizing the Incentive}
 
 
-\textbf{Goal}: Identify which new-to-RBC clients should receive an iPad incentive in the future to maximize the expected profitability of the campaign.
+\textbf{Business Goal}: Identify which new-to-RBC clients should receive an iPad incentive in the future to maximize the expected profitability of the campaign.
 
 \vskip20pt
 
@@ -411,14 +445,20 @@ $I=0$ &  0.50 & \cellcolor{blue!25}{0.10} & \cellcolor{blue!25}{0.05} & 0.30 \\
 %%%%Slide
 
 \begin{frame}
-[fragile]\frametitle{DS \#1: Empirical Decision Criterion (EDC)}
-\framesubtitle{Associational Inference}
+[fragile]\frametitle{1. Associational Inference}
+
+\begin{tikzpicture}[remember picture, overlay]
+\node[left] at (current page.33) 
+{
+    \includegraphics[width=0.1\textwidth]{figures/ds1.png}
+};
+\end{tikzpicture}
 
 \begin{columns}[T] % align columns
 \begin{column}{.48\textwidth}
 
 \begin{center}
-EDC  $\rightarrow$ $\underset{I \in {0,1}}{\mathrm{argmax}}~E[\pi|I, M]$
+D^*_{\text{AI}}(M) = ~$\underset{I \in {0,1}}{\mathrm{argmax}}~E[\pi|I, M]$
 \end{center}
 
 \pause
@@ -483,16 +523,22 @@ $I=0$ &  0.50 & \cellcolor{blue!25}{0.10} & \cellcolor{blue!25}{0.05} & 0.30 \\
 
 Expected profit = $\boxed{\mathbf{0.275}}$ = (0.25+0.30)/2.
 
-
-
 \end{frame}
 
 
 %%%%Slide
 
 \begin{frame}
-[fragile]\frametitle{DS \#2: Post-Visit Randomization (PVR)}
-\framesubtitle{Interventional Inference}
+[fragile]\frametitle{2. Interventional Inference + Post-Visit Randomization}
+
+
+
+\begin{tikzpicture}[remember picture, overlay]
+\node[left] at (current page.33) 
+{
+    \includegraphics[width=0.1\textwidth]{figures/ds2.png}
+};
+\end{tikzpicture}
 
 \begin{columns}[T] % align columns
 \begin{column}{.48\textwidth}
@@ -546,15 +592,21 @@ I :=&  V \textcolor{blue}{\land C}
 %%%%Slide
 
 \begin{frame}
-[fragile]\frametitle{DS \#2: Post-Visit Randomization (PVR) - cont'd}
-\framesubtitle{Interventional Inference}
+[fragile]\frametitle{2. Interventional Inference + Post-Visit Randomization}
+
+\begin{tikzpicture}[remember picture, overlay]
+\node[left] at (current page.33) 
+{
+    \includegraphics[width=0.1\textwidth]{figures/ds2.png}
+};
+\end{tikzpicture}
 
 
 \begin{columns}[T] % align columns
-\begin{column}{.48\textwidth}
+\begin{column}{.55\textwidth}
 
 \begin{center}
-PVR $\rightarrow$ $\underset{I \in {0,1}}{\mathrm{argmax}}~E[\pi| do(I), M, V=1]$
+D^*_{\text{IPVR}}(M) = $\underset{I \in {0,1}}{\mathrm{argmax}}~E[\pi| do(I), M, V=1]$
 \end{center}
 
 \vskip10pt
@@ -575,7 +627,7 @@ E[\pi | do(I=0), M=0, V=1] =& 0.30
 \hfill%
 
 
-\begin{column}{.48\textwidth}
+\begin{column}{.45\textwidth}
 
 \vskip 30pt
 
@@ -628,8 +680,14 @@ Expected profit = $\boxed{\mathbf{0.40}}$ = (0.50+0.30)/2.
 
 
 \begin{frame}
-[fragile]\frametitle{DS \#3: A/B Test on All New-to-RBC Clients}
-\framesubtitle{Interventional Inference}
+[fragile]\frametitle{3. Interventional Inference + Full Randomization}
+
+\begin{tikzpicture}[remember picture, overlay]
+\node[left] at (current page.33) 
+{
+    \includegraphics[width=0.1\textwidth]{figures/ds3.png}
+};
+\end{tikzpicture}
 
 \begin{columns}[T] % align columns
 \begin{column}{.48\textwidth}
@@ -686,14 +744,20 @@ I :=&  \textcolor{blue}{C}
 
 
 \begin{frame}
-[fragile]\frametitle{DS \#3: A/B Test on All New-to-RBC Clients - cont'd}
-\framesubtitle{Interventional Inference}
+[fragile]\frametitle{3. Interventional Inference + Full Randomization}
+
+\begin{tikzpicture}[remember picture, overlay]
+\node[left] at (current page.33) 
+{
+    \includegraphics[width=0.1\textwidth]{figures/ds3.png}
+};
+\end{tikzpicture}
 
 \begin{columns}[T] % align columns
 \begin{column}{.48\textwidth}
 
 \begin{center}
-ABT  $\rightarrow$ $\underset{I \in {0,1}}{\mathrm{argmax}}~E[\pi|do(I), M]$
+D^*_{\text{IFR}}(M) = $\underset{I \in {0,1}}{\mathrm{argmax}}~E[\pi|do(I), M]$
 \end{center}
 
 \vskip10pt
@@ -763,10 +827,16 @@ Expected profit = $\boxed{\mathbf{0.315}}$ = (0.35+0.275)/2.
 %%%%Slide
 
 \begin{frame}
-[fragile]\frametitle{DS \#4: Regret Decision Criterion (RDC)}
-\framesubtitle{Counterfactual Inference}
+[fragile]\frametitle{4. Counterfactual Inference}
 
-RDC  $\rightarrow$ $\underset{a' \in~{0,1}}{\mathrm{argmax}}~E[\pi_{a'}| I=a, M]$
+\begin{tikzpicture}[remember picture, overlay]
+\node[left] at (current page.33) 
+{
+    \includegraphics[width=0.1\textwidth]{figures/ds4.png}
+};
+\end{tikzpicture}
+
+D^*_{\text{CI}}(M, I) = $\underset{a' \in~{0,1}}{\mathrm{argmax}}~E[\pi_{a'}| I=a, M]$
 
 \vskip10pt
 
@@ -793,8 +863,14 @@ P(\pi_{a'} | M, a) &= \frac{1}{P(a|M)} \Bigl[P(\pi_{a'} | M) -  P(\pi | M, a') P
 %%%%Slide
 
 \begin{frame}
-[fragile]\frametitle{DS \#4: Regret Decision Criterion (RDC) - cont'd}
-\framesubtitle{Counterfactual Inference}
+[fragile]\frametitle{4. Counterfactual Inference}
+
+\begin{tikzpicture}[remember picture, overlay]
+\node[left] at (current page.33) 
+{
+    \includegraphics[width=0.1\textwidth]{figures/ds4.png}
+};
+\end{tikzpicture}
 
 \begin{columns}[T] % align columns
 \begin{column}{.48\textwidth}
@@ -938,6 +1014,38 @@ was proposed to estimate counterfactual expressions empirically from an arbitrar
 \end{frame}
 
 %%%%Slide
+
+
+\begin{frame}
+[fragile]\frametitle{Estimating Treatment Effects: \textbf{Personalized Paradigm}}
+
+% If there is a singe takeaway message from what I want to talk about is that, in contrast to the idea that A/B testing should be used as the gold standard to learn causal effects, when the goal is not just to learn average treatment effects (i.e., whether a action is effective on average) but to learn personalized optimal actions, then A/B test may or may not be the best we can do.
+
+% when the goal is to 
+
+\begin{itemize}
+
+\item A/B Tests are `gold standard' in the One-Treatment-Fits-All paradigm because they remove the influence of unobserved confounders (unmeasured variables that influence both the treatment and the outcome). 
+
+\item In the presence of unobserved confounders, experimental data is not `gold standard' for estimating heterogenous treatment effects (required for personalization)
+
+\vskip10pt
+
+\item Experiments `destroy' information that can be valuable to identify the values of unobserved confounders.
+
+\vskip10pt
+
+\item Counterfactual-based decision making, which leads to a fusion of experimental and observational data, might be optimal for personalization. 
+
+\end{itemize}
+
+
+\end{frame}
+
+
+
+%%%%Slide
+
 
 \begin{frame}
 [fragile]\frametitle{References}
