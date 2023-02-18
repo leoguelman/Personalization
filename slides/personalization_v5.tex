@@ -234,7 +234,7 @@
 %%%%Slide
 
 \begin{frame}
-[fragile]\frametitle{Unobserved and Heterogeneous Confounders}
+[fragile]\frametitle{Unobserved and Heterogeneous Confounder (UHC)}
 
 
 
@@ -248,7 +248,7 @@
 
 \begin{itemize}
 
-\item Treatment effect ($T$) varies according to the value of unobserved confounders ($U$).
+\item Treatment effect ($T$) varies according to the value of unobserved confounder/s ($U$).
 
 
 \begin{equation*}
@@ -261,8 +261,13 @@ Y :=& f(T, U, \boldsymbol{T \times U)} + N_Y
 
 \vskip7pt
 
-\item Likely the norm in observational settings. 
+\item Existence of UHCs is the most sensible assumption in practice. 
 % the optimal action for person A and person B might be different. 
+
+
+\vskip7pt
+
+\item UHCs introduce challenges to personalization. 
 
 
 \end{itemize}
@@ -272,6 +277,9 @@ Y :=& f(T, U, \boldsymbol{T \times U)} + N_Y
 \end{column}%
 
 \begin{column}{.48\textwidth}
+
+
+\vskip40pt
 
 \begin{figure}
 \begin{tikzpicture}
@@ -294,13 +302,23 @@ Y :=& f(T, U, \boldsymbol{T \times U)} + N_Y
 
 \end{frame}
 
+
+%%%%Slide
+
+\begin{frame}
+[fragile]\frametitle{There's Nothing Personal About Personalization}
+
+
+
+\end{frame}
+
 %%%%Slide
 
 \begin{frame}
 [fragile]\frametitle{Motivating Questions}
 
 
-Given the high-level goal of personalization, and the context of unobserved heterogeneity:
+Given the high-level goal of personalization, and the context of UHCs:
 
 \vskip10pt
 
@@ -411,8 +429,8 @@ I :=&  V
 \multicolumn{2}{c}{$R=1$} \\\cmidrule(r){2-3}\cmidrule(l){4-5}
  & $M=1$ & $M=0$     & $M=1$ & $M=0$     \\  
  \midrule
-$I=1$ &  \cellcolor{blue!25}{0.25} & 0.50 & 0.45 & \cellcolor{blue!25}{0.05} \\
-$I=0$ &  0.50 & \cellcolor{blue!25}{0.10} & \cellcolor{blue!25}{0.05} & 0.30 \\
+$I=1$ &  \cellcolor{blue!25}{25} & 50 & 45 & \cellcolor{blue!25}{5} \\
+$I=0$ &  50 & \cellcolor{blue!25}{10} & \cellcolor{blue!25}{5} & 30 \\
 \bottomrule
 \end{tabular}
 \vskip5pt
@@ -467,10 +485,10 @@ $\mathcal{D}^*_{\text{AI}}(M) = ~$\underset{I \in {0,1}}{\mathrm{argmax}}~E[\pi|
 
 \begin{equation*}
 \begin{align*}
-E[\pi | I=1, M=1] =& 0.25\\
-E[\pi | I=0, M=1] =& 0.05\\
-E[\pi | I=1, M=0] =& 0.05\\
-E[\pi | I=0, M=0] =& 0.10 \\
+E[\pi | I=1, M=1] =& 25\\
+E[\pi | I=0, M=1] =& 5\\
+E[\pi | I=1, M=0] =& 5\\
+E[\pi | I=0, M=0] =& 10 \\
 \end{align*}
 \end{equation*}
 
@@ -492,8 +510,8 @@ E[\pi | I=0, M=0] =& 0.10 \\
 \multicolumn{2}{c}{$R=1$} \\\cmidrule(r){2-3}\cmidrule(l){4-5}
  & $M=1$ & $M=0$     & $M=1$ & $M=0$     \\  
  \midrule
-$I=1$ &  \cellcolor{blue!25}{0.25} & 0.50 & 0.45 & \cellcolor{blue!25}{0.05} \\
-$I=0$ &  0.50 & \cellcolor{blue!25}{0.10} & \cellcolor{blue!25}{0.05} & 0.30 \\
+$I=1$ &  \cellcolor{blue!25}{25} & 50 & 45 & \cellcolor{blue!25}{5} \\
+$I=0$ &  50 & \cellcolor{blue!25}{10} & \cellcolor{blue!25}{5} & 30 \\
 \bottomrule
 \end{tabular}
 \vskip5pt
@@ -514,14 +532,14 @@ $I=0$ &  0.50 & \cellcolor{blue!25}{0.10} & \cellcolor{blue!25}{0.05} & 0.30 \\
 
 \small{
 \begin{itemize}
-\item If Visit Site $\land$ Married $\rightarrow$ Purchase Incentive $\rightarrow~E[\pi] = \textbf{0.25}  $
-\item If Visit Site $\land$ Not Married $\rightarrow$ No Purchase Incentive  $\rightarrow~E[\pi] = \textbf{0.30} $
+\item If Visit Site $\land$ Married $\rightarrow$ Purchase Incentive $\rightarrow~E[\pi] = \textbf{25}  $
+\item If Visit Site $\land$ Not Married $\rightarrow$ No Purchase Incentive  $\rightarrow~E[\pi] = \textbf{30} $
 \end{itemize}
 }
 
 \vskip10pt
 
-Expected profit = $\boxed{\mathbf{0.275}}$ = (0.25+0.30)/2.
+Expected profit = $\boxed{\mathbf{27.5}}$ = (25+30)/2.
 
 \end{frame}
 
@@ -615,10 +633,10 @@ $\mathcal{D}^*_{\text{IPVR}}(M) = ~$\underset{I \in {0,1}}{\mathrm{argmax}}~E[\p
 
 \begin{equation*}
 \begin{align*}
-E[\pi | do(I=1), M=1, V=1] =& 0.25\\
-E[\pi | do(I=0), M=1, V=1] =& 0.50\\
-E[\pi | do(I=1), M=0, V=1] =& 0.05\\
-E[\pi | do(I=0), M=0, V=1] =& 0.30
+E[\pi | do(I=1), M=1, V=1] =& 25\\
+E[\pi | do(I=0), M=1, V=1] =& 50\\
+E[\pi | do(I=1), M=0, V=1] =& 5\\
+E[\pi | do(I=0), M=0, V=1] =& 30
 \end{align*}
 \end{equation*}
 
@@ -640,8 +658,8 @@ E[\pi | do(I=0), M=0, V=1] =& 0.30
 \multicolumn{2}{c}{$R=1$} \\\cmidrule(r){2-3}\cmidrule(l){4-5}
  & $M=1$ & $M=0$     & $M=1$ & $M=0$     \\  
  \midrule
-$I=1$ &  \cellcolor{blue!25}{0.25} & 0.50 & 0.45 & \cellcolor{blue!25}{0.05} \\
-$I=0$ &  0.50 & \cellcolor{blue!25}{0.10} & \cellcolor{blue!25}{0.05} & 0.30 \\
+$I=1$ &  \cellcolor{blue!25}{25} & 50 & 45 & \cellcolor{blue!25}{5} \\
+$I=0$ &  50 & \cellcolor{blue!25}{10} & \cellcolor{blue!25}{5} & 30 \\
 \bottomrule
 \end{tabular}
 \vskip5pt
@@ -663,14 +681,14 @@ $I=0$ &  0.50 & \cellcolor{blue!25}{0.10} & \cellcolor{blue!25}{0.05} & 0.30 \\
 
 \small{
 \begin{itemize}
-\item If Visit Site $\land$ Married $\rightarrow$ No Purchase Incentive $\rightarrow~E[\pi] = \textbf{0.50} $
-\item If Visit Site $\land$ Not Married $\rightarrow$ No Purchase Incentive  $\rightarrow~E[\pi] = \textbf{0.30} $
+\item If Visit Site $\land$ Married $\rightarrow$ No Purchase Incentive $\rightarrow~E[\pi] = \textbf{50} $
+\item If Visit Site $\land$ Not Married $\rightarrow$ No Purchase Incentive  $\rightarrow~E[\pi] = \textbf{30} $
 \end{itemize}
 }
 
 \vskip10pt
 
-Expected profit = $\boxed{\mathbf{0.40}}$ = (0.50+0.30)/2.
+Expected profit = $\boxed{\mathbf{40}}$ = (50+30)/2.
 
 
 
@@ -711,10 +729,9 @@ Expected profit = $\boxed{\mathbf{0.40}}$ = (0.50+0.30)/2.
 \end{tikzpicture}
 
 \vskip 5pt
-
-
-\caption{Causal DAG with A/B Test on all New-to-RBC clients.}
-
+\begin{center}
+\caption{Causal DAG with Full Randomization.}
+\end{center}
 \end{figure}
 
 \end{column}%
@@ -765,10 +782,10 @@ $\mathcal{D}^*_{\text{IFR}}(M) = ~$\underset{I \in {0,1}}{\mathrm{argmax}}~E[\pi
 \scriptsize{
 \begin{equation*}
 \begin{align*}
-E[\pi | do(I=1), M=1] &= 0.350 =(0.25+0.45)/2 \\
-E[\pi | do(I=0), M=1] &= 0.275 =(0.50 + 0.05)/2 \\
-E[\pi | do(I=1), M=0] &= 0.275 =(0.50 + 0.05)/2 \\
-E[\pi | do(I=0), M=0] &= 0.200 = (0.10 +0.30)/2 
+E[\pi | do(I=1), M=1] &= 35.0=(25+45)/2 \\
+E[\pi | do(I=0), M=1] &= 27.5 =(50 + 5)/2 \\
+E[\pi | do(I=1), M=0] &= 27.5 =(50 + 5)/2 \\
+E[\pi | do(I=0), M=0] &= 20.0 = (10 +30)/2 
 \end{align*}
 \end{equation*}
 }
@@ -791,8 +808,8 @@ E[\pi | do(I=0), M=0] &= 0.200 = (0.10 +0.30)/2
 \multicolumn{2}{c}{$R=1$} \\\cmidrule(r){2-3}\cmidrule(l){4-5}
  & $M=1$ & $M=0$     & $M=1$ & $M=0$     \\  
  \midrule
-$I=1$ &  \cellcolor{blue!25}{0.25} & 0.50 & 0.45 & \cellcolor{blue!25}{0.05} \\
-$I=0$ &  0.50 & \cellcolor{blue!25}{0.10} & \cellcolor{blue!25}{0.05} & 0.30 \\
+$I=1$ &  \cellcolor{blue!25}{25} & 50 & 45 & \cellcolor{blue!25}{5} \\
+$I=0$ &  50 & \cellcolor{blue!25}{10} & \cellcolor{blue!25}{5} & 30 \\
 \bottomrule
 \end{tabular}
 \vskip5pt
@@ -813,14 +830,14 @@ $I=0$ &  0.50 & \cellcolor{blue!25}{0.10} & \cellcolor{blue!25}{0.05} & 0.30 \\
 
 \small{
 \begin{itemize}
-\item If  Married $\rightarrow$ Purchase Incentive $\rightarrow~E[\pi] = \textbf{0.35}  $
-\item If  Not Married $\rightarrow$ Purchase Incentive  $\rightarrow~E[\pi] = \textbf{0.275} $
+\item If  Married $\rightarrow$ Purchase Incentive $\rightarrow~E[\pi] = \textbf{35}  $
+\item If  Not Married $\rightarrow$ Purchase Incentive  $\rightarrow~E[\pi] = \textbf{27.5} $
 \end{itemize}
 }
 
 \vskip10pt
 
-Expected profit = $\boxed{\mathbf{0.315}}$ = (0.35+0.275)/2.
+Expected profit = $\boxed{\mathbf{31.5}}$ = (35+27.5)/2.
 
 \end{frame}
 
@@ -909,16 +926,16 @@ $\boxed{E(\pi_{I=1} | M=1, I=0)} = $
 \begin{align*}
  \frac{1}{P(I=0|M=1)} \Bigl[E\Big(\pi | M=1, do(I=1)\Big) -  \\
  E(\pi | M=1, I=1) P( I=1 | M=1) \Bigr].  & \\
- = \frac{1}{1/2} (0.350-0.25  \times 1/2)  & = \textbf{0.45} \\
-  > 0.05 = E(\pi_{I=0} | M=1, I=0).
+ = \frac{1}{1/2} (35-25  \times 1/2)  & = \textbf{45} \\
+  > 5 = E(\pi_{I=0} | M=1, I=0).
 \end{align*}
 \end{equation*}
 
-$\boxed{E(\pi_{I=1} | M=0, I=0)} = \textbf{0.50} \\ $ 
+$\boxed{E(\pi_{I=1} | M=0, I=0)} = \textbf{50} \\ $ 
 
-$\boxed{E(\pi_{I=0} | M=1, I=1)} = \textbf{0.50} \\ $ 
+$\boxed{E(\pi_{I=0} | M=1, I=1)} = \textbf{50} \\ $ 
 
-$\boxed{E(\pi_{I=0} | M=0, I=1)} = \textbf{0.30} \\ $ 
+$\boxed{E(\pi_{I=0} | M=0, I=1)} = \textbf{30} \\ $ 
 
 \end{footnotesize}
 
@@ -940,8 +957,8 @@ $\boxed{E(\pi_{I=0} | M=0, I=1)} = \textbf{0.30} \\ $
 \multicolumn{2}{c}{$R=1$} \\\cmidrule(r){2-3}\cmidrule(l){4-5}
  & $M=1$ & $M=0$     & $M=1$ & $M=0$     \\  
  \midrule
-$I=1$ &  \cellcolor{blue!25}{0.25} & 0.50 & 0.45 & \cellcolor{blue!25}{0.05} \\
-$I=0$ &  0.50 & \cellcolor{blue!25}{0.10} & \cellcolor{blue!25}{0.05} & 0.30 \\
+$I=1$ &  \cellcolor{blue!25}{25} & 50 & 45 & \cellcolor{blue!25}{5} \\
+$I=0$ &  50 & \cellcolor{blue!25}{10} & \cellcolor{blue!25}{5} & 30 \\
 \bottomrule
 \end{tabular}
 \vskip5pt
@@ -961,17 +978,17 @@ $I=0$ &  0.50 & \cellcolor{blue!25}{0.10} & \cellcolor{blue!25}{0.05} & 0.30 \\
 
 \small{
 \begin{itemize}
-\item If Not Visit Site $\land$ Married $\rightarrow$ Purchase Incentive $\rightarrow~E[\pi] = \textbf{0.45} $
-\item If Not Visit Site $\land$ Not Married $\rightarrow$ Purchase Incentive  $\rightarrow~E[\pi] = \textbf{0.50} $
-\item If Visit Site $\land$ Married $\rightarrow$ No Purchase Incentive $\rightarrow~E[\pi] = \textbf{0.50} $
-\item If Visit Site $\land$ Not Married $\rightarrow$ No Purchase Incentive  $\rightarrow~E[\pi] = \textbf{0.30} $
+\item If Not Visit Site $\land$ Married $\rightarrow$ Purchase Incentive $\rightarrow~E[\pi] = \textbf{45} $
+\item If Not Visit Site $\land$ Not Married $\rightarrow$ Purchase Incentive  $\rightarrow~E[\pi] = \textbf{50} $
+\item If Visit Site $\land$ Married $\rightarrow$ No Purchase Incentive $\rightarrow~E[\pi] = \textbf{50} $
+\item If Visit Site $\land$ Not Married $\rightarrow$ No Purchase Incentive  $\rightarrow~E[\pi] = \textbf{30} $
 \end{itemize}
 }
 
 
 \vskip5pt
 
-Expected profit = $\boxed{\mathbf{0.4375}}$ = (0.45 + 0.50+ 0.50 +0.30)/4.
+Expected profit = $\boxed{\mathbf{43.75}}$ = (45 + 50+ 50 +30)/4.
 }
 
 \end{frame}
@@ -998,9 +1015,9 @@ $\mathcal{D}_{AI}$ &
 
   
     
-&  .2750 &\\ \hline
-$\mathcal{D}_{IPVR}$& \textbf{Never Purchase Incentive} & .4000 \\ \\ \hline
-$\mathcal{D}_{IFR}$& \textbf{Always Purchase Incentive} &  .3150  \\ \\ \hline
+&  27.50 &\\ \hline
+$\mathcal{D}_{IPVR}$& \textbf{Never Purchase Incentive} & 40.0 \\ \\ \hline
+$\mathcal{D}_{IFR}$& \textbf{Always Purchase Incentive} &  31.50  \\ \\ \hline
 $\mathcal{D}_{CI}$ & 
 
 \begin{itemize}
@@ -1010,8 +1027,8 @@ $\mathcal{D}_{CI}$ &
 \item If Not Visit Site $\land$ Not Married $\rightarrow$ \textbf{Purchase Incentive} 
 \end{itemize}
 
-& \textbf{.4375}  \\ \hline
-$\mathcal{D}_{\text{Oracle}}$ & & \textbf{.4375} \\ \\ 
+& \textbf{43.75}  \\ \hline
+$\mathcal{D}_{\text{Oracle}}$ & & \textbf{43.75} \\ \\ 
    \bottomrule
    \end{tabular}
 \end{table}
