@@ -248,7 +248,7 @@
 
 \begin{itemize}
 
-\item Treatment effect ($T$) varies according to the value of unobserved confounder/s ($U$).
+\item Treatment effect ($T$) varies according to the value of an unobserved confounder ($U$).
 
 
 \begin{equation*}
@@ -337,7 +337,7 @@ Given the high-level goal of personalization, and the context of UHCs:
 %%%%Slide
 
 \begin{frame}
-[fragile]\frametitle{Motivating Example}
+[fragile]\frametitle{Business Setting}
 
 \begin{itemize}
 
@@ -834,7 +834,7 @@ Expected profit = $\boxed{\mathbf{31.5}}$ = (35+27.5)/2.
 %%%%Slide
 
 \begin{frame}
-[fragile]\frametitle{4. Counterfactual Inference}
+[fragile]\frametitle{4. Regret Decision Criterion}
 
 \begin{tikzpicture}[remember picture, overlay]
 \node[left] at (current page.33) 
@@ -845,7 +845,7 @@ Expected profit = $\boxed{\mathbf{31.5}}$ = (35+27.5)/2.
 
 %\vskip-50pt
 
-$\mathcal{D}^*_{\text{CI}}(M, I) = ~$\underset{a' \in~{0,1}}{\mathrm{argmax}}~E[\pi_{a'}| I=a, M]$
+$\mathcal{D}^*_{\text{RDC}}(M, I) = ~$\underset{a' \in~{0,1}}{\mathrm{argmax}}~E[\pi_{a'}| I=a, M]$
 
 \pause
 
@@ -875,9 +875,9 @@ $\mathcal{D}^*_{\text{CI}}(M, I) = ~$\underset{a' \in~{0,1}}{\mathrm{argmax}}~E[
 
 \begin{itemize}
 
-\item In general, we do need to assume the conditioning set $Z=\{M\}$ satisfies the backdoor criterion. 
+\item In general, population-level counterfactuals can be identified non-parametrically using just the causal graph -- i.e., assuming the conditioning set $Z=\{M\}$ satisfies the backdoor criterion. 
 
-\item An exception is when the treatment $I$ is binary and both experimental and observational data are available. 
+\item An exception is when the treatment is binary and both experimental and observational data are available. 
 
 \end{itemize}
 
@@ -888,7 +888,7 @@ $\mathcal{D}^*_{\text{CI}}(M, I) = ~$\underset{a' \in~{0,1}}{\mathrm{argmax}}~E[
 %%%%Slide
 
 \begin{frame}
-[fragile]\frametitle{4. Counterfactual Inference}
+[fragile]\frametitle{4. Regret Decision Criterion}
 
 \begin{tikzpicture}[remember picture, overlay]
 \node[left] at (current page.33) 
@@ -897,7 +897,7 @@ $\mathcal{D}^*_{\text{CI}}(M, I) = ~$\underset{a' \in~{0,1}}{\mathrm{argmax}}~E[
 };
 \end{tikzpicture}
 
-$\mathcal{D}^*_{\text{CI}}(M, I) = ~$\underset{a' \in~{0,1}}{\mathrm{argmax}}~E[\pi_{a'}| I=a, M]$
+$\mathcal{D}^*_{\text{RDC}}(M, I) = ~$\underset{a' \in~{0,1}}{\mathrm{argmax}}~E[\pi_{a'}| I=a, M]$
 
 \vskip5pt
 
@@ -921,7 +921,7 @@ P(\pi_{a'} | M, a) &= \frac{1}{P(a|M)} \Bigl[P(\pi_{a'} | M) -  P(\pi | M, a') P
 %%%%Slide
 
 \begin{frame}
-[fragile]\frametitle{4. Counterfactual Inference}
+[fragile]\frametitle{4. Regret Decision Criterion}
 
 \begin{tikzpicture}[remember picture, overlay]
 \node[left] at (current page.33) 
@@ -1032,7 +1032,7 @@ $\mathcal{D}_{AI}$ &
 &  27.50 &\\ \hline
 $\mathcal{D}_{IPVR}$& \textbf{Never Purchase Incentive} & 40.0 \\ \\ \hline
 $\mathcal{D}_{IFR}$& \textbf{Always Purchase Incentive} &  31.50  \\ \\ \hline
-$\mathcal{D}_{CI}$ & 
+$\mathcal{D}_{RDC}$ & 
 
 \begin{itemize}
 \item If Visit Site $\land$ Married $\rightarrow$ \textbf{No Purchase Incentive} 
@@ -1083,18 +1083,10 @@ $\mathcal{D}_{\text{Oracle}}$ & & \textbf{43.75} \\ \\
 \begin{frame}
 [fragile]\frametitle{Further Reading}
 
-\begin{itemize}
 
-\item The expression derived from RDC works only in the binary treatment case. 
 
-\vskip5pt
 
 \begin{itemize}
-\item RDC-type randomization \href{https://proceedings.mlr.press/v70/forney17a.html}{(Forney et al., 2017) }
-was proposed to estimate counterfactual expressions empirically from an arbitrary number of treatments. 
-\end{itemize}
-
-\vskip15pt
 
 \item This presentation is fundamentally inspired by this paper: 
 
@@ -1110,8 +1102,20 @@ was proposed to estimate counterfactual expressions empirically from an arbitrar
 
 \end{itemize}
 
+\vskip15pt
+
+\item The expression derived from RDC works only in the binary treatment case. 
+
+\vskip5pt
+
+\begin{itemize}
+\item RDC-type randomization \href{https://proceedings.mlr.press/v70/forney17a.html}{(Forney et al., 2017) }
+was proposed to estimate counterfactual expressions empirically from an arbitrary number of treatments. 
+\end{itemize}
+
 
 \end{itemize}
+
 
 \end{frame}
 

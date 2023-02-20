@@ -1,17 +1,9 @@
 \frametitle{Further Reading}
 
-\begin{itemize}
 
-\item The expression derived from RDC works only in the binary treatment case.
 
-\vskip5pt
 
 \begin{itemize}
-\item RDC-type randomization \href{https://proceedings.mlr.press/v70/forney17a.html}{(Forney et al., 2017) }
-was proposed to estimate counterfactual expressions empirically from an arbitrary number of treatments.
-\end{itemize}
-
-\vskip15pt
 
 \item This presentation is fundamentally inspired by this paper:
 
@@ -27,6 +19,18 @@ was proposed to estimate counterfactual expressions empirically from an arbitrar
 
 \end{itemize}
 
+\vskip15pt
+
+\item The expression derived from RDC works only in the binary treatment case.
+
+\vskip5pt
+
+\begin{itemize}
+\item RDC-type randomization \href{https://proceedings.mlr.press/v70/forney17a.html}{(Forney et al., 2017) }
+was proposed to estimate counterfactual expressions empirically from an arbitrary number of treatments.
+\end{itemize}
+
 
 \end{itemize}
+
 
