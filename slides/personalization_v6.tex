@@ -261,7 +261,7 @@ Y :=& f(T, U, \boldsymbol{T \times U)} + N_Y
 
 \vskip7pt
 
-\item Existence of UHCs is the most sensible assumption in practice. 
+\item Presence of UHCs is arguably the most sensible assumption in practice. 
 % the optimal action for person A and person B might be different. 
 
 
@@ -843,9 +843,14 @@ Expected profit = $\boxed{\mathbf{31.5}}$ = (35+27.5)/2.
 };
 \end{tikzpicture}
 
-%\vskip-50pt
 
-$\mathcal{D}^*_{\text{RDC}}(M, I) = ~$\underset{a' \in~{0,1}}{\mathrm{argmax}}~E[\pi_{a'}| I=a, M]$
+Puzzled by $E[\pi|I, M] \neq E[\pi|do(I), M]$.
+
+\pause 
+
+\vskip10pt
+
+$\mathcal{D}^*_{\text{RDC}}(M, I) = ~$\underset{a' \in~{0,1}}{\mathrm{argmax}}~E[\pi_{I=a'}| I=a, M]$
 
 \pause
 
@@ -869,13 +874,13 @@ $\mathcal{D}^*_{\text{RDC}}(M, I) = ~$\underset{a' \in~{0,1}}{\mathrm{argmax}}~E
 
 \vskip10pt
 
-\item Do we need to assume that the conditioning set $\{M\}$ satisfies the \emph{backdoor criterion} to identify this causal estimand?
+\item Do we need the causal graph to non-parametrically identify this causal estimand?
 
 \pause
 
 \begin{itemize}
 
-\item In general, population-level counterfactuals can be identified non-parametrically using just the causal graph -- i.e., assuming the conditioning set $Z=\{M\}$ satisfies the backdoor criterion. 
+\item In general, yes. Population-level counterfactuals require the causal graph. 
 
 \item An exception is when the treatment is binary and both experimental and observational data are available. 
 
@@ -1058,19 +1063,23 @@ $\mathcal{D}_{\text{Oracle}}$ & & \textbf{43.75} \\ \\
 
 \item Experimental data are `gold standard' in the non-personalized paradigm because they remove the influence of unobserved confounders.
 
-\vskip12pt
+\vskip15pt
 
-\item In the personalization paradigm, experimental data alone is not `gold standard' for estimating heterogeneous treatment effects in the presence of (UHCs).
+\item In the personalization paradigm with UHCs, experimental data are not necessarily `gold standard' for identifying heterogeneous treatment effects:
 
-\vskip12pt
+\vskip5pt
 
-\item Experiments `destroy' information that can be valuable to `recover' these confounders. 
+\begin{itemize}
 
-\vskip12pt
+\item Experiments `destroy' uncoded knowledge about these confounders. 
 
-\item Counterfactual-based decision-making leads to a fusion of experimental and observational data for personalization.  
+\item Interventional inference does not capture the information required to maximize payout.
 
-\vskip12pt
+\end{itemize}
+
+\vskip15pt
+
+\item Counterfactual-based decision-making leads to a fusion of experimental and observational data, which might capture additional information about UHCs required to maximize payout. 
 
 
 \end{itemize}

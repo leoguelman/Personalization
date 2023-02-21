@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  20 FEB 2023 16:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  21 FEB 2023 11:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2031,23 +2031,23 @@ File: figures/ds4.png Graphic file (type png)
 Package pdftex.def Info: figures/ds4.png  used on input line 6.
 (pdftex.def)             Requested size: 34.42212pt x 30.46193pt.
 
-./personalization_v6.vrb:12: Missing $ inserted.
+./personalization_v6.vrb:17: Missing $ inserted.
 <inserted text> 
                 $
-l.12 ...~$\underset{a' \in~{0,1}}{\mathrm{argmax}}
-                                                  ~E[\pi_{a'}| I=a, M]$
+l.17 ...~$\underset{a' \in~{0,1}}{\mathrm{argmax}}
+                                                  ~E[\pi_{I=a'}| I=a, M]$
 ? 
-./personalization_v6.vrb:12: Extra }, or forgotten $.
+./personalization_v6.vrb:17: Extra }, or forgotten $.
 \underset ...{\mathop {\kern \z@ #2}\limits _{#1}}
                                                   
-l.12 ...~$\underset{a' \in~{0,1}}{\mathrm{argmax}}
-                                                  ~E[\pi_{a'}| I=a, M]$
+l.17 ...~$\underset{a' \in~{0,1}}{\mathrm{argmax}}
+                                                  ~E[\pi_{I=a'}| I=a, M]$
 ? 
 )
-./personalization_v6.tex:886: Missing } inserted.
+./personalization_v6.tex:891: Missing } inserted.
 <inserted text> 
                 }
-l.886 \end{frame}
+l.891 \end{frame}
                  
 ? 
 [19
@@ -2058,23 +2058,23 @@ File: figures/ds4.png Graphic file (type png)
 Package pdftex.def Info: figures/ds4.png  used on input line 6.
 (pdftex.def)             Requested size: 34.42212pt x 30.46193pt.
 
-./personalization_v6.vrb:12: Missing $ inserted.
+./personalization_v6.vrb:17: Missing $ inserted.
 <inserted text> 
                 $
-l.12 ...~$\underset{a' \in~{0,1}}{\mathrm{argmax}}
-                                                  ~E[\pi_{a'}| I=a, M]$
+l.17 ...~$\underset{a' \in~{0,1}}{\mathrm{argmax}}
+                                                  ~E[\pi_{I=a'}| I=a, M]$
 ? 
-./personalization_v6.vrb:12: Extra }, or forgotten $.
+./personalization_v6.vrb:17: Extra }, or forgotten $.
 \underset ...{\mathop {\kern \z@ #2}\limits _{#1}}
                                                   
-l.12 ...~$\underset{a' \in~{0,1}}{\mathrm{argmax}}
-                                                  ~E[\pi_{a'}| I=a, M]$
+l.17 ...~$\underset{a' \in~{0,1}}{\mathrm{argmax}}
+                                                  ~E[\pi_{I=a'}| I=a, M]$
 ? 
 )
-./personalization_v6.tex:886: Missing } inserted.
+./personalization_v6.tex:891: Missing } inserted.
 <inserted text> 
                 }
-l.886 \end{frame}
+l.891 \end{frame}
                  
 ? 
 [20
@@ -2085,23 +2085,23 @@ File: figures/ds4.png Graphic file (type png)
 Package pdftex.def Info: figures/ds4.png  used on input line 6.
 (pdftex.def)             Requested size: 34.42212pt x 30.46193pt.
 
-./personalization_v6.vrb:12: Missing $ inserted.
+./personalization_v6.vrb:17: Missing $ inserted.
 <inserted text> 
                 $
-l.12 ...~$\underset{a' \in~{0,1}}{\mathrm{argmax}}
-                                                  ~E[\pi_{a'}| I=a, M]$
+l.17 ...~$\underset{a' \in~{0,1}}{\mathrm{argmax}}
+                                                  ~E[\pi_{I=a'}| I=a, M]$
 ? 
-./personalization_v6.vrb:12: Extra }, or forgotten $.
+./personalization_v6.vrb:17: Extra }, or forgotten $.
 \underset ...{\mathop {\kern \z@ #2}\limits _{#1}}
                                                   
-l.12 ...~$\underset{a' \in~{0,1}}{\mathrm{argmax}}
-                                                  ~E[\pi_{a'}| I=a, M]$
+l.17 ...~$\underset{a' \in~{0,1}}{\mathrm{argmax}}
+                                                  ~E[\pi_{I=a'}| I=a, M]$
 ? 
 )
-./personalization_v6.tex:886: Missing } inserted.
+./personalization_v6.tex:891: Missing } inserted.
 <inserted text> 
                 }
-l.886 \end{frame}
+l.891 \end{frame}
                  
 ? 
 [21
@@ -2112,23 +2112,23 @@ File: figures/ds4.png Graphic file (type png)
 Package pdftex.def Info: figures/ds4.png  used on input line 6.
 (pdftex.def)             Requested size: 34.42212pt x 30.46193pt.
 
-./personalization_v6.vrb:12: Missing $ inserted.
+./personalization_v6.vrb:17: Missing $ inserted.
 <inserted text> 
                 $
-l.12 ...~$\underset{a' \in~{0,1}}{\mathrm{argmax}}
-                                                  ~E[\pi_{a'}| I=a, M]$
+l.17 ...~$\underset{a' \in~{0,1}}{\mathrm{argmax}}
+                                                  ~E[\pi_{I=a'}| I=a, M]$
 ? 
-./personalization_v6.vrb:12: Extra }, or forgotten $.
+./personalization_v6.vrb:17: Extra }, or forgotten $.
 \underset ...{\mathop {\kern \z@ #2}\limits _{#1}}
                                                   
-l.12 ...~$\underset{a' \in~{0,1}}{\mathrm{argmax}}
-                                                  ~E[\pi_{a'}| I=a, M]$
+l.17 ...~$\underset{a' \in~{0,1}}{\mathrm{argmax}}
+                                                  ~E[\pi_{I=a'}| I=a, M]$
 ? 
 )
-./personalization_v6.tex:886: Missing } inserted.
+./personalization_v6.tex:891: Missing } inserted.
 <inserted text> 
                 }
-l.886 \end{frame}
+l.891 \end{frame}
                  
 ? 
 [22
@@ -2139,26 +2139,53 @@ File: figures/ds4.png Graphic file (type png)
 Package pdftex.def Info: figures/ds4.png  used on input line 6.
 (pdftex.def)             Requested size: 34.42212pt x 30.46193pt.
 
-./personalization_v6.vrb:12: Missing $ inserted.
+./personalization_v6.vrb:17: Missing $ inserted.
 <inserted text> 
                 $
-l.12 ...~$\underset{a' \in~{0,1}}{\mathrm{argmax}}
-                                                  ~E[\pi_{a'}| I=a, M]$
+l.17 ...~$\underset{a' \in~{0,1}}{\mathrm{argmax}}
+                                                  ~E[\pi_{I=a'}| I=a, M]$
 ? 
-./personalization_v6.vrb:12: Extra }, or forgotten $.
+./personalization_v6.vrb:17: Extra }, or forgotten $.
 \underset ...{\mathop {\kern \z@ #2}\limits _{#1}}
                                                   
-l.12 ...~$\underset{a' \in~{0,1}}{\mathrm{argmax}}
-                                                  ~E[\pi_{a'}| I=a, M]$
+l.17 ...~$\underset{a' \in~{0,1}}{\mathrm{argmax}}
+                                                  ~E[\pi_{I=a'}| I=a, M]$
 ? 
 )
-./personalization_v6.tex:886: Missing } inserted.
+./personalization_v6.tex:891: Missing } inserted.
 <inserted text> 
                 }
-l.886 \end{frame}
+l.891 \end{frame}
                  
 ? 
 [23
+
+] (./personalization_v6.vrb
+File: figures/ds4.png Graphic file (type png)
+<use figures/ds4.png>
+Package pdftex.def Info: figures/ds4.png  used on input line 6.
+(pdftex.def)             Requested size: 34.42212pt x 30.46193pt.
+
+./personalization_v6.vrb:17: Missing $ inserted.
+<inserted text> 
+                $
+l.17 ...~$\underset{a' \in~{0,1}}{\mathrm{argmax}}
+                                                  ~E[\pi_{I=a'}| I=a, M]$
+? 
+./personalization_v6.vrb:17: Extra }, or forgotten $.
+\underset ...{\mathop {\kern \z@ #2}\limits _{#1}}
+                                                  
+l.17 ...~$\underset{a' \in~{0,1}}{\mathrm{argmax}}
+                                                  ~E[\pi_{I=a'}| I=a, M]$
+? 
+)
+./personalization_v6.tex:891: Missing } inserted.
+<inserted text> 
+                }
+l.891 \end{frame}
+                 
+? 
+[24
 
 ]
 \openout4 = `personalization_v6.vrb'.
@@ -2194,13 +2221,13 @@ l.23 \end{align*}
                  
 ? 
 )
-./personalization_v6.tex:919: Missing } inserted.
+./personalization_v6.tex:924: Missing } inserted.
 <inserted text> 
                 }
-l.919 \end{frame}
+l.924 \end{frame}
                  
 ? 
-[24
+[25
 
 ]
 \openout4 = `personalization_v6.vrb'.
@@ -2290,10 +2317,10 @@ l.30
      
 ? 
 )
-Overfull \vbox (4.83258pt too high) detected at line 1008
+Overfull \vbox (4.83258pt too high) detected at line 1013
  []
 
-[25
+[26
 
 ] (./personalization_v6.vrb
 File: figures/ds4.png Graphic file (type png)
@@ -2380,10 +2407,10 @@ l.30
      
 ? 
 )
-Overfull \vbox (4.83258pt too high) detected at line 1008
+Overfull \vbox (4.83258pt too high) detected at line 1013
  []
 
-[26
+[27
 
 ]
 \openout4 = `personalization_v6.vrb'.
@@ -2395,17 +2422,17 @@ Overfull \vbox (4.83258pt too high) detected at line 1008
 l.20 &  27.50 &
                \\ \hline
 ? 
-) [27
-
-]
-\openout4 = `personalization_v6.vrb'.
-
- (./personalization_v6.vrb) [28
+) [28
 
 ]
 \openout4 = `personalization_v6.vrb'.
 
  (./personalization_v6.vrb) [29
+
+]
+\openout4 = `personalization_v6.vrb'.
+
+ (./personalization_v6.vrb) [30
 
 ]
 \tf@nav=\write6
@@ -2417,12 +2444,12 @@ l.20 &  27.50 &
 \tf@snm=\write8
 \openout8 = `personalization_v6.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1122.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1122.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1131.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1131.
 
 (./personalization_v6.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1122.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1122.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1131.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1131.
 
 Package rerunfilecheck Info: File `personalization_v6.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
@@ -2430,13 +2457,16 @@ Package rerunfilecheck Info: File `personalization_v6.out' has not changed.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 32630 strings out of 480608
- 693597 string characters out of 5903631
- 938031 words of memory out of 5000000
- 47679 multiletter control sequences out of 15000+600000
- 561290 words of font info for 88 fonts, out of 8000000 for 9000
+ 32634 strings out of 480608
+ 693682 string characters out of 5903631
+ 938076 words of memory out of 5000000
+ 47680 multiletter control sequences out of 15000+600000
+ 560474 words of font info for 87 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  58i,22n,69p,856b,1097s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
@@ -2459,23 +2489,22 @@ texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/te
 xlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texl
 ive/2020/texmf-dist/fonts/type1/public/amsfonts/symbols/msam5.pfb></usr/local/t
 exlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/tex
-live/2020/texmf-dist/fonts/type1/public/cm-super/sfsi1000.pfb></usr/local/texli
-ve/2020/texmf-dist/fonts/type1/public/cm-super/sfso0900.pfb></usr/local/texlive
-/2020/texmf-dist/fonts/type1/public/cm-super/sfss0500.pfb></usr/local/texlive/2
-020/texmf-dist/fonts/type1/public/cm-super/sfss0600.pfb></usr/local/texlive/202
-0/texmf-dist/fonts/type1/public/cm-super/sfss0700.pfb></usr/local/texlive/2020/
-texmf-dist/fonts/type1/public/cm-super/sfss0900.pfb></usr/local/texlive/2020/te
-xmf-dist/fonts/type1/public/cm-super/sfss1000.pfb></usr/local/texlive/2020/texm
-f-dist/fonts/type1/public/cm-super/sfss1440.pfb></usr/local/texlive/2020/texmf-
-dist/fonts/type1/public/cm-super/sfsx0600.pfb></usr/local/texlive/2020/texmf-di
-st/fonts/type1/public/cm-super/sfsx0700.pfb></usr/local/texlive/2020/texmf-dist
-/fonts/type1/public/cm-super/sfsx0900.pfb></usr/local/texlive/2020/texmf-dist/f
-onts/type1/public/cm-super/sfsx1000.pfb></usr/local/texlive/2020/texmf-dist/fon
-ts/type1/public/cm-super/sftt0900.pfb>
-Output written on personalization_v6.pdf (29 pages, 913841 bytes).
+live/2020/texmf-dist/fonts/type1/public/cm-super/sfso0900.pfb></usr/local/texli
+ve/2020/texmf-dist/fonts/type1/public/cm-super/sfss0500.pfb></usr/local/texlive
+/2020/texmf-dist/fonts/type1/public/cm-super/sfss0600.pfb></usr/local/texlive/2
+020/texmf-dist/fonts/type1/public/cm-super/sfss0700.pfb></usr/local/texlive/202
+0/texmf-dist/fonts/type1/public/cm-super/sfss0900.pfb></usr/local/texlive/2020/
+texmf-dist/fonts/type1/public/cm-super/sfss1000.pfb></usr/local/texlive/2020/te
+xmf-dist/fonts/type1/public/cm-super/sfss1440.pfb></usr/local/texlive/2020/texm
+f-dist/fonts/type1/public/cm-super/sfsx0600.pfb></usr/local/texlive/2020/texmf-
+dist/fonts/type1/public/cm-super/sfsx0700.pfb></usr/local/texlive/2020/texmf-di
+st/fonts/type1/public/cm-super/sfsx0900.pfb></usr/local/texlive/2020/texmf-dist
+/fonts/type1/public/cm-super/sfsx1000.pfb></usr/local/texlive/2020/texmf-dist/f
+onts/type1/public/cm-super/sftt0900.pfb>
+Output written on personalization_v6.pdf (30 pages, 907547 bytes).
 PDF statistics:
- 332 PDF objects out of 1000 (max. 8388607)
- 244 compressed objects within 3 object streams
- 60 named destinations out of 1000 (max. 500000)
+ 334 PDF objects out of 1000 (max. 8388607)
+ 246 compressed objects within 3 object streams
+ 62 named destinations out of 1000 (max. 500000)
  89 words of extra memory for PDF output out of 10000 (max. 10000000)
 
