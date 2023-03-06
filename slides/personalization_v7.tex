@@ -314,15 +314,15 @@ Given the goal of assigning the best treatment to each individual, and the conte
 
 \begin{itemize}
 
-\item How should I express my objective function? What is a suitable causal estimand?
+\item What alternatives do I have to express my objective optim. function?
 
 \vskip7pt
 
-\item What data do I need for identification? 
+\item What is the corresponding data I need in each case?
 
 \vskip7pt
 
-\item Is experimental data `gold standard'?
+\item Which of these alternatives can theoretically achieve the oracle treatment assignment?
 
 \end{itemize}
 
@@ -344,7 +344,7 @@ Given the goal of assigning the best treatment to each individual, and the conte
 \item \textbf{Business objective:}  Sell a credit card to new-to-RBC clients. 
 
 
-\item \textbf{Current campaign}. All new-to-RBC clients who visited the RBC public site get a credit card offer $+$ iPad incentive.
+\item \textbf{Current campaign}. All new-to-RBC clients who visit the RBC public site get a credit card offer $+$ iPad incentive.
 
 
 \begin{figure}
@@ -769,6 +769,8 @@ $\mathcal{D}^*_{\text{IFR}}(M) = ~$\underset{I \in {0,1}}{\mathrm{argmax}}~E[\pi
 
 \vskip10pt
 
+\pause
+
 \scriptsize{
 \begin{equation*}
 \begin{align*}
@@ -1094,13 +1096,9 @@ $\mathcal{D}_{\text{Oracle}}$ & & \textbf{43.75} \\ \\
 
 \item Experiments `destroy' uncoded knowledge about these confounders. 
 
-\item Interventional inference does not capture the information required to maximize payout.
+\item Observational data (usually discarded when experimental data are available) might capture additional information about UHCs required to maximize payout. 
 
 \end{itemize}
-
-\vskip15pt
-
-\item Counterfactual-based decision-making leads to a fusion of experimental and observational data, which might capture additional information about UHCs required to maximize payout. 
 
 
 \end{itemize}
