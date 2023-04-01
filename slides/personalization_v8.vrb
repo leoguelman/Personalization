@@ -1,0 +1,36 @@
+\frametitle{Further Reading}
+
+
+
+
+\begin{itemize}
+
+\item This presentation is fundamentally inspired by this paper:
+
+\vskip5pt
+
+\begin{itemize}
+
+
+\item Elias Bareinboim, Andrew Forney, and Judea Pearl. 2015. \textbf{Bandits with unobserved confounders: a causal approach}. In Proceedings of the 28th International Conference on Neural Information Processing Systems - Volume 1 (NIPS'15).
+
+
+\item Implementation: \url{https://github.com/leoguelman/mabuc}.
+
+\end{itemize}
+
+\vskip15pt
+
+\item The expression derived from RDC works only in the binary treatment case.
+
+\vskip5pt
+
+\begin{itemize}
+\item RDC-type randomization \href{https://proceedings.mlr.press/v70/forney17a.html}{(Forney et al., 2017) }
+was proposed to estimate counterfactual expressions empirically from an arbitrary number of treatments.
+\end{itemize}
+
+
+\end{itemize}
+
+
